@@ -1,0 +1,60 @@
+.ctl-service-card {
+  appearance: none;
+  background: #ffffff;
+  border: 1px solid var(--ctl-border);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(6, 22, 89, 0.04);
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  min-width: 0;
+  overflow: hidden;
+  padding: 0;
+  text-align: left;
+  width: 100%;
+}
+
+.ctl-service-card:active {
+  transform: scale(0.99);
+}
+
+.ctl-service-card__image {
+  background-color: var(--ctl-muted);
+  background-position: center;
+  background-size: cover;
+  display: block;
+  height: 100px;
+  width: 100%;
+}
+
+.ctl-service-card__body {
+  align-items: flex-start;
+  display: flex;
+  gap: 10px;
+  padding: 12px;
+}
+
+.ctl-service-card__icon {
+  align-items: center;
+  background: rgba(255, 95, 19, 0.1);
+  border-radius: 6px;
+  color: var(--ion-color-primary);
+  display: flex;
+  flex: 0 0 auto;
+  height: 28px;
+  justify-content: center;
+  margin-top: 2px;
+  width: 28px;
+}
+
+.ctl-service-card__icon ion-icon {
+  font-size: 16px;
+}
+
+.ctl-service-card__title {
+  color: var(--ctl-secondary);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.2;
+}

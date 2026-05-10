@@ -1,0 +1,2099 @@
+{
+  "services": [
+    {
+      "id": "concrete-admixture",
+      "name": "Concrete Admixture",
+      "description": "Chemical solutions for concrete performance",
+      "productIds": [
+        "sikacim",
+        "sika-plastiment-2001-ns",
+        "plastocrete-plus",
+        "sikaplast-5061-ns2",
+        "sikaplast-5003-ns1",
+        "sika-viscocrete-2002-he",
+        "sika-viscocrete-730-pr",
+        "sikament-ff"
+      ]
+    },
+    {
+      "id": "concrete-essentials",
+      "name": "Concrete Essentials",
+      "description": "Core materials for construction",
+      "productIds": [
+        "sikacontrol-wt-200-p-in",
+        "sika-foam-oil",
+        "sika-seprol",
+        "sika-seprol-plus",
+        "sika-antisol-a4-white"
+      ]
+    },
+    {
+      "id": "waterproofing",
+      "name": "Waterproofing",
+      "description": "Protection against water leakage",
+      "productIds": [
+        "sika-sbr-latex",
+        "sika-latex-super",
+        "sika-raintite-i",
+        "sika-topseal-107",
+        "sika-topseal-107-plus",
+        "sika-topseal-109",
+        "sikalastic-450-i",
+        "sikadur-combiflex-sg-20",
+        "sikadur-combiflex-adhesive",
+        "sika-shield-p22",
+        "sika-shield-p24",
+        "sika-shield-primer-s30",
+        "sika-shield-w1",
+        "sikaproof-312-sg-in",
+        "sika-proof-315-sg-in",
+        "sika-shield-e50"
+      ]
+    },
+    {
+      "id": "repair-protection",
+      "name": "Repair & Protection",
+      "description": "Repair damaged structures",
+      "productIds": [
+        "sika-anchorfix-3030",
+        "sika-top-122-hs",
+        "sika-monotop-122-f",
+        "sikadur-53-uf-mortar",
+        "sikadur-53-uf-grout",
+        "sika-ferrogard-903",
+        "sika-frianzic-r",
+        "sikadur-32-lp",
+        "sika-rustoff-100",
+        "masterprotect-1818",
+        "sikacrete-145-in",
+        "sikadur-41",
+        "sikadur-42-hes"
+      ]
+    },
+    {
+      "id": "structure-strengthening",
+      "name": "Structure Strengthening",
+      "description": "Enhance load-bearing capacity",
+      "productIds": [
+        "sikarep-microcrete-4",
+        "sikawarp-203-c",
+        "sikadur-31-sba-02",
+        "sikadur-31",
+        "sikadur-32-lp",
+        "sikadur-330",
+        "sikadur-30-lp",
+        "sikadur-31-sba-03",
+        "sikadur-31-sba-04"
+      ]
+    },
+    {
+      "id": "building-finishing",
+      "name": "Building Finishing",
+      "description": "Surface finishing solutions",
+      "productIds": [
+        "sikaceram-888",
+        "sikaceram-50-tikofix",
+        "sika-ceram-125-easy-fix",
+        "sika-ceram-255-grey",
+        "sika-ceram-255-white",
+        "sikaceram-288-flex-s1"
+      ]
+    },
+    {
+      "id": "industrial-flooring",
+      "name": "Industrial Flooring",
+      "description": "Durable flooring systems",
+      "productIds": [
+        "sika-chapdur",
+        "sika-curehard-24",
+        "sikafloor-161-hc",
+        "sika-floor-290-primer",
+        "sika-floor-291",
+        "sika-floor-264-hc",
+        "sikafloor-167",
+        "sikafloor-41-purcem"
+      ]
+    },
+    {
+      "id": "roofing",
+      "name": "Roofing",
+      "description": "Roof protection systems",
+      "productIds": [
+        "sika-cool-coat",
+        "sikalastic-621-tc",
+        "sika-sovacryl",
+        "sikalastic-590",
+        "sika-sarnafil-g-410",
+        "masterseal-lhm-5000-r"
+      ]
+    },
+    {
+      "id": "sealing-bonding",
+      "name": "Sealing & Bonding",
+      "description": "Adhesives & sealants",
+      "productIds": [
+        "sika-polysulphide-gun-grade",
+        "sika-flex-127",
+        "sikaflex-11-fc",
+        "sika-multiseal-t",
+        "sika-polysulphide-pour-grade",
+        "sika-swell-a",
+        "sika-swell-s2"
+      ]
+    },
+    {
+      "id": "grouting",
+      "name": "Grouting",
+      "description": "Precision filling solutions",
+      "productIds": [
+        "sika-intraplast-n-200",
+        "sika-injection-101-h",
+        "sika-injection-201-in",
+        "sika-injection-306-set",
+        "sikadur-55-lp",
+        "sikadur-53-uf"
+      ]
+    }
+  ],
+
+  "products": [
+    {
+      "id": "sikacim",
+      "serviceId": "concrete-admixture",
+      "name": "SikaCim®",
+      "tagline": "Liquid integral waterproofing concrete and mortar admixture",
+      "thumbnail": "/images/products/sikacim.jpg",
+      "tabs": {
+        "overview": {
+          "text": "Liquid integral waterproofing admixture for all types of concrete and mortar. Compatible with all varieties of Portland Cement including Slag Cement. Minimizes loss of mortar due to rebound in plastering jobs, hence great ease of application and saving. Required at a very small dosage, hence economical.",
+          "usage": [
+            "Slope Roof Slabs",
+            "Flat Roof Slabs",
+            "Beams",
+            "Columns",
+            "Slabs",
+            "Excellent for internal and external plaster of buildings etc.",
+            "Repair and renovation"
+          ],
+          "advantages": [
+            "Compatible with all varieties of Portland Cement including Slag Cement",
+            "Minimizes loss of mortar due to rebound in plastering jobs, hence great ease of application and saving",
+            "Required at a very small dosage, hence economical",
+            "Improves water tightness to a great extent",
+            "Performs multiple roles of water reducer as well as waterproofer",
+            "Improves workability without increased water content",
+            "Reduced shrinkage, better finish",
+            "Acts to disrupt the leakage causing capillary structures formed in concrete to cause leakages",
+            "No added chloride thus not contributing to corrosion of steel",
+            "Convenient to handle since suitable for both concrete and mortar",
+            "Supplied in consumer friendly pack"
+          ],
+          "packaging": "200g, 1kg, 5kg, 10kg, 20kg, 230kg",
+          "colour": "Brown Liquid"
+        },
+        "details": {
+          "keyValues": [
+            { "label": "Chemical Base", "value": "Modified Ligno Sulphonate" },
+            { "label": "Shelf Life", "value": "Best before 12 months from date of production if stored properly in undamaged, unopened, original sealed packaging" },
+            { "label": "Storage Conditions", "value": "Store in dry conditions at temperatures between +10°C and +40°C. Protect from direct sunlight and frost." },
+            { "label": "Density", "value": "~1.00 at 25°C" },
+            { "label": "pH-Value", "value": "≥ 6" },
+            { "label": "Approvals / Standards", "value": "IS 2645" }
+          ]
+        },
+        "application": {
+          "steps": [
+            {
+              "step": 1,
+              "title": "Compatibility",
+              "description": "Compatible with all types of cements and cementitious materials."
+            },
+            {
+              "step": 2,
+              "title": "Dry Mix",
+              "description": "Mix cement, aggregates and sand and dry mix."
+            },
+            {
+              "step": 3,
+              "title": "Add Water",
+              "description": "Add 50-70% of required water and mix the mass to make it moist."
+            },
+            {
+              "step": 4,
+              "title": "Add SikaCim®",
+              "description": "Add SikaCim® to the remaining water and pour it in the mixing drum and mix the entire quantity for approx. 3 minutes to achieve homogenous mix."
+            },
+            {
+              "step": 5,
+              "title": "Pour",
+              "description": "Pour the mixture on a tray and use as per requirement and lay the concrete."
+            },
+            {
+              "step": 6,
+              "title": "Cure",
+              "description": "Cure as per normal procedure by ponding/curing compound."
+            }
+          ],
+          "consumption": {
+            "label": "Recommended Dosage",
+            "value": "100g for 50kg bag of cement (0.2% by weight of cement)"
+          },
+          "notes": null
+        },
+        "documents": {
+          "files": [
+            {
+              "label": "Sikacim",
+              "type": "Product Data Sheet (PDS)",
+              "url": "/docs/sikacim-pds.pdf"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "sika-plastiment-2001-ns",
+      "serviceId": "concrete-admixture",
+      "name": "Sika® Plastiment®-2001 NS",
+      "tagline": "Water Reducing Cum Integral Water Proofing Admixture",
+      "thumbnail": "/images/products/sika-plastiment-2001-ns.jpg",
+      "tabs": {
+        "overview": {
+          "text": "A liquid water reducing cum water proofing concrete admixture with a plasticizing effect. Sika® Plastiment®-2001 NS can be added into the mixing water or directly into the concrete mixer after 50–70% of the mixing water has been added. The addition to dry aggregate or cement is not recommended. To achieve optimum performance a minimum wet mixing time of 60 seconds is recommended.",
+          "usage": [
+            "High quality concrete in difficult conditions",
+            "High temperature",
+            "Long haul",
+            "Ready mix concrete",
+            "Water proof concrete"
+          ],
+          "advantages": [
+            "Long-lasting control of slump loss",
+            "Very good for ready mix concrete plants where long haulage is there",
+            "Improved workability without increasing water",
+            "Reduced water without loss of workability",
+            "Improved water tightness/water proofing",
+            "Increased ultimate strength",
+            "Improved surface finish"
+          ],
+          "packaging": "255 kg / Bulk supply",
+          "colour": "Dark Brown Liquid"
+        },
+        "details": {
+          "keyValues": [
+            { "label": "Chemical Base", "value": "Modified Ligno Sulphonate" },
+            { "label": "Shelf Life", "value": "Best before 12 months from date of production if stored properly in undamaged, unopened, original sealed packaging" },
+            { "label": "Storage Conditions", "value": "Store in dry conditions at temperatures between +10°C and +40°C. Protect from direct sunlight and frost." },
+            { "label": "Density", "value": "~1.00 at 25°C" },
+            { "label": "pH-Value", "value": "≥ 6" },
+            { "label": "Approvals / Standards", "value": "IS 2645" }
+          ]
+        },
+        "application": {
+          "steps": [
+            {
+              "step": 1,
+              "title": "Recommended Dosage",
+              "description": "0.5% to 2.0% by weight of cement. Higher dosage may be used if agreed by engineer and consultant. Actual dosage to be finalised on the basis of site trials. Stir well before use."
+            },
+            {
+              "step": 2,
+              "title": "Compatibility",
+              "description": "Sika® Plastiment®-2001 NS may be combined with many other Sika® products. Compatible with all types of cements and cementitious materials. Important: Always conduct trials before combining products in specific mixes and combinations."
+            }
+          ],
+          "consumption": {
+            "label": "Recommended Dosage",
+            "value": "0.5% to 2.0% by weight of cement"
+          },
+          "notes": "Actual dosage to be finalised on the basis of site trials. Stir well before use."
+        },
+        "documents": {
+          "files": [
+            {
+              "label": "Sika® Plastiment®-2001 NS",
+              "type": "Product Data Sheet (PDS)",
+              "url": "/docs/sika-plastiment-2001-ns-pds.pdf"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "plastocrete-plus",
+      "serviceId": "concrete-admixture",
+      "name": "Sika® Plastocrete® Plus",
+      "tagline": "Waterproofing concrete/mortar admixture",
+      "thumbnail": "/images/products/plastocrete-plus.jpg",
+      "tabs": {
+        "overview": {
+          "text": "Sika® Plastocrete® Plus provides improved workability without increased water content, allows easier compaction leading to denser concrete and superior finish, and reduced shrinkage.",
+          "usage": ["Sloped Roof Slab","Flat Roof Slab","Beams","Flat Hoof Slab","Columns","Slabs etc","Internal and external plaster of buildings etc.","Repair and renovation"],
+          "advantages": ["Improved workability without increased water content","Allows easier compaction leading to denser concrete and superior finish","Reduced shrinkage","Improved water tightness","Chloride free - does not attack reinforcement"],
+          "packaging": "20kg, 100kg, 200kg, 230kg",
+          "colour": "Dark Brown Liquid"
+        },
+        "details": {
+          "keyValues": [
+            { "label": "Chemical Base", "value": "Modified Ligno Sulphonate" },
+            { "label": "Shelf Life", "value": "Best before 12 months from date of production if stored properly in undamaged, unopened, original sealed packaging" },
+            { "label": "Storage Conditions", "value": "Store in dry conditions at temperatures between +10°C and +40°C. Protect from direct sunlight and frost." },
+            { "label": "Density", "value": "~1.00 at 25°C" },
+            { "label": "pH-Value", "value": "≥ 6" },
+            { "label": "Approvals / Standards", "value": "IS 2645, IS 9103" }
+          ]
+        },
+        "application": {
+          "steps": [
+            { "step": 1, "title": "Compatibility", "description": "Sika® Plastocrete® Plus may be combined with many other Sika® Products. Compatible with all types of cement and cementitious material. Always conduct trials before combining products in specific mixes and combinations." },
+            { "step": 2, "title": "Dispensing", "description": "Sika® Plastocrete® Plus liquid should be dispensed directly into the mixing water, prior to its addition to the aggregates." }
+          ],
+          "consumption": { "label": "Recommended Dosage", "value": "0.05 – 0.2% by weight of cement. Actual dosage to be finalised on the basis of site trials." },
+          "notes": null
+        },
+        "documents": {
+          "files": [{ "label": "Sika® Plastocrete® Plus", "type": "Product Data Sheet (PDS)", "url": "/docs/plastocrete-plus-pds.pdf" }]
+        }
+      }
+    },
+    {
+      "id": "sikaplast-5061-ns2",
+      "serviceId": "concrete-admixture",
+      "name": "SikaPlast®-5061 NS2",
+      "tagline": "High efficient superplasticizer",
+      "thumbnail": "/images/products/sikaplast-5061-ns2.jpg",
+      "tabs": {
+        "overview": {
+          "text": "SikaPlast®-5061 NS2 GE is the latest development of superplasticizer for concrete. It meets the requirements for high range water reducing superplasticizers. Compatible with all varieties of Portland Cement including Slag Cement.",
+          "usage": ["A wide range of applications where excellent workability is requested","Concrete with high water reduction","High efficient concrete applications"],
+          "advantages": ["Strong water reduction, resulting in high density, high strength and reduced permeability","Less sensitive against variations in aggregates and/or different cement types","High efficiency even at low dosage rates","Extended workability in conjunction with subsequent strength development","Superior plasticising effect, resulting in improved flow, placing and compaction characteristics"],
+          "packaging": "255kg HDPE carboy or Tanker supply",
+          "colour": "Brown Liquid"
+        },
+        "details": {
+          "keyValues": [
+            { "label": "Chemical Base", "value": "Polycarboxylate Ether" },
+            { "label": "Shelf Life", "value": "12 months from date of production if stored properly in undamaged unopened, original sealed packaging" },
+            { "label": "Storage Conditions", "value": "Store in dry conditions at temperatures between +10°C and +40°C. Protect from direct sunlight and frost." },
+            { "label": "Density", "value": "~1.07 kg/l at 25°C" },
+            { "label": "pH-Value", "value": "≥ 6" },
+            { "label": "Approvals / Standards", "value": "IS 9103, ASTM C494" }
+          ]
+        },
+        "application": {
+          "steps": [
+            { "step": 1, "title": "Recommended Dosage", "description": "0.5% to 2% b.w.o. cementitious. Optimum dosage has to be finalized through site trials. Stir well before use." },
+            { "step": 2, "title": "Dispensing", "description": "SikaPlast®-5061 NS2 GE is added to the gauging water or added with it into the concrete mixer. To take advantage of the high water reduction, a wet mixing time of at least 60 seconds is recommended. To avoid excess water in the concrete, the final dosage must begin only after 2/3 of the wet mixing time." },
+            { "step": 3, "title": "Compatibility", "description": "SikaPlast®-5061 NS2 GE may be combined with many other Sika® Products. It is compatible with all types of ordinary Portland cement, PPC, PSC and cement replacement materials. Always conduct trials before combining products in specific mixes." }
+          ],
+          "consumption": { "label": "Recommended Dosage", "value": "100g for 50kg bag of cement (0.2% by weight of cement)" },
+          "notes": null
+        },
+        "documents": {
+          "files": [{ "label": "SikaPlast®-5061 NS2 GE", "type": "Product Data Sheet (PDS)", "url": "/docs/sikaplast-5061-ns2-pds.pdf" }]
+        }
+      }
+    },
+    {
+      "id": "sikaplast-5003-ns1",
+      "serviceId": "concrete-admixture",
+      "name": "SikaPlast®-5003 NS1",
+      "tagline": "High efficient superplasticizer",
+      "thumbnail": "/images/products/sikaplast-5003-ns1.jpg",
+      "tabs": {
+        "overview": {
+          "text": "SikaPlast®-5003 NS1 is the latest development of superplasticizer for concrete. It meets the requirements for high range water reducing superplasticizers. When using SikaPlast®-5003 NS1 a suitable mix design has to be taken into account and local material sources shall be trialled.",
+          "usage": ["A wide range of applications where excellent workability is requested","Concrete with high water reduction","High efficient concrete applications","Variable use in different concrete systems with different raw materials"],
+          "advantages": ["Strong water reduction, resulting in high density, high strength and reduced permeability","Less sensitive against variations in aggregates and/or different cement types","High efficiency even at low dosage rates","Extended workability in conjunction with subsequent strength development","Superior plasticising effect, resulting in improved flow, placing and compaction characteristics"],
+          "packaging": "255 kg HDPE carboy or Tanker supply",
+          "colour": "Light Brown Liquid"
+        },
+        "details": {
+          "keyValues": [
+            { "label": "Chemical Base", "value": "Polycarboxylate ether" },
+            { "label": "Shelf Life", "value": "Best before 12 months from date of production if stored properly in undamaged, unopened, original sealed packaging" },
+            { "label": "Storage Conditions", "value": "Store in dry conditions at temperatures between +10°C and +40°C. Protect from direct sunlight and frost." },
+            { "label": "Density", "value": "~1.09 kg/l at 25°C" },
+            { "label": "pH-Value", "value": "≥ 6" },
+            { "label": "Approvals / Standards", "value": "IS 9103, ASTM C494" }
+          ]
+        },
+        "application": {
+          "steps": [
+            { "step": 1, "title": "Recommended Dosage", "description": "0.2% to 2% b.w.o. cementitious. Optimum dosage has to be finalized through site trial. Stir well before use." },
+            { "step": 2, "title": "Dispensing", "description": "SikaPlast®-5003 NS1 is added to the gauging water or added with it into the concrete mixer. To take advantage of the high water reduction, a wet mixing time of at least 60 seconds is recommended. To avoid excess water in the concrete, the final dosage must begin only after 2/3 of the wet mixing time." },
+            { "step": 3, "title": "Compatibility", "description": "SikaPlast®-5003 NS1 may be combined with many other Sika® Products. Compatible with all types of cements and cementitious materials. Always conduct trials before combining products in specific mixes and contact Technical Service Department for information about specific combinations." }
+          ],
+          "consumption": { "label": "Recommended Dosage", "value": "100g for 50kg bag of cement (0.2% by weight of cement)" },
+          "notes": null
+        },
+        "documents": {
+          "files": [{ "label": "SikaPlast®-5003 NS1", "type": "Product Data Sheet (PDS)", "url": "/docs/sikaplast-5003-ns1-pds.pdf" }]
+        }
+      }
+    },
+    {
+      "id": "sika-viscocrete-2002-he",
+      "serviceId": "concrete-admixture",
+      "name": "Sika® ViscoCrete®-2002 HE",
+      "tagline": "High Performance Superplasticizing Admixture",
+      "thumbnail": "/images/products/sika-viscocrete-2002-he.jpg",
+      "tabs": {
+        "overview": {
+          "text": "Imparts very high workability, allows a large reduction in water content and gives high early strength. Sika® ViscoCrete®-2002 HE produces a more uniformly cohesive high quality free flowing concrete.",
+          "usage": ["High performance concrete","High early strength concrete","Ready mixed concrete","Self compacting concrete","Precast concrete","Pre stressed concrete","Pumped concrete","Cold weather concrete"],
+          "advantages": ["Improved dispersion properties","Very high water reduction","Improved strength and density","Improved durability","Improved cohesion properties","Improved rheology","Improved flowability","Reduced drying shrinkage"],
+          "packaging": "255 kg drums / Bulk supply",
+          "colour": "Brown Hazy Liquid"
+        },
+        "details": {
+          "keyValues": [
+            { "label": "Chemical Base", "value": "Aqueous solution of modified poly carboxylate" },
+            { "label": "Shelf Life", "value": "12 months from date of production if stored properly in undamaged unopened, original sealed packaging" },
+            { "label": "Storage Conditions", "value": "Store in dry conditions at temperatures between +10°C and +40°C. Protect from direct sunlight and frost." },
+            { "label": "Density", "value": "~1.08 kg/l at 25°C" },
+            { "label": "pH-Value", "value": "≥ 6" },
+            { "label": "Approvals / Standards", "value": "IS 9103, ASTM C494" }
+          ]
+        },
+        "application": {
+          "steps": [
+            { "step": 1, "title": "Compatibility", "description": "Sika ViscoCrete-2002 HE may be combined with many other Sika® Products. Compatible with all types of ordinary Portland cement, PPC, PSC and cement replacement materials. Always conduct trials before combining products in specific mixes." },
+            { "step": 2, "title": "Dispensing", "description": "Sika ViscoCrete-2002 HE can be added into the mixing water or directly into the concrete mixer after 50–70% of the mixing water has been added. Addition to dry aggregate or cement is not recommended. A minimum wet mixing time of 60 seconds is recommended." }
+          ],
+          "consumption": { "label": "Recommended Dosage", "value": "Optimum dosage should be determined by site trials. Recommended dosage: 0.2–2.0% by weight of cementitious. A higher dosage might be used if agreed by client, consultant. Stir well before use." },
+          "notes": null
+        },
+        "documents": {
+          "files": [{ "label": "Sika® ViscoCrete®-2002 HE", "type": "Product Data Sheet (PDS)", "url": "/docs/sika-viscocrete-2002-he-pds.pdf" }]
+        }
+      }
+    },
+    {
+      "id": "sika-viscocrete-730-pr",
+      "serviceId": "concrete-admixture",
+      "name": "Sika® ViscoCrete®-730 PR",
+      "tagline": "High Range Water Reducer/Superplasticizer",
+      "thumbnail": "/images/products/sika-viscocrete-730-pr.jpg",
+      "tabs": {
+        "overview": {
+          "text": "Sika® ViscoCrete®-730 PR is a third generation High Range Water Reducing/SuperPlasticizing admixture for concrete and mortar. As a powerful water reducer it acts through surface adsorption and sterical effects separating the binder particles.",
+          "usage": ["Ready mixed concrete","Precast concrete","Site batched concrete","Columns Self Compacting Concrete (SCC)"],
+          "advantages": ["Powerful water reduction, resulting in high density, high strength and reduced permeability for water etc.","Excellent plasticizing effect resulting in improved flowability, placing and compacting behaviour","Especially suitable for the production of Self Compacting Concrete (SCC)","Vma for SCC may not require, reduces stickiness","Reduces shrinkage","Does not contain chlorides or other ingredients promoting corrosion of steel reinforcement"],
+          "packaging": "255 Kg HDPE Drum / Bulk supply",
+          "colour": "Brown Liquid"
+        },
+        "details": {
+          "keyValues": [
+            { "label": "Chemical Base", "value": "Aqueous solution of modified poly carboxylate" },
+            { "label": "Shelf Life", "value": "12 months from date of production if stored properly in undamaged unopened, original sealed packaging" },
+            { "label": "Storage Conditions", "value": "Store in dry conditions at temperatures between +10°C and +40°C. Protect from direct sunlight and frost." },
+            { "label": "Density", "value": "~1.10 kg/l at 25°C" },
+            { "label": "pH-Value", "value": "≥ 6" },
+            { "label": "Approvals / Standards", "value": "IS 9103, ASTM C494" }
+          ]
+        },
+        "application": {
+          "steps": [
+            { "step": 1, "title": "Compatibility", "description": "Sika Viscocrete-730 PR may be combined with many other Sika® Products. Compatible with all types of cements and cementitious materials. Always conduct trials before combining products in specific mixes and contact Technical Service Department for information about specific combinations." },
+            { "step": 2, "title": "Dispensing", "description": "Sika Viscocrete-730 PR can be added into the mixing water or directly into the concrete mixer after 50–70% of the mixing water has been added. Addition to dry aggregate or cement is not recommended. A minimum wet mixing time of 60 seconds is recommended." }
+          ],
+          "consumption": { "label": "Recommended Dosage", "value": "Optimum dosage should be determined by site trials. Recommended dosage: 0.2–2.0% by weight of cementitious. A higher dosage might be used if agreed by client or consultant. Stir well before use." },
+          "notes": null
+        },
+        "documents": {
+          "files": [{ "label": "Sika® ViscoCrete®-730 PR", "type": "Product Data Sheet (PDS)", "url": "/docs/sika-viscocrete-730-pr-pds.pdf" }]
+        }
+      }
+    },
+    {
+      "id": "sikament-ff",
+      "serviceId": "concrete-admixture",
+      "name": "Sikament® FF",
+      "tagline": "High Range Water Reducer / Superplasticizer",
+      "thumbnail": "/images/products/sikament-ff.jpg",
+      "tabs": {
+        "overview": {
+          "text": "Sikament® FF is a high range water reducer / superplasticizer for concrete and mortar. Works based on a combination of electrostatic inter particle repulsion — solid particles can be effectively dispersed and a high level of fluidity can be reached with less water. Does not contain any chlorides, therefore can be used without risk for steel and prestressed concrete.",
+          "usage": ["Early-strength concretes where workability time of more than 40 minutes isn't necessary — particularly for precast production and construction sites with special applications","Concrete in regular use in a short amount of time e.g. airfield repair, road and railways bridge sections"],
+          "advantages": ["Solid particles can be effectively dispersed and a high level of fluidity reached with less water","Does not contain any chlorides — safe for steel and prestressed concrete","Water reduction of up to 20% is possible with sufficiently high dosage"],
+          "packaging": "Drum IBC Bulk supply",
+          "colour": "Brownish liquid"
+        },
+        "details": {
+          "keyValues": [
+            { "label": "Chemical Base", "value": "Melamine formaldehyde condensate" },
+            { "label": "Shelf Life", "value": "12 months shelf life from date of production if stored properly in undamaged, unopened, original sealed packaging" },
+            { "label": "Storage Conditions", "value": "Storage at temperatures between 10°C and 30°C. Protect from direct sunlight, frost and contamination." },
+            { "label": "Density", "value": "~1.24 kg/l at +25°C" },
+            { "label": "pH-Value", "value": "~10" },
+            { "label": "Approvals / Standards", "value": "Conforms to the requirements of EN 934–2, Table 3.1/3.2, IS 9103" }
+          ]
+        },
+        "application": {
+          "steps": [
+            { "step": 1, "title": "Compatibility", "description": "Sikament FF may be combined with many other Sika products. Combination with other admixtures may affect the amount of air-entrained into the concrete. Always conduct trials before combining products in specific mixes and contact Sika® technical service for more information and advice." },
+            { "step": 2, "title": "Dispensing", "description": "Sikament FF is added to the gauging water or added with it into the concrete mixer. To take advantage of the workability enhancing ability, a wet mixing time of at least 60 seconds is recommended. To avoid excess water in the concrete, the final dosage must begin only after 2/3 of the wet mixing time." }
+          ],
+          "consumption": { "label": "Recommended Dosage", "value": "0.8–3.0% by weight of cement" },
+          "notes": null
+        },
+        "documents": {
+          "files": [{ "label": "Sikament® FF", "type": "Product Data Sheet (PDS)", "url": "/docs/sikament-ff-pds.pdf" }]
+        }
+      }
+    },
+    {
+      "id": "sikacontrol-wt-200-p-in",
+      "serviceId": "concrete-essentials",
+      "name": "SikaControl® WT-200 P (IN)",
+      "tagline": "Water Resisting and Crystalline Waterproofing Concrete Admixture",
+      "thumbnail": "/images/products/sikacontrol-wt-200-p-in.jpg",
+      "tabs": {
+        "overview": {
+          "text": "SikaControl® WT-200 P (IN) is a combined water resisting and crystalline water proofing admixture used to reduce permeability of concrete and has the ability to heal the cracks. It reduces the ability of concrete to conduct water flow through unique active chemicals that react with moisture within the concrete. Over time crystalline formations reduce the size of the capillary pores until they are completely blocked and water flow is stopped.",
+          "usage": ["Tunnels","Subway Stations","Water tanks","Dams & Reservoirs","Water treatment plants","Basements","Foundations"],
+          "advantages": ["Uniform water proofing throughout the entire concrete volume","No leakage due to surface damage","Reduced water penetration under pressure","Enhancement of self-healing properties of concrete"],
+          "packaging": "20kg and 25kg bag",
+          "colour": "Off white to grey powder"
+        },
+        "details": {
+          "keyValues": [
+            { "label": "Chemical Base", "value": "Minerals and additives" },
+            { "label": "Shelf Life", "value": "Best before 12 months from date of production if stored properly in undamaged, unopened, original sealed packaging" },
+            { "label": "Storage Conditions", "value": "Store in dry conditions at temperatures between +10°C and +40°C. Protect from direct sunlight and frost." },
+            { "label": "Bulk Density", "value": "~0.8 g/cc at 25°C" },
+            { "label": "Approvals / Standards", "value": "ACI 212" },
+            { "label": "Compatibility", "value": "Compatible with most admixtures manufactured to IS & ASTM Specifications, most cements & pozzolans." }
+          ]
+        },
+        "application": {
+          "steps": [
+            { "step": 1, "title": "Dispensing", "description": "Add the correct amount of SikaControl® WT-200 P (IN) during mixing process at the batch plant." }
+          ],
+          "consumption": { "label": "Recommended Dosage", "value": "0.8% to 2% by weight of cementitious. Actual dosage to be finalised on the basis of site trials and requirements." },
+          "notes": null
+        },
+        "documents": {
+          "files": [{ "label": "SikaControl® WT-200 P (IN)", "type": "Product Data Sheet (PDS)", "url": "/docs/sikacontrol-wt-200-p-in-pds.pdf" }]
+        }
+      }
+    },
+    {
+      "id": "sika-foam-oil",
+      "serviceId": "concrete-essentials",
+      "name": "Sika® Form Oil",
+      "tagline": "Emulsion based formwork release agent",
+      "thumbnail": "/images/products/sika-foam-oil.jpg",
+      "tabs": {
+        "overview": {
+          "text": "Sika® Form Oil is a carefully blended combination of refined mineral oils and emulsifying agents, producing a thin film stable release agent for concrete. When applied to steel, plastic, or timber formwork, it allows clean, fast and easy striking.",
+          "usage": ["Steel formwork","Plastic formwork","Timber formwork"],
+          "advantages": ["Good adhesion to the formwork","Good concrete surface finish","Reduces concrete contamination","Non-flammable"],
+          "packaging": "25 and 200 litre drums",
+          "colour": "Milky white liquid"
+        },
+        "details": {
+          "keyValues": [
+            { "label": "Chemical Base", "value": "Emulsified mineral oil" },
+            { "label": "Shelf Life", "value": "12 months from date of production if stored properly" },
+            { "label": "Storage Conditions", "value": "Stored in original unopened, undamaged, sealed packaging. Protect from frost, direct sunlight and contamination. Opened units should be stored closed." },
+            { "label": "Density", "value": "1.0 kg/litre" }
+          ]
+        },
+        "application": {
+          "steps": [
+            { "step": 1, "title": "Ambient Temperature", "description": "Min. 5°C – Max. 35°C" },
+            { "step": 2, "title": "Equipment", "description": "Apply single coat by brush, roller, cloth or spray." },
+            { "step": 3, "title": "Surface Preparation", "description": "Shutter surface must be clean and free from dirt and cement laitance." },
+            { "step": 4, "title": "Application", "description": "Sika Form Oil is supplied ready to use and requires no dilution. Mix contents of drum prior to use, to ensure a uniform application." }
+          ],
+          "consumption": { "label": "Consumption", "value": "Timber approximately 20m² per litre. Steel or plastic approx. 45m² per litre." },
+          "notes": null
+        },
+        "documents": {
+          "files": [{ "label": "Sika® Form Oil", "type": "Product Data Sheet (PDS)", "url": "/docs/sika-form-oil-pds.pdf" }]
+        }
+      }
+    },
+    {
+      "id": "sika-seprol",
+      "serviceId": "concrete-essentials",
+      "name": "Sika® Separol®",
+      "tagline": "Form release agent",
+      "thumbnail": "/images/products/sika-seprol.jpg",
+      "tabs": {
+        "overview": {
+          "text": "Sika® Separol® is an oil based ready to use form release agent which provides complete release of concrete or grout from metal or wooden formwork. It does not stain, extends the life of the formwork and provides a good quality aesthetic concrete finish.",
+          "usage": ["Form release agent for steel, Aluminum or wooden formwork","Providing a good quality aesthetic concrete finish","Extending the life of formwork"],
+          "advantages": ["Ready to use","Easy to apply","Fast stripping and cleaning of formwork","Extends life of formwork","Ensures fair faced concrete finish which makes it ideal for architectural concretes","Reduces air bubbles which may appear on concrete surfaces","Non staining","Economical consumption","Suitable for application to formwork used in curing and damp processes","All types of concrete"],
+          "packaging": "50 liters, 200 liters drum",
+          "colour": "Colourless to slight yellowish clear oily liquid"
+        },
+        "details": {
+          "keyValues": [
+            { "label": "Chemical Base", "value": "Modified Ligno Sulphonate" },
+            { "label": "Shelf Life", "value": "Best before 12 months from date of production if stored properly in undamaged, unopened, original sealed packaging" },
+            { "label": "Storage Conditions", "value": "Store in dry conditions at temperatures between +10°C and +40°C. Protect from direct sunlight and frost." },
+            { "label": "Density", "value": "~1.00 at 25°C" },
+            { "label": "pH-Value", "value": "≥ 5" },
+            { "label": "Shelf Life (alt)", "value": "12 months from date of production" },
+            { "label": "Storage Conditions (alt)", "value": "Store in original, unopened and undamaged sealed packaging in dry conditions at temperatures between +5°C and +40°C." },
+            { "label": "Density (alt)", "value": "~0.830 kg/l at 25°C" }
+          ]
+        },
+        "application": {
+          "steps": [
+            { "step": 1, "title": "Surface Preparation", "description": "All surfaces to be coated with Sika® Separol® must be clean and free from dirt, dust, grease and any remaining concrete or grout residue. Steel formwork must be dry. Used formwork must be cleaned before using Sika® Separol®." },
+            { "step": 2, "title": "Application", "description": "Ensure full mixing before applying. Apply a single, uniform and continuous thin layer of Sika® Separol® on the full area of dry or damp formwork using a brush, roller or spray equipment. For architectural aesthetic concrete finishes, consumption may need to be adjusted. A preliminary trial must be carried out before full application in all situations." },
+            { "step": 3, "title": "Cleaning of Equipment", "description": "Clean all tools and application equipment with cleaning solvent, dissolvent or petroleum ether immediately after use. Hardened material can only be removed mechanically." }
+          ],
+          "consumption": { "label": "Consumption", "value": "Wooden formwork: ~20–30 m²/L. Metal or plastic formwork: ~40–50 m²/L. Consumption depends on the absorbency, surface porosity, roughness, surface profile, variations in level or wastage etc. Actual consumption to be decided on regular site trials." },
+          "notes": null
+        },
+        "documents": {
+          "files": [{ "label": "Sika® Separol®", "type": "Product Data Sheet (PDS)", "url": "/docs/sika-seprol-pds.pdf" }]
+        }
+      }
+    },
+    {
+      "id": "sika-seprol-plus",
+      "serviceId": "concrete-essentials",
+      "name": "Sika® Separol Plus",
+      "tagline": "Mould Release Agent",
+      "thumbnail": "/images/products/sika-seprol-plus.jpg",
+      "tabs": {
+        "overview": {
+          "text": "Ready to use low viscous mineral oil based mould release agent. Ready to use and easy to apply. Forms stable thin film when dried up, no dirt sticks on surface after it is dried, and provides clean, fast and easy stripping of formwork.",
+          "usage": ["Steel formwork","Plastic formwork","Timber formwork","Aluminium formwork","Heated formwork"],
+          "advantages": ["Forms stable thin film when dried up","No dirt sticks on surface after it is dried","Clean, fast and easy stripping of formwork","Extended life of formwork","Improved finish stain and air-hole free fair-faced concrete","Reduced concrete contamination","High coverage","Does not corrode steel","Environment friendly product"],
+          "packaging": "230 litres Drums",
+          "colour": "Brownish oily liquid"
+        },
+        "details": {
+          "keyValues": [
+            { "label": "Chemical Base", "value": "Blend of mineral/Natural oils" },
+            { "label": "Shelf Life", "value": "12 months from date of production if stored properly in original unopened, undamaged, sealed packaging" },
+            { "label": "Storage Conditions", "value": "Protect from frost, direct sunlight and contamination. Opened units should be stored closed." },
+            { "label": "Density", "value": "~0.83 kg/l at 25°C" }
+          ]
+        },
+        "application": {
+          "steps": [
+            { "step": 1, "title": "Surface Preparation", "description": "The moulds should be dry and clean. Any residues of rust and concrete must be removed." },
+            { "step": 2, "title": "Application", "description": "Sika® Separol Plus is applied in thin layers, covering the complete surface (a second application may be necessary in case of highly absorbent formwork). Use a special spray gun with an operating pressure of 3-6 bar and a flat spraying nozzle. Application by a brush, roller or cloth is also possible. Accumulations of Sika® Separol Plus should be avoided. Any excess should be wiped off using a cloth or sponge." },
+            { "step": 3, "title": "Pre-concreting", "description": "Before concreting preliminary tests are recommended to optimise the procedure for each project." }
+          ],
+          "consumption": { "label": "Consumption", "value": "Steel, Aluminium or Plastic formwork 40-60 m²/l and Timber form 30 m²/l. The consumption is dependant on the surface texture and porosity of the formwork. Actual dosage to be finalised on the basis of site trials." },
+          "notes": null
+        },
+        "documents": {
+          "files": [{ "label": "Sika® Separol Plus", "type": "Product Data Sheet (PDS)", "url": "/docs/sika-seprol-plus-pds.pdf" }]
+        }
+      }
+    },
+    {
+      "id": "sika-antisol-a4-white",
+      "serviceId": "concrete-essentials",
+      "name": "Sika® Antisol® A-4 White",
+      "tagline": "Water dispersed, acrylic copolymer based white pigmented concrete curing compound",
+      "thumbnail": "/images/products/sika-antisol-a4-white.jpg",
+      "tabs": {
+        "overview": {
+          "text": "Sika® Antisol® A-4 White is a water dispersed acrylic copolymer based white pigmented curing compound. It is ready to use and simple to apply. Sika® Antisol® A-4 White will form a thin film, covering the surface of the concrete to prevent premature water loss due to evaporation. No need to remove Sika® Antisol® A-4 White from concrete surface for subsequent application of acrylic water based paints, cement plasters, gypsum plaster, tile adhesives etc.",
+          "usage": ["Sprayed onto newly laid concrete surfaces to form a thin film barrier against premature water loss without disturbing the normal setting action"],
+          "advantages": ["Reduces incidence of plastic cracking","Reduces shrinkage","Reduces surface dusting","Eliminates expensive methods of curing such as hessian-watering, etc."],
+          "packaging": "230kg Drum",
+          "colour": "Milky white liquid / White lump free liquid"
+        },
+        "details": {
+          "keyValues": [
+            { "label": "Chemical Base", "value": "Water-dispersed, acrylic copolymer" },
+            { "label": "Shelf Life", "value": "6 months from date of production if stored properly in undamaged unopened, original sealed packaging" },
+            { "label": "Storage Conditions", "value": "Store in dry conditions at temperatures between +10°C and +40°C. Protect from direct sunlight and frost." },
+            { "label": "Density", "value": "~1.03 kg/l at 25°C" },
+            { "label": "Approvals / Standards", "value": "ASTM C309 Type 2, Class B" }
+          ]
+        },
+        "application": {
+          "steps": [
+            { "step": 1, "title": "Preparation", "description": "Sika® Antisol® A-4 White is ready to use. Do not dilute. Stir well before use." },
+            { "step": 2, "title": "Application", "description": "Can be applied by a sprayer, brush or paint roller. For maximum beneficial effect, apply immediately after disappearance of the surface water sheen following final finishing on horizontal surfaces. For vertical surfaces, apply immediately after removal of formwork." },
+            { "step": 3, "title": "Coverage", "description": "Apply single coat in two applications at right angles to each other to ensure uniform and more complete coverage." },
+            { "step": 4, "title": "Protection", "description": "After application, the area must be protected from rain for at least 2-3 hours." }
+          ],
+          "consumption": { "label": "Consumption", "value": "5 to 6.5 m² per liter depending on wind, humidity and temperature condition. Actual dosage to be finalised on the basis of site trials." },
+          "notes": null
+        },
+        "documents": {
+          "files": [{ "label": "Sika® Antisol® A-4 White", "type": "Product Data Sheet (PDS)", "url": "/docs/sika-antisol-a4-white-pds.pdf" }]
+        }
+      }
+    },
+    {
+      "id": "sika-sbr-latex",
+      "serviceId": "waterproofing",
+      "name": "SikaLatex® SBR",
+      "tagline": "Superior performance SBR based multipurpose polymer for waterproofing, repair and bonding",
+      "thumbnail": "/images/products/sika-sbr-latex.jpg",
+      "tabs": {
+        "overview": {
+          "text": "SikaLatex® SBR is a superior modified styrene butadiene emulsion to be mixed with cement slurry, cement mortar, concrete or cementitious grout for improved adhesion and water resistance properties. It is fully soluble in water and is added directly to the gauging water of slurry, mortar, concrete or grout.",
+          "usage": ["Bonding of rendering and coating layers","Bonding between successive concrete casts","Cement grouting and screeds","Polymer modified repair mortars","Masonry mortars","Renders","Tile fixing and panelling","Waterproof plastering"],
+          "advantages": ["Multipurpose 5-in-1 application","Makes the mortar waterproof","Improves resistance to salt permeation","Improves toughness and flexibility and reduces cracking","Good adhesion to substrates like concrete, stone, brick etc.","Dilute with water up to 6 times depending on the type of application","Reduces surface dusting of concrete","Improves chemical resistance of concrete","Improves frost resistance","Good resistance to water and water vapour","Reduces water cement ratio for equivalent workability","Mixes may be applied in much thinner sections"],
+          "packaging": "250g, 500g, 1kg, 5kg, 10kg, 20kg, 100kg container",
+          "colour": "Liquid / Milky white"
+        },
+        "details": {
+          "keyValues": [
+            { "label": "Chemical Base", "value": "Styrene butadiene rubber (latex) emulsion" },
+            { "label": "Shelf Life", "value": "18 months from date of production" },
+            { "label": "Storage Conditions", "value": "The product must be stored properly in undamaged and unopened original sealed packaging, in dry conditions at temperatures between +5°C and +35°C. Protect from frost and direct sunlight." },
+            { "label": "Specific Gravity", "value": "~1.02" },
+            { "label": "pH-Value", "value": "8 ± 1" },
+            { "label": "Tensile Adhesion Strength", "value": "≥ 1.5 N/mm² (concrete failure) (EN 1542)" }
+          ]
+        },
+        "application": {
+          "steps": [
+            { "step": 1, "title": "Ambient Temperature", "description": "+5°C min. / +40°C max." },
+            { "step": 2, "title": "Substrate Temperature", "description": "+5°C min. / +40°C max." },
+            { "step": 3, "title": "Application Time", "description": "~20 to 30 minutes at +30°C when used as coating, mortar or bonding agent." }
+          ],
+          "consumption": { "label": "Consumption", "value": "Waterproof coating: SikaLatex® SBR:Water:Cement = 1:4:8, ~900g/m² in 2 coats, ~70g/m² SBR. Bonding coat: 1:4:8, ~350g/m² single coat, ~30g/m². Polymer mortar/Waterproof plaster: 1:1:4:8:32, ~2000kg/m², ~45g/m² per mm. Polymer concrete/Screed: 1:5, ~2300kg/m², ~10% by weight. Polymer cement injection grout: 1:7, ~1700kg/m², ~7% by weight." },
+          "notes": "Actual consumption depends on substrate condition, porosity, level, application skills and mixing ratios."
+        },
+        "documents": {
+          "files": [{ "label": "SikaLatex® SBR", "type": "Product Data Sheet (PDS)", "url": "/docs/sika-sbr-latex-pds.pdf" }]
+        }
+      }
+    },
+    {
+      "id": "sika-latex-super",
+      "serviceId": "waterproofing",
+      "name": "SikaLatex® Super",
+      "tagline": "Specialised SBR based multipurpose polymer for waterproofing, repair and bonding",
+      "thumbnail": "/images/products/sika-latex-super.jpg",
+      "tabs": {
+        "overview": {
+          "text": "SikaLatex® Super is a specialised modified styrene butadiene emulsion to be mixed with cement slurry, cement mortar, concrete or cementitious grout for improved adhesion and water resistance properties. It is fully soluble in water and is added directly to the gauging water of slurry, mortar, concrete or grout.",
+          "usage": ["Bonding of rendering and coating layers","Bonding between successive concrete casts","Cement grouting and screeds","Polymer modified repair mortars","Masonry mortars","Renders","Tile fixing and panelling","Waterproof plastering","Waterproofing of roof slabs, sunken slabs, basements, retaining walls, water tanks, sunshades etc","Treatment for leaching and saltpetre action"],
+          "advantages": ["Multipurpose polymer and admixture","Good adhesion to most substrates","Increases adhesion, flexural and tensile strength","Improves abrasion resistance, limits wear and dust production","Reduces cracking in mortar and concrete","Reduces water permeability","Increases chemical resistance","Non-toxic, non-corrosive and non-flammable","Reduces viscosity of cement and improves bond","Easy to use","Does not re-emulsify even in high alkaline conditions","Long life and watertight masonry jointing"],
+          "packaging": "1kg, 5kg, 10kg, 20kg, 50kg container",
+          "colour": "Liquid / Milky white"
+        },
+        "details": {
+          "keyValues": [
+            { "label": "Chemical Base", "value": "Styrene butadiene rubber emulsion" },
+            { "label": "Shelf Life", "value": "18 months from date of production" },
+            { "label": "Storage Conditions", "value": "The product must be stored properly in undamaged and unopened original sealed packaging, in dry conditions at temperatures between +5°C and +25°C. Protect from frost and direct sunlight." },
+            { "label": "Specific Gravity", "value": "~1.02" },
+            { "label": "pH-Value", "value": "8 ± 1" },
+            { "label": "Tensile Adhesion Strength", "value": "≥ 1.5 N/mm² (concrete failure) (EN 1542)" }
+          ]
+        },
+        "application": {
+          "steps": [
+            { "step": 1, "title": "Ambient Temperature", "description": "+5°C min. / +40°C max." },
+            { "step": 2, "title": "Substrate Temperature", "description": "+5°C min. / +40°C max." },
+            { "step": 3, "title": "Application Time", "description": "~20 to 30 minutes at +30°C when used as coating, mortar or bonding agent." }
+          ],
+          "consumption": { "label": "Consumption", "value": "Waterproofing coating: SikaLatex® Super:Water:Cement = 1:1.5:5, ~600g/m² per coat, ~80g/m². Bonding coat: 1:1:4, ~300g/m² single coat, ~50g/m². Repair mortar: 1:2:6:18, ~1800kg/m², ~70g/m² per mm thickness." },
+          "notes": "Actual consumption depends on substrate condition, porosity, level, application skills and mixing ratios."
+        },
+        "documents": {
+          "files": [{ "label": "SikaLatex® Super", "type": "Product Data Sheet (PDS)", "url": "/docs/sika-latex-super-pds.pdf" }]
+        }
+      }
+    },
+    {
+      "id": "sika-raintite-i",
+      "serviceId": "waterproofing",
+      "name": "Sika® RainTite I",
+      "tagline": "Acrylic based multipurpose polymer for repair and waterproofing",
+      "thumbnail": "/images/products/sika-raintite-i.jpg",
+      "tabs": {
+        "overview": {
+          "text": "Sika® RainTite I is a multifunctional polymer emulsion for enhancing the properties of mortar/concrete/grout/cement slurry. It provides a good adhesion, water resistance and improvement of several other properties.",
+          "usage": ["Waterproofing of roof slab, sunken slabs, basements, water tanks, sunshades etc.","As a bonding agent for uses in repair and plastering","For making polymer mortar for repairs mortars etc.","For treatment for leaching and salt petre action","As a multipurpose mortar admixture for injection grouts","Additives to cement based paints for waterproofing"],
+          "advantages": ["Improved impermeability against water ingress","Extremely good bonding to moist substrates, extremely improved mechanical, flexural strength and abrasion resistance properties","UV resistant & suitable for external coating","Sika® RainTite I can be diluted with water (1:Nil to 1:4) depending on the type of application","Screed required with Sikacim®/Sika® Plastocrete Super to protect waterproofing layer"],
+          "packaging": "250g, 500g, 1kg, 5kg, 10kg, 20kg and 200kg",
+          "colour": "Milky white liquid"
+        },
+        "details": {
+          "keyValues": [
+            { "label": "Chemical Base", "value": "Acrylic copolymer and special additives" },
+            { "label": "Shelf Life", "value": "18 months from date of production if stored in undamaged and unopened, original sealed pack." },
+            { "label": "Storage Conditions", "value": "Store in dry conditions and protected from direct sunlight. Protect from frost." },
+            { "label": "Density", "value": "~1.03 kg/l at 27°C" },
+            { "label": "Solid Content by Weight", "value": "~28%" }
+          ]
+        },
+        "application": {
+          "steps": [
+            { "step": 1, "title": "Substrate Preparation", "description": "Substrate must be clean, dry, homogeneous, free from oils & grease, dust & loose or friable particles, paint, cement laitance, old coatings. Cementitious substrates should be pre-saturated surface dry with clean water." },
+            { "step": 2, "title": "Mixing", "description": "Refer to the mixing ratio table and always add powder to liquid for all applications. Prepare mixture by using Sika® RainTite I enriched water and apply within 20-30 minutes of preparation." },
+            { "step": 3, "title": "Cleaning of Tools", "description": "Clean all tools and application equipment with clean water immediately after use. Hardened/cured material can only be removed mechanically." }
+          ],
+          "consumption": { "label": "Mixing Ratio & Consumption", "value": "Waterproof Coating: ratio 1:0:2, nil dilution in water, 0.4 kg/m² for two coats. Cement Slurry/Bond: 1:2:3, 1:2 dilution, 0.2 kg/m² single coat. Mortar: 1:4 dilution, 0.16 kg/kg cement. Concrete: 1:4 dilution, 0.12 kg/kg cement. Additive to Cement Paint: 2.5 kg/25 kg paint." },
+          "notes": null
+        },
+        "documents": {
+          "files": [{ "label": "Sika® RainTite I", "type": "Product Data Sheet (PDS)", "url": "/docs/sika-raintite-i-pds.pdf" }]
+        }
+      }
+    },
+    {
+      "id": "sika-topseal-107",
+      "serviceId": "waterproofing",
+      "name": "SikaTop® Seal-107",
+      "tagline": "Two-component, polymer-modified, cementitious waterproofing and protective slurry mortar for concrete",
+      "thumbnail": "/images/products/sika-topseal-107.jpg",
+      "tabs": {
+        "overview": {
+          "text": "SikaTop® Seal-107 is slightly flexible to tolerate fine cracks and suitable in both interior and exterior applications.",
+          "usage": ["Horizontal surfaces subjected to light foot traffic (balconies)","For waterproofing of drinking water, tanks, reservoirs, and clearwells","For internal and external waterproofing and dampproofing concrete, mortar blockwork and brickwork","For protection of concrete structures against the deleterious effects of deicing salts and freeze/thaw cycles","For sealing hairline cracks in concrete structures not subject to movement surfaces","For interior and exterior waterproofing of basements","Vertical surfaces"],
+          "advantages": ["Improves the watertightness of water-containing concrete tanks, reservoirs, and clearwells","Protects against water penetration, yet water vapor permeable (breathable)","Excellent freeze/thaw resistance","Good adhesion to sound, prepared substrates","Easy and fast mixing and application","Good abrasion resistance","Protects against concrete carbonation","Can be mixed to slurry or trowelable consistency","Improves concrete/masonry appearance","Available in concrete gray and off-white","Approved for potable water contact"],
+          "packaging": "44 lb. unit - when mixed yields 2.65 gallons (10 l). Component 'A' - 1 gal. plastic jug; 4/carton. Component 'B' - 35.5 lb. multi-wall bag.",
+          "colour": "Concrete gray and off white"
+        },
+        "details": {
+          "keyValues": [
+            { "label": "Chemical Base", "value": "Part A: Acrylic polymer. Part B: Portland cement with selected aggregates and additives" }
+          ]
+        },
+        "application": {
+          "steps": [
+            { "step": 1, "title": "Substrate Preparation", "description": "Substrate must be clean, dry, homogeneous, free from oils & grease, dust & loose or friable particles, paint, cement laitance, old coatings." }
+          ],
+          "consumption": null,
+          "notes": null
+        },
+        "documents": {
+          "files": [{ "label": "SikaTop® Seal-107", "type": "Product Data Sheet (PDS)", "url": "/docs/sika-topseal-107-pds.pdf" }]
+        }
+      }
+    },
+    {
+      "id": "sika-topseal-107-plus",
+      "serviceId": "waterproofing",
+      "name": "SikaTop®-107 Seal Plus IN",
+      "tagline": "High performance acrylic polymer modified cementitious waterproofing coating",
+      "thumbnail": "/images/products/sika-topseal-107-plus.jpg",
+      "tabs": {
+        "overview": {
+          "text": "SikaTop®-107 Seal Plus IN is a flexible, two part, high performance acrylic polymer modified cementitious liquid applied waterproofing coating system. It comprises of a liquid polymer and a cement based mix incorporating special admixtures. It is applied to concrete and mortar to prevent water infiltration with flexibility. Available in a user friendly pre-packed kit form.",
+          "usage": ["Raw water concrete tanks, reservoirs, waste water tanks","Terraces, balconies, sunshades, etc.","Flat and small roofs","Basement and retaining walls","Swimming pools, fountains, water bodies, canals","RCC gutters, drains and planter boxes","Wet areas like toilets, kitchen, utility, sunk slabs","Lift pits, sump, etc.","Interior and exterior waterproofing and damp-proofing of concrete, cementitious rendering, brickwork and blockwork","Protection of concrete structures against the effects of de-icing salts and freeze-thaw attack","Pore / blowhole filling","Sealing fine static cracks in concrete structures not subject to movement","Sealing internal basement walls against dampness"],
+          "advantages": ["Easy to apply by brush, spray or flat trowel","No additional water is required to make the slurry","Pre-batched components with consistent quality","Easy and fast mixing","Highly water resistant, reduces saltpetre action and prevents carbonation","Protects concrete from chloride penetration","Non-corrosive to steel and iron","Flexible enough to bridge hairline crack","Bonds well to all damp substrates","Good abrasion resistance","Good adhesion to reinforced concrete, mortar or masonry","Fast curing"],
+          "packaging": "Part A+B pre-batched 7 kg set (Part A: 2 kg container, Part B: 5 kg bag). Part A+B pre-batched 35 kg set (Part A: 10 kg container, Part B: 25 kg bag).",
+          "colour": "Part A+B mixed: Cement grey slurry. Part A: Milky white liquid. Part B: Grey powder."
+        },
+        "details": {
+          "keyValues": [
+            { "label": "Chemical Base - Part A", "value": "Acrylic polymer" },
+            { "label": "Chemical Base - Part B", "value": "Portland cement with selected aggregates and additives" },
+            { "label": "Shelf Life", "value": "12 months from date of production" },
+            { "label": "Storage Conditions", "value": "The product must be stored in original, unopened and undamaged sealed packaging in dry conditions at temperatures between +10°C and +35°C. Liquid component must be protected from frost." },
+            { "label": "Mixing Ratio", "value": "Part A : Part B = 1 : 2.5 (by weight)" },
+            { "label": "Fresh Mortar Density", "value": "~1.90 kg/L (Part A+B mixed, +27°C) (EN ISO 2811-1)" },
+            { "label": "Layer Thickness", "value": "~1.0–1.3 mm in 2 coats" },
+            { "label": "Pot Life", "value": "~45 minutes (100 g mass, 27°C)" }
+          ]
+        },
+        "application": {
+          "steps": [
+            { "step": 1, "title": "Ambient Temperature", "description": "+10°C min. / +40°C max." },
+            { "step": 2, "title": "Substrate Temperature", "description": "+10°C min. / +40°C max." },
+            { "step": 3, "title": "Waiting Time / Overcoating", "description": "SikaTop®-107 Seal Plus IN to SikaTop®-107 Seal Plus IN: ~6 h. SikaTop®-107 Seal Plus IN to Screed/Plaster: ~3 d." },
+            { "step": 4, "title": "Applied Product Ready for Use", "description": "Foot traffic: ~1 d. Water immersion: ~7 d. Applied SikaTop®-107 Seal Plus IN must not be subjected to ponding before 7 days." }
+          ],
+          "consumption": { "label": "Consumption", "value": "0.6 to 0.75 m² per kg. Note: The consumption will vary depending on application area, substrate type, substrate roughness, surface profile, absorption of the surface and thickness required." },
+          "notes": null
+        },
+        "documents": {
+          "files": [{ "label": "SikaTop®-107 Seal Plus IN", "type": "Product Data Sheet (PDS)", "url": "/docs/sika-topseal-107-plus-pds.pdf" }]
+        }
+      }
+    },
+    {
+      "id": "sika-topseal-109",
+      "serviceId": "waterproofing",
+      "name": "SikaTop®-109 Seal IN",
+      "tagline": "High performance flexible acrylic cementitious waterproofing coating (Formerly SikaTop® Seal109 hi)",
+      "thumbnail": "/images/products/sika-topseal-109.jpg",
+      "tabs": {
+        "overview": {
+          "text": "SikaTop®-109 Seal IN is an elastomeric, liquid applied, crack bridging, two part high performance acrylic polymer modified cementitious waterproofing coating system with high degree of flexibility. It comprises of a liquid polymer and a cement based mix incorporating special admixtures. Applied to concrete and mortar to prevent water infiltration, particularly in demanding applications and difficult environments.",
+          "usage": ["Raw water concrete tanks, reservoirs, waste water tanks","Terraces, balconies, sunshades, etc.","Flat and small roofs","Basement and Retaining walls","Swimming pools, fountains, water bodies, canals","RCC gutters, drains and planter boxes","Wet areas like toilets, kitchen, utility, sunk slabs","Lift pits, sump, etc."],
+          "advantages": ["Easy to apply by brush, spray or flat trowel","No additional water is required to make the slurry","Pre-batched components with consistent quality","Easy and fast mixing","Highly water resistant, reduces saltpetre action and prevents carbonation","Protects concrete from chloride penetration","Non-corrosive to steel and iron","Very flexible, good elongation","Bonds well to all damp substrates","Good abrasion resistance","Good adhesion to reinforced concrete, mortar or masonry","Fast curing"],
+          "packaging": "Part A+B pre-batched 50 kg set (Part A: 20 kg container, Part B: 30 kg bag).",
+          "colour": "Part A+B: mixed Grey slurry. Part A: White liquid. Part B: Grey powder."
+        },
+        "details": {
+          "keyValues": [
+            { "label": "Chemical Base - Part A", "value": "Acrylic polymer" },
+            { "label": "Chemical Base - Part B", "value": "Portland cement with selected aggregates and additives" },
+            { "label": "Shelf Life", "value": "12 months from date of production" },
+            { "label": "Storage Conditions", "value": "Store in original, unopened and undamaged sealed packaging in dry conditions at temperatures between +10°C and +35°C. Liquid component must be protected from frost." },
+            { "label": "Mixing Ratio", "value": "Part A : Part B = 1 : 1.5 (by weight)" },
+            { "label": "Fresh Mortar Density", "value": "~1.65 kg/L (Part A+B mixed, +27°C) (EN ISO 2811-1)" },
+            { "label": "Layer Thickness", "value": "~1 mm in 2 coats" },
+            { "label": "Pot Life", "value": "~40 minutes (100g mass, +27°C)" },
+            { "label": "Consumption", "value": "Base coat: ~1 kg/m². Top coat: ~1.2 kg/m²" }
+          ]
+        },
+        "application": {
+          "steps": [
+            { "step": 1, "title": "Ambient Temperature", "description": "+10°C min. / +40°C max." },
+            { "step": 2, "title": "Substrate Temperature", "description": "+10°C min. / +40°C max." }
+          ],
+          "consumption": { "label": "Consumption", "value": "Base coat SikaTop®-109 Seal IN: ~1 kg/m². Top coat SikaTop®-109 Seal IN: ~1.2 kg/m²." },
+          "notes": "All technical data stated are based on laboratory tests. Actual measured data may vary due to circumstances beyond our control."
+        },
+        "documents": {
+          "files": [{ "label": "SikaTop®-109 Seal IN", "type": "Product Data Sheet (PDS)", "url": "/docs/sika-topseal-109-pds.pdf" }]
+        }
+      }
+    },
+    {
+      "id": "sikalastic-450-i",
+      "serviceId": "waterproofing",
+      "name": "Sikalastic®-450 (I)",
+      "tagline": "Aliphatic, elastomeric, polyurethane based liquid applied waterproofing coating",
+      "thumbnail": "/images/products/sikalastic-450-i.jpg",
+      "tabs": {
+        "overview": {
+          "text": "Sikalastic®-450 (I) is a single component, elastomeric, aliphatic polyurethane based liquid applied waterproof coating system. It cures to form an highly elastic, seamless, waterproof coating with excellent crack bridging properties.",
+          "usage": ["Seamless, impervious coating for application on roofs and concrete structures","Protective coating in infrastructure projects in civil engineering on non-trafficked areas","Used to waterproof variety of substrates concrete, brickwork, asphalt, corrugated asbestos sheets, etc.","Used for inverted roof structures","Used for podium waterproofing as a part of built up system","Can be applied on retaining walls before backfill"],
+          "advantages": ["Excellent crack bridging properties","Elastomeric membrane that cures with aerial moisture to a flexible and rubbery coating","Single component, ready to use","Easy application by brush, airless spray or roller","Economical","Root resistant as a part of built up system","Abrasion resistant","Hydrolysis resistant","Resistant to mild acid and chemicals and industrial environment","Weathering and UV resistant","Low VOC and Eco-friendly"],
+          "packaging": "20 kg container",
+          "colour": "Black Liquid"
+        },
+        "details": {
+          "keyValues": [
+            { "label": "Chemical Base", "value": "Aliphatic polyurethane modified bituminous emulsion" },
+            { "label": "Shelf Life", "value": "12 months from the date of production" },
+            { "label": "Storage Conditions", "value": "Store in original, unopened and undamaged sealed packaging in dry conditions at temperatures between +5°C and +30°C." },
+            { "label": "Density", "value": "1.20±0.05 kg/liter" },
+            { "label": "Solid Content by Weight", "value": "≥ 60%" },
+            { "label": "Tensile Strength", "value": "≥ 3.0 N/mm² (ASTM D 412), after 14 days at +27°C with Sika® Fab1" },
+            { "label": "Crack Bridging Ability", "value": "Passes 3 mm Mandrel (IS 101)" },
+            { "label": "Service Temperature", "value": "-20°C to +80°C" }
+          ]
+        },
+        "application": {
+          "steps": [
+            { "step": 1, "title": "Ambient Air Temperature", "description": "+10°C min. / +40°C max." },
+            { "step": 2, "title": "Relative Air Humidity", "description": "80% max." },
+            { "step": 3, "title": "Substrate Temperature", "description": "+10°C min. / +40°C max." },
+            { "step": 4, "title": "Substrate Moisture Content", "description": "< 6%" },
+            { "step": 5, "title": "Pot Life", "description": "~3 hours at 30°C" },
+            { "step": 6, "title": "Tack Free Time", "description": "~12-20 hours at 20°C and 50% Relative Humidity" },
+            { "step": 7, "title": "Drying Time", "description": "Full Cure requires about 7 days at 30°C" }
+          ],
+          "consumption": { "label": "Consumption", "value": "100g for 50kg bag of cement (0.2% by weight of cement)" },
+          "notes": null
+        },
+        "documents": {
+          "files": [{ "label": "Sikalastic®-450 (I)", "type": "Product Data Sheet (PDS)", "url": "/docs/sikalastic-450-i-pds.pdf" }]
+        }
+      }
+    },
+    {
+      "id": "sikadur-combiflex-sg-20",
+      "serviceId": "waterproofing",
+      "name": "Sikadur-Combiflex® SG-20 P",
+      "tagline": "High performance movement joint and crack sealing tape",
+      "thumbnail": "/images/products/sikadur-combiflex-sg-20.jpg",
+      "tabs": {
+        "overview": {
+          "text": "Sikadur-Combiflex® SG-20 P is a flexible waterproofing tape based on modified flexible Polyolefin (FPO) with advanced adhesion properties. Thickness 2.0 mm. The product is part of the Sikadur Combiflex® SG System.",
+          "usage": ["Tunnels and culverts","Hydroelectric power plants","Sewage treatment plants","Basements","Water retaining structures","Drinking water reservoirs","Movement joints","Construction joints","Pipe penetrations","Cracks","Building components where differential settlement is expected"],
+          "advantages": ["Advanced adhesion, no activation on site required","Highly flexible - high crack and joint bridging ability","Good chemical resistance","Good resistance to ageing","Resistant to UV exposure","Resistant to root penetration","Performs well within a wide range of temperatures","Plasticiser-free","Hot air weldable","Can be used in contact with potable/drinking water"],
+          "packaging": "1 roll of 25 m length. Refer to current price list for packaging variations.",
+          "colour": "Flexible light grey membrane"
+        },
+        "details": {
+          "keyValues": [
+            { "label": "Chemical Base", "value": "Modified flexible Polyolefin (FPO)" },
+            { "label": "Shelf Life", "value": "36 months from date of production" },
+            { "label": "Storage Conditions", "value": "Store in original, unopened and undamaged packaging in dry conditions at temperatures between +5°C and +30°C. Opened and unprotected rolls must be used within 2 months." },
+            { "label": "Approvals / Standards", "value": "Root Resistance CEN/TS 14416; Water Regulations up to +50°C BS6920-1:2000, WRAS Approval No. 1708503; CE Marking EN 13967; Artificial Weathering Report No.MT Nr. 09/0177" }
+          ]
+        },
+        "application": {
+          "steps": [
+            { "step": 1, "title": "Ambient Air Temperature", "description": "Refer to the System Data Sheet: Sikadur Combiflex® SG System" },
+            { "step": 2, "title": "Substrate Temperature", "description": "Refer to the System Data Sheet: Sikadur Combiflex® SG System" }
+          ],
+          "consumption": null,
+          "notes": null
+        },
+        "documents": {
+          "files": [{ "label": "Sikadur-Combiflex® SG-20 P", "type": "Product Data Sheet (PDS)", "url": "/docs/sikadur-combiflex-sg-20-pds.pdf" }]
+        }
+      }
+    },
+    {
+      "id": "sikadur-combiflex-adhesive",
+      "serviceId": "waterproofing",
+      "name": "Sikadur-Combiflex® CF Adhesive Normal",
+      "tagline": "2-part epoxy adhesive for the Sikadur-Combiflex® SG System",
+      "thumbnail": "/images/products/sikadur-combiflex-adhesive.jpg",
+      "tabs": {
+        "overview": {
+          "text": "Sikadur-Combiflex® CF Adhesive Normal is a 2-part epoxy based thixotropic adhesive for bonding the Sikadur-Combiflex® SG modified flexible Polyolefin (FPO) waterproofing tapes to different substrates. Internal and external use. Application temperature range +10°C to +30°C. Part of the Sikadur-Combiflex® SG System.",
+          "usage": ["Adhesive for the Sikadur-Combiflex SG System on various structural surfaces including slope roof slabs, flat roof slabs, beams, columns, slabs, internal and external plaster of buildings, repair and renovation"],
+          "advantages": ["Easy to mix and apply","Excellent adhesion to many materials","Performs well within a wide temperature range","Good resistance to many chemicals","No primer needed","High mechanical resistance"],
+          "packaging": "6 kg (A+B) pre-batched unit; 15 kg bulk container (Part A: 390 kg / 10 kg, Part B: pallet of 500 kg / 100 × 5 kg); 30 kg bulk container (Part A: 780 kg / 39 × 20 kg, Part B: 390 kg / 39 × 10 kg).",
+          "colour": "Resin Part A: White. Hardener Part B: Dark grey. Part A+B mixed: Light grey."
+        },
+        "details": {
+          "keyValues": [
+            { "label": "Approvals / Standards", "value": "CE Marking and Declaration of Performance to EN 1504-4 – Structural bonding; Methane gas transmission rate, ISO 15105-1, Versaperm, Report No. LR2282" },
+            { "label": "Mixing Ratio", "value": "Part A:B = 2:1 parts by weight or volume" },
+            { "label": "Product Temperature", "value": "+10°C min. / +30°C max." },
+            { "label": "Ambient Air Temperature", "value": "+10°C / +30°C max." }
+          ]
+        },
+        "application": {
+          "steps": [
+            { "step": 1, "title": "Pot Life", "description": "+10°C: ~125 minutes. +23°C: ~50 minutes (open time ~70 min). +30°C: ~25 minutes." },
+            { "step": 2, "title": "Substrate Preparation", "description": "Cementitious substrates: substrate must be dry or matt damp (no standing water). Brush the adhesive well into the substrate if matt damp." },
+            { "step": 3, "title": "Overcoating", "description": "Sikadur-Combiflex® CF Adhesive Normal may be overcoated with an epoxy coating. If so, do not smooth the adhesive with detergent. If waiting time between application of adhesive and overcoating is longer than 2 days, blend to excess with quartz sand immediately after application." }
+          ],
+          "consumption": null,
+          "notes": null
+        },
+        "documents": {
+          "files": [{ "label": "Sikadur-Combiflex® CF Adhesive Normal", "type": "Product Data Sheet (PDS)", "url": "/docs/sikadur-combiflex-adhesive-pds.pdf" }]
+        }
+      }
+    },
+    {
+      "id": "sika-shield-p22",
+      "serviceId": "waterproofing",
+      "name": "SikaShield® P22 PE IN 3 mm",
+      "tagline": "Atactic Poly Propylene (APP) modified bituminous membrane with PE foil (Formerly Sika® WP Shield-103)",
+      "thumbnail": "/images/products/sika-shield-p22.jpg",
+      "tabs": {
+        "overview": {
+          "text": "SikaShield® P22 PE IN 3 mm is an APP modified bituminous waterproofing membrane with a thickness of 3 mm. It is reinforced with a hybrid composite reinforcement fabric and is flexible at 2°C. The top surface is coated with polyethylene foil, which ensures the bond of the overlying layer. The underside of the product has a burn-off film for easy torch-application.",
+          "usage": ["Balconies and terraces under a heavy protection layer such as tiles or gravel","Flat and sloping roofs under protective layers or ballast","Car park decks","Bridge decks under asphalt wearing layer","Underpass and subways","Basements and other below ground structures","Horizontal reinforced concrete slabs, decks, podiums and protrusions","Vertical reinforced concrete walls"],
+          "advantages": ["Fully bonded","Long term flexibility","Excellent water tightness","Good mechanical properties (tensile, tear)","Can be handled in warmer temperatures easily","Low water absorption","Easy to install by torching method","Capable of withstanding thermal and structural stresses","Good durability and performance under long term ageing"],
+          "packaging": "Roll width: 1.0 m. Roll length: 10.0 m.",
+          "colour": "Top surface: Polyethylene film / Black. Bottom surface: Polyethylene film / Black."
+        },
+        "details": {
+          "keyValues": [
+            { "label": "Chemical Base - Composition", "value": "APP modified bitumen" },
+            { "label": "Reinforcing Material", "value": "Hybrid composite fabric" },
+            { "label": "Shelf Life", "value": "12 months from date of production" },
+            { "label": "Storage Conditions", "value": "Store in original unopened and undamaged packaging in dry conditions and temperatures between +5°C and +35°C. Store in a vertical position." },
+            { "label": "Thickness", "value": "3 mm (+0.3 mm / -0.2 mm)" }
+          ]
+        },
+        "application": {
+          "steps": [
+            { "step": 1, "title": "Ambient Air Temperature", "description": "+10°C min. / +40°C max." },
+            { "step": 2, "title": "Substrate Temperature", "description": "+10°C min. / +40°C max." },
+            { "step": 3, "title": "Substrate Moisture Content", "description": "< 6%" },
+            { "step": 4, "title": "Substrate Preparation", "description": "New concrete should be cured for at least 28 days and should have a pull off strength ≥ 1.5 N/mm². Cementitious or mineral based substrates must be prepared mechanically to remove cement laitance and achieve an open textured surface." }
+          ],
+          "consumption": null,
+          "notes": null
+        },
+        "documents": {
+          "files": [{ "label": "SikaShield® P22 PE IN 3 mm", "type": "Product Data Sheet (PDS)", "url": "/docs/sika-shield-p22-pds.pdf" }]
+        }
+      }
+    },
+    {
+      "id": "sika-shield-p24",
+      "serviceId": "waterproofing",
+      "name": "SikaShield® P24 MG IN 3 mm",
+      "tagline": "Atactic Poly Propylene (APP) modified bituminous membrane with mineral granules and flexible at -2°C (Formerly Sika® WP Shield-103 PM)",
+      "thumbnail": "/images/products/sika-shield-p24.jpg",
+      "tabs": {
+        "overview": {
+          "text": "SikaShield® P24 MG IN 3 mm is an APP modified bituminous waterproofing membrane with a thickness of 3 mm. It is reinforced with a non-woven polyester fabric and is flexible at -2°C. The top surface is coated with mineral granules, which allows the permanent exposure to UV radiation. The underside of the product has a burn-off film for easy torch-application.",
+          "usage": ["Balconies and terraces","Flat or sloping roofs with up to 15% gradient","Bridge decks under asphalt wearing layer","Horizontal reinforced concrete slabs, decks, podiums and protrusions","Exposed single-layer or as a top sheet in a multi-layer roofing system"],
+          "advantages": ["Decorative mineral granules","Can be painted immediately after application","Fully bonded","Long term flexibility","Excellent water tightness","Very good mechanical properties (tensile, tear, shear)","Can be handled in warmer temperatures easily","Low water absorption","Easy to install by torching method","Capable of withstanding thermal and structural stresses","Good durability and performance under long term ageing","Tiles can be placed directly onto the membrane"],
+          "packaging": "Roll width: 1.0 m. Roll length: 10.0 m.",
+          "colour": "Top surface: Mineral granules / Grey. Bottom surface: Polyethylene film / Black."
+        },
+        "details": {
+          "keyValues": [
+            { "label": "Chemical Base - Composition", "value": "APP modified bitumen" },
+            { "label": "Reinforcing Material", "value": "Non-woven polyester fabric" },
+            { "label": "Shelf Life", "value": "12 months from date of production" },
+            { "label": "Storage Conditions", "value": "Store in original unopened and undamaged packaging in dry conditions and temperatures between +5°C and +35°C. Store in a vertical position." },
+            { "label": "Thickness", "value": "3 mm (+0.3 mm / -0.2 mm) (EN 1849-1)" }
+          ]
+        },
+        "application": {
+          "steps": [
+            { "step": 1, "title": "Ambient Air Temperature", "description": "+10°C min. / +40°C max." },
+            { "step": 2, "title": "Substrate Temperature", "description": "+10°C min. / +40°C max." },
+            { "step": 3, "title": "Substrate Moisture Content", "description": "< 6%" }
+          ],
+          "consumption": null,
+          "notes": null
+        },
+        "documents": {
+          "files": [{ "label": "SikaShield® P24 MG IN 3 mm", "type": "Product Data Sheet (PDS)", "url": "/docs/sika-shield-p24-pds.pdf" }]
+        }
+      }
+    },
+    {
+      "id": "sika-shield-primer-s30",
+      "serviceId": "waterproofing",
+      "name": "SikaShield® Primer S-30 IN",
+      "tagline": "Solvent based bituminous primer for SikaShield® bituminous waterproofing membranes (Formerly SikaBit® T Primer IN)",
+      "thumbnail": "/images/products/sika-shield-primer-s30.jpg",
+      "tabs": {
+        "overview": {
+          "text": "SikaShield® Primer S-30 IN is ready to use, single component, quick drying, low viscosity, solvent based modified bituminous primer which penetrates and activates the substrates. It improves adhesion between the substrate and preformed bituminous sheet membranes in SikaShield® range.",
+          "usage": ["Primer for better adhesion of the torch-on and stick-on Atactic Poly Propylene (APP) and Styrene Butadiene Styrene (SBS) modified bituminous waterproofing membranes on surfaces including slope roof slabs, flat roof slabs, beams, columns, slabs, internal and external plaster of buildings, repair and renovation"],
+          "advantages": ["Excellent bond with concrete, screed mortar, porous stones and lime-concrete substrates","Bonds well with old bituminous substrates","Easy application by brush, spray or roller","Good penetration in cementitious substrates","Effective activation of the surface to receive the waterproofing sheet membrane","Specially designed for tropical conditions"],
+          "packaging": "20 litres metal drum",
+          "colour": "Liquid / Black"
+        },
+        "details": {
+          "keyValues": [
+            { "label": "Product Declaration", "value": "Conforms to IS: 3384" },
+            { "label": "Chemical Base", "value": "Bitumen based liquid" },
+            { "label": "Shelf Life", "value": "12 months from date of production" },
+            { "label": "Storage Conditions", "value": "Store properly in original unopened, sealed and undamaged packaging, in covered area at temperatures between +20°C and +35°C. Store vertically with top side up. Protect from direct sunshine, rain, snow, ice, etc." },
+            { "label": "Density", "value": "0.87–0.89 g/mL (at +27°C) (IS:101 Part 1 Sec 7)" },
+            { "label": "Flash Point", "value": "≥ 40°C (IS:1209)" },
+            { "label": "Solid Content by Weight", "value": "≥ 45% (IS:101 Part 2 Sec 2)" },
+            { "label": "Viscosity", "value": "Standard tar viscometer, 4 mm orifice at +25°C: 4–24 s. Brookfield viscometer: 70–160 cP" }
+          ]
+        },
+        "application": {
+          "steps": [
+            { "step": 1, "title": "Ambient Air Temperature", "description": "+10°C min. / +40°C max." },
+            { "step": 2, "title": "Substrate Temperature", "description": "+10°C min. / +40°C max." },
+            { "step": 3, "title": "Substrate Moisture Content", "description": "< 6%. Test method: Sika®-Tramex meter" },
+            { "step": 4, "title": "Drying Time", "description": "Touch dry: 4 h max. (concrete substrate). Hard dry: 14 h max. (concrete substrate). Values at 23 ± 2°C and 60 ± 5% Relative Humidity." }
+          ],
+          "consumption": { "label": "Consumption", "value": "0.250–0.400 litre/m² per coat. Note: These figures are theoretical and do not consider any additional material required due to surface porosity, surface profile, variations in level or wastage etc." },
+          "notes": null
+        },
+        "documents": {
+          "files": [{ "label": "SikaShield® Primer S-30 IN", "type": "Product Data Sheet (PDS)", "url": "/docs/sika-shield-primer-s30-pds.pdf" }]
+        }
+      }
+    },
+    {
+      "id": "sika-shield-w1",
+      "serviceId": "waterproofing",
+      "name": "SikaShield® W1 IN",
+      "tagline": "Cementitious adhesive for bonding wet applied bituminous membranes (Formerly SikaBit® W-1)",
+      "thumbnail": "/images/products/sika-shield-w1.jpg",
+      "tabs": {
+        "overview": {
+          "text": "SikaShield® W1 IN is a 1-part polymer modified cementitious adhesive for bonding the SikaShield® W bituminous membranes on concrete substrates.",
+          "usage": ["Basements and other below ground structures","Horizontal reinforced concrete slabs, decks and podiums","Vertical reinforced concrete walls"],
+          "advantages": ["Provides very good adhesion between the bituminous membrane and the concrete surface","One-part system, requires only the addition of clean water","Fast and easy installation","Very good mechanical strength","Requires minimum surface preparation","Can be applied on wet concrete"],
+          "packaging": "30 kg bag",
+          "colour": "Red powder"
+        },
+        "details": {
+          "keyValues": [
+            { "label": "Chemical Base", "value": "Polymer modified cement" },
+            { "label": "Shelf Life", "value": "12 months from date of production" },
+            { "label": "Storage Conditions", "value": "The product must be stored in original, unopened and undamaged sealed packaging in dry conditions at temperatures between +5°C and +35°C." },
+            { "label": "Mixing Ratio", "value": "water : powder = 0.33–0.37, ~9.9–11.1 L of water per 30 kg bag" },
+            { "label": "Fresh Mortar Density", "value": "~1.95 kg/L (EN ISO 2811-1)" },
+            { "label": "Ambient Air Temperature", "value": "+10°C min. / +40°C max." },
+            { "label": "Substrate Temperature", "value": "+10°C min. / +40°C max." },
+            { "label": "Pot Life", "value": "≥ 30 minutes (100 g mass, +25°C, 65% r.h)" },
+            { "label": "System Structure", "value": "1. Adhesive: SikaShield® W1 IN. 2. Membrane: SikaShield® W159 ED 1.5 mm. 3. Protection: Suitable protection layer." }
+          ]
+        },
+        "application": {
+          "steps": [
+            { "step": 1, "title": "Mixing Ratio", "description": "water : powder = 0.33–0.37. ~9.9–11.1 L of water per 30 kg bag." },
+            { "step": 2, "title": "Ambient Air Temperature", "description": "+10°C min. / +40°C max." },
+            { "step": 3, "title": "Substrate Temperature", "description": "+10°C min. / +40°C max." }
+          ],
+          "consumption": { "label": "Consumption", "value": "~2.0–3.0 kg/m² (wet adhesive consumption per m² of membrane). Note: Consumption data is theoretical and does not allow for any additional material due to surface porosity, surface profile, variations in level, wastage or any other variations." },
+          "notes": null
+        },
+        "documents": {
+          "files": [{ "label": "SikaShield® W1 IN", "type": "Product Data Sheet (PDS)", "url": "/docs/sika-shield-w1-pds.pdf" }]
+        }
+      }
+    },
+    {
+      "id": "sikaproof-312-sg-in",
+      "serviceId": "waterproofing",
+      "name": "SikaProof®-312 HDPE SG IN",
+      "tagline": "Pre-applied fully bonded HDPE self-adhesive membrane with protective sand layer for below ground waterproofing",
+      "thumbnail": "/images/products/sikaproof-312-sg-in.jpg",
+      "tabs": {
+        "overview": {
+          "text": "SikaProof®-312 HDPE SG IN is a unique HDPE based self adhesive fully bonded sheet membrane comprising of a virgin HDPE layer, coated with a high bond strength adhesive, covered by a weatherproof protective sand sprinkled layer, for below ground waterproofing of reinforced concrete structures. It is loose laid onto prepared substrates or formwork before fixing reinforcement and casting concrete. The adhesive layer is activated when the concrete is poured on the surface and forms a permanent bond with the fresh concrete which will prevent the ingress of water around the structure. Reinforcement can be directly laid on top of the membrane and it does not require screed protection.",
+          "usage": ["Reinforced concrete base slabs","Reinforced concrete walls with single and doublefaced formwork","Reinforced concrete footings and grade slab","Extension and reconstruction works","Prefabricated structures"],
+          "advantages": ["Pre-applied: Fixed before placing reinforcement and casting concrete","Strong adhesive bond with fresh concrete","High flexibility and crack-bridging capabilities","No lateral water migration between the concrete structure and the membrane system","High watertightness tested according to various standards","Fully and permanently bonded to the reinforced concrete structure","Resistant to aggressive conditions in natural ground water and soil","Easy to install with fully adhered joints","Temporarily resistant to weathering and UV exposure during construction","Made up of non-recycled / virgin HDPE for long durability","Eco-friendly material","Sound anti-puncture performance","Adaptable to settlement and distortion","Can be combined with other approved Sika® Waterproofing / Joint Sealing Systems"],
+          "packaging": "Standard rolls wrapped individually in PE-foil. Roll length: 20 m. Roll width: 1.2 m, 1.5 m, or 2.0 m.",
+          "colour": "HDPE side: White. Adhesive side: Off white."
+        },
+        "details": {
+          "keyValues": [
+            { "label": "Product Declaration", "value": "Bonded sheet membrane according to IS 16471 : 2017" },
+            { "label": "Chemical Base", "value": "HDPE sheet membrane with adhesive layer and sand topping" },
+            { "label": "Shelf Life", "value": "12 months from date of production" },
+            { "label": "Storage Conditions", "value": "Store in original unopened and undamaged sealed packaging in dry conditions and temperatures between +5°C and +30°C. Store in a horizontal position. Do not stack pallets of the rolls on top of each other, or under pallets of any other materials during transport or storage. Protect from direct sunlight, rain, snow and ice." },
+            { "label": "Effective Thickness - HDPE Film", "value": "> 0.80 mm" },
+            { "label": "Effective Thickness - HDPE Membrane Composite", "value": "≥ 1.20 mm" }
+          ]
+        },
+        "application": {
+          "steps": [
+            { "step": 1, "title": "Ambient Air Temperature", "description": "+5°C min. / +40°C max." },
+            { "step": 2, "title": "Substrate Temperature", "description": "+5°C min. / +40°C max." }
+          ],
+          "consumption": null,
+          "notes": null
+        },
+        "documents": {
+          "files": [{ "label": "SikaProof®-312 HDPE SG IN", "type": "Product Data Sheet (PDS)", "url": "/docs/sikaproof-312-sg-in-pds.pdf" }]
+        }
+      }
+    },
+    {
+      "id": "sika-proof-315-sg-in",
+      "serviceId": "waterproofing",
+      "name": "SikaProof®-315 HDPE SG IN",
+      "tagline": "Pre-applied fully bonded HDPE self-adhesive membrane with protective sand layer for below ground waterproofing",
+      "thumbnail": "/images/products/sika-proof-315-sg-in.jpg",
+      "tabs": {
+        "overview": {
+          "text": "SikaProof®-315 HDPE SG IN is a unique HDPE based self adhesive fully bonded sheet membrane comprising of a virgin HDPE layer, coated with a high bond strength adhesive, covered by a weatherproof protective sand sprinkled layer, for below ground waterproofing of reinforced concrete structures. The adhesive layer is activated when the concrete is poured on the surface and forms a permanent bond with the fresh concrete which will prevent the ingress of water around the structure. Reinforcement can be directly laid on top of the membrane and it does not require screed protection.",
+          "usage": ["Reinforced concrete base slabs","Reinforced concrete walls with single- and double-faced formwork","Reinforced concrete footings and grade slab","Extension and reconstruction works","Prefabricated structures"],
+          "advantages": ["Pre-applied: Fixed before placing reinforcement and casting concrete","Strong adhesive bond with fresh concrete","High flexibility and crack-bridging capabilities","No lateral water migration between the concrete structure and the membrane system","High watertightness tested according to various standards","Fully and permanently bonded to the reinforced concrete structure","Resistant to aggressive conditions in natural ground water and soil","Easy to install with fully adhered joints","Temporarily resistant to weathering and UV exposure during construction","Made up of non-recycled / virgin HDPE for long durability","Eco-friendly material","Sound anti-puncture performance","Adaptable to settlement and distortion","Can be combined with other approved Sika® Waterproofing / Joint Sealing Systems"],
+          "packaging": "Standard rolls wrapped individually in PE-foil. Roll length: 20 m. Roll width: 1.2 m, 1.5 m, or 2.0 m.",
+          "colour": "HDPE side: White. Adhesive side: Off white."
+        },
+        "details": {
+          "keyValues": [
+            { "label": "Product Declaration", "value": "Bonded sheet membrane according to IS 16471 : 2017" },
+            { "label": "Chemical Base", "value": "HDPE sheet membrane with adhesive layer and sand topping" },
+            { "label": "Shelf Life", "value": "12 months from date of production" },
+            { "label": "Storage Conditions", "value": "Store in original unopened and undamaged sealed packaging in dry conditions and temperatures between +5°C and +30°C. Store in a horizontal position. Do not stack pallets of the rolls on top of each other, or under pallets of any other materials during transport or storage. Protect from direct sunlight, rain, snow and ice." },
+            { "label": "Effective Thickness - HDPE Film", "value": "~1.10 mm" },
+            { "label": "Effective Thickness - HDPE Membrane Composite", "value": "≥ 1.50 mm" }
+          ]
+        },
+        "application": {
+          "steps": [
+            { "step": 1, "title": "Ambient Air Temperature", "description": "+5°C min. / +40°C max." },
+            { "step": 2, "title": "Substrate Temperature", "description": "+5°C min. / +40°C max." }
+          ],
+          "consumption": null,
+          "notes": null
+        },
+        "documents": {
+          "files": [{ "label": "SikaProof®-315 HDPE SG IN", "type": "Product Data Sheet (PDS)", "url": "/docs/sika-proof-315-sg-in-pds.pdf" }]
+        }
+      }
+    },
+    {
+      "id": "sika-shield-e50",
+      "serviceId": "waterproofing",
+      "name": "SikaShield® E50 HDPE SA IN 1.5 mm",
+      "tagline": "Self-adhesive modified bituminous membrane for post-applied below ground waterproofing",
+      "thumbnail": "/images/products/sika-shield-e50.jpg",
+      "tabs": {
+        "overview": {
+          "text": "SikaShield® E50 HDPE SA IN 1.5 mm is a bituminous, self-adhesive, fully bonded, post-applied, waterproofing sheet membrane with a thickness of 1.5 mm. It consists of a cross-laminated HDPE film that is pre-coated with an SBS modified bitumen compound. The underside has a removable liner over the adhesive compound for easy application. SikaShield® E50 HDPE SA IN 1.5 mm membranes must be protected with screed, reflective coating, drainage boards, or protection boards to protect from UV or damages from backfilling.",
+          "usage": ["Basements and other below ground structures","Horizontal reinforced concrete slabs, decks, podiums and protrusions","Vertical reinforced concrete walls","Single and strip foundations","Extensions and reconstruction works"],
+          "advantages": ["Used in versatile applications from basement to roof","Cold-applied and self-adhesive (no heating or open flames required)","Easy and fast application","Fully bonded","No special equipment required for application","Good resistance to all natural aggressive substances in groundwater and soil","Good electrical resistance","Good resistance to ageing, tearing and perforation","Excellent adhesive property","Dimensionally stable","Good flexibility even at low temperatures"],
+          "packaging": "Roll width: 1.0 m ± 0.01 m. Roll length: 20.0 m ± 0.2 m.",
+          "colour": "Top surface: HDPE (High Density Polyethylene). Bottom surface: Release film. Top layer colour: Black."
+        },
+        "details": {
+          "keyValues": [
+            { "label": "Product Declaration", "value": "Bonded sheet membrane according to IS 16471 : 2017" },
+            { "label": "Chemical Base - Compound", "value": "SBS modified bitumen" },
+            { "label": "Chemical Base - Top Layer", "value": "Cross laminated HDPE film" },
+            { "label": "Chemical Base - Bottom Layer", "value": "Release liner PE film" },
+            { "label": "Shelf Life", "value": "12 months from date of production" },
+            { "label": "Storage Conditions", "value": "Store in original unopened and undamaged packaging in dry conditions and temperatures between +5°C and +30°C. Store in a horizontal position in pallets with maximum height 1 meter. Protect from long exposure to direct sunlight." },
+            { "label": "Thickness", "value": "1.50 mm ± 0.08 mm (ASTM D5147)" },
+            { "label": "Mass per Unit Area", "value": "1.70 kg/m² ± 0.09 kg/m² (ASTM D5147)" }
+          ]
+        },
+        "application": {
+          "steps": [
+            { "step": 1, "title": "Dew Point", "description": "The substrate temperature must be at least +3°C above the dew point to reduce the risk of condensation and so limited adhesion." },
+            { "step": 2, "title": "Ambient Air Temperature", "description": "+5°C min. / +50°C max." },
+            { "step": 3, "title": "Relative Air Humidity", "description": "< 80%" },
+            { "step": 4, "title": "Substrate Temperature", "description": "+5°C min. / +50°C max." }
+          ],
+          "consumption": null,
+          "notes": null
+        },
+        "documents": {
+          "files": [{ "label": "SikaShield® E50 HDPE SA IN 1.5 mm", "type": "Product Data Sheet (PDS)", "url": "/docs/sika-shield-e50-pds.pdf" }]
+        }
+      }
+    },
+    {
+      "id": "sika-anchorfix-3030",
+      "serviceId": "repair-protection",
+      "name": "Sika AnchorFix®-3030",
+      "tagline": "Epoxy based high performance chemical anchoring adhesive",
+      "thumbnail": "/images/products/sika-anchorfix-3030.jpg",
+      "tabs": {
+        "overview": {
+          "text": "Sika AnchorFix®-3030 is an epoxy resin based, 2-part, thixotropic, high performance anchoring adhesive for anchoring threaded rods and reinforcing bars in both cracked and un-cracked concrete dry or damp concrete.",
+          "usage": ["Rebar/steel reinforcement anchoring in new and refurbishment works","Threaded rods","Bolts and special fastening/fixing systems","Handrails, balustrades and supports","Railings","Window and door frames","Concrete (cracked and un-cracked)","Hollow and solid masonry","Wood","Natural and reconstituted stone","Solid rock"],
+          "advantages": ["Long open Time","Can be used in damp concrete","High load capacity","ETA for anchoring in cracked concrete","ETA for post installed rebar connections","I-A for anchoring in cracked concrete","Seismic tested (C1 & C2)","Suitable for contact with drinking water","Fire resistant","Styrene-free","Good adhesion to substrate","Shrinkage-free hardening","Standard sealant guns can be used (300ml cartridge)","Low emissions","Low wastage"],
+          "packaging": "385 ml dual cartridge – 12 cartridges per box. 585 ml dual cartridge – 12 cartridges per box.",
+          "colour": "Part A: Off white. Part B: Grey. A+B mixed: Light grey."
+        },
+        "details": {
+          "keyValues": [
+            { "label": "Chemical Base", "value": "Epoxy resin" },
+            { "label": "Shelf Life", "value": "24 months from date of production" },
+            { "label": "Storage Conditions", "value": "Store in original, unopened and undamaged sealed packaging in dry conditions at temperatures between +10°C and +25°C. Always refer to packaging." },
+            { "label": "Density A+B Mixed", "value": "~1.5 kg/l" },
+            { "label": "Mixing Ratio", "value": "Part A : Part B = 3 : 1 by volume" },
+            { "label": "Layer Thickness", "value": "~8 mm max." },
+            { "label": "Approvals / Standards", "value": "CE Marking to ETAG 001 Part 1 and Part 5; CE Marking to ETA 17/0694; Fire Evaluation of Post Installed Rebar Connections CEN EN 1991-1-2, CSTB Test report MRF 26072904/C" }
+          ]
+        },
+        "application": {
+          "steps": [
+            { "step": 1, "title": "Substrate Quality", "description": "Mortar and concrete must be at the required design strength. Substrate tensile/compressive strengths must be confirmed by testing. The anchor hole must always be clean, dry, free from oil and grease. Threaded rods and rebar's must be cleaned thoroughly and free from dirt, oil, grease, corrosion products or any other substances and particles which could affect adhesion." },
+            { "step": 2, "title": "Mixing", "description": "Preparing the cartridge: 385 & 585 ml. 1. Unscrew the cap. 2. Remove the cap. 3. Screw on the static mixer. 4. Place the cartridge into the application gun ready for use. When the work is interrupted the static mixer nozzle can remain on the cartridge after the gun pressure has been released. If the resin has hardened in the nozzle when work is resumed, a new nozzle must be attached." },
+            { "step": 3, "title": "Cleaning of Tools", "description": "Clean all tools and application equipment with Sika® Colma Cleaner immediately after use. Hardened material can only be removed mechanically." }
+          ],
+          "consumption": { "label": "Curing Time", "value": "+35°C to +46°C: open 6 min, cure 2 hrs. +30°C to +35°C: open 8 min, cure 4 hrs. +25°C to +30°C: open 12 min, cure 6 hrs. +20°C to +25°C: open 18 min, cure 8 hrs. +15°C to +20°C: open 25 min, cure 12 hrs. +10°C to +15°C: open 40 min, cure 18 hrs. +5°C to +10°C: open 150 min, cure 24 hrs. +5°C: open 300 min, cure 24 hrs." },
+          "notes": "Product Temperature: +10°C min. / +40°C max. Ambient Air Temperature: +5°C min. / +40°C max."
+        },
+        "documents": {
+          "files": [{ "label": "Sika AnchorFix®-3030", "type": "Product Data Sheet (PDS)", "url": "/docs/sika-anchorfix-3030-pds.pdf" }]
+        }
+      }
+    },
+    {
+      "id": "sika-top-122-hs",
+      "serviceId": "repair-protection",
+      "name": "SikaTop®-122 HS",
+      "tagline": "Polymer modified one component repair mortar for hand and machine application",
+      "thumbnail": "/images/products/sika-top-122-hs.jpg",
+      "tabs": {
+        "overview": {
+          "text": "SikaTop®-122 HS is a pre-batched one component polymer modified repair mortar. Easy to use (only to be mixed with water). Suitable for structural and cosmetic repairs. Can be applied up to 40 mm thick in vertical layers.",
+          "usage": ["Repair of spalling and damaged concrete in buildings, bridges, infrastructure and superstructure works"],
+          "advantages": ["Easy to use (only to be mixed with water)","Structural and cosmetic repairs","Can be applied up to 40 mm thick in vertical layers","Good adhesion","Suitable for hand and machine application by wet spray application"],
+          "packaging": "30 kg Bag",
+          "colour": "Grey Powder"
+        },
+        "details": {
+          "keyValues": [
+            { "label": "Chemical Base", "value": "Portland cement, polymer redispersable powder, selected aggregates and additives" },
+            { "label": "Shelf Life", "value": "6 months from date of production if stored as per recommendations" },
+            { "label": "Storage Conditions", "value": "Store properly in undamaged original sealed packaging, in dry conditions at temperatures between +5°C and +40°C." },
+            { "label": "Bulk Density", "value": "~1.3 kg/l @ 27°C" },
+            { "label": "Compressive Strength", "value": "1 day: ~20 N/mm², 7 days: ~35 N/mm², 28 days: ~55 N/mm² (Ambient Temperature +30°C, ASTM C 109, 70mm Cube)" }
+          ]
+        },
+        "application": {
+          "steps": [
+            { "step": 1, "title": "Mixing", "description": "Water : Powder = 0.13 by weight (3.9 l water per bag). Mix for at least 3 minutes minimum. Mix powder mechanically in the correct ratio with water with low speed (max. 500 rpm) electric drill. Put around 80 to 90% of required water in the mixing drum, followed by SikaTop®-122 HS and then add the balance water. Don't use concrete tilting mixer. Do not mix more material which cannot be used within Pot Life. DO NOT ADD EXTRA WATER." },
+            { "step": 2, "title": "Application", "description": "SikaTop®-122 HS can be applied either manually using traditional techniques or mechanically using wet spray equipment. When a bonding primer is used, ensure it is still 'tacky' when the repair mortar is pressed on ('wet on wet' technique). Finishing with both hand and machine application should be done as soon as mortar has started to stiffen." },
+            { "step": 3, "title": "Curing Treatment", "description": "Protect the fresh mortar from excess evaporation from the surface and early dehydration using the relevant curing method." },
+            { "step": 4, "title": "Cleaning of Tools", "description": "Clean all tools and application equipment with water immediately after use. Hardened material can only be removed mechanically." }
+          ],
+          "consumption": { "label": "Consumption", "value": "~2100 kg/m³. At Water : Powder ratio of 0.13." },
+          "notes": "Ambient Air Temperature: +5°C min / +40°C max. Substrate Temperature: +5°C min / +40°C max. Pot Life: ~30 min @ +20°C."
+        },
+        "documents": {
+          "files": [{ "label": "SikaTop®-122 HS", "type": "Product Data Sheet (PDS)", "url": "/docs/sika-top-122-hs-pds.pdf" }]
+        }
+      }
+    },
+    {
+      "id": "sika-monotop-122-f",
+      "serviceId": "repair-protection",
+      "name": "Sika Monotop 122 F",
+      "tagline": "",
+      "thumbnail": "/images/products/sika-monotop-122-f.jpg",
+      "tabs": {
+        "overview": { "text": "", "usage": [], "advantages": [], "packaging": "", "colour": "" },
+        "details": { "keyValues": [] },
+        "application": { "steps": [], "consumption": null, "notes": null },
+        "documents": { "files": [] }
+      }
+    },
+    {
+      "id": "sikadur-53-uf-mortar",
+      "serviceId": "repair-protection",
+      "name": "Sikadur 53 UF Mortar",
+      "tagline": "",
+      "thumbnail": "/images/products/sikadur-53-uf-mortar.jpg",
+      "tabs": {
+        "overview": { "text": "", "usage": [], "advantages": [], "packaging": "", "colour": "" },
+        "details": { "keyValues": [] },
+        "application": { "steps": [], "consumption": null, "notes": null },
+        "documents": { "files": [] }
+      }
+    },
+    {
+      "id": "sikadur-53-uf-grout",
+      "serviceId": "repair-protection",
+      "name": "Sikadur 53 UF Grout",
+      "tagline": "",
+      "thumbnail": "/images/products/sikadur-53-uf-grout.jpg",
+      "tabs": {
+        "overview": { "text": "", "usage": [], "advantages": [], "packaging": "", "colour": "" },
+        "details": { "keyValues": [] },
+        "application": { "steps": [], "consumption": null, "notes": null },
+        "documents": { "files": [] }
+      }
+    },
+    {
+      "id": "sika-ferrogard-903",
+      "serviceId": "repair-protection",
+      "name": "Sika Ferrogard 903",
+      "tagline": "",
+      "thumbnail": "/images/products/sika-ferrogard-903.jpg",
+      "tabs": {
+        "overview": { "text": "", "usage": [], "advantages": [], "packaging": "", "colour": "" },
+        "details": { "keyValues": [] },
+        "application": { "steps": [], "consumption": null, "notes": null },
+        "documents": { "files": [] }
+      }
+    },
+    {
+      "id": "sika-frianzic-r",
+      "serviceId": "repair-protection",
+      "name": "Sika Frianzic R",
+      "tagline": "",
+      "thumbnail": "/images/products/sika-frianzic-r.jpg",
+      "tabs": {
+        "overview": { "text": "", "usage": [], "advantages": [], "packaging": "", "colour": "" },
+        "details": { "keyValues": [] },
+        "application": { "steps": [], "consumption": null, "notes": null },
+        "documents": { "files": [] }
+      }
+    },
+    {
+      "id": "sikadur-32-lp",
+      "serviceId": "repair-protection",
+      "name": "Sikadur 32 LP",
+      "tagline": "",
+      "thumbnail": "/images/products/sikadur-32-lp.jpg",
+      "tabs": {
+        "overview": { "text": "", "usage": [], "advantages": [], "packaging": "", "colour": "" },
+        "details": { "keyValues": [] },
+        "application": { "steps": [], "consumption": null, "notes": null },
+        "documents": { "files": [] }
+      }
+    },
+    {
+      "id": "sika-rustoff-100",
+      "serviceId": "repair-protection",
+      "name": "Sika Rustoff 100",
+      "tagline": "",
+      "thumbnail": "/images/products/sika-rustoff-100.jpg",
+      "tabs": {
+        "overview": { "text": "", "usage": [], "advantages": [], "packaging": "", "colour": "" },
+        "details": { "keyValues": [] },
+        "application": { "steps": [], "consumption": null, "notes": null },
+        "documents": { "files": [] }
+      }
+    },
+    {
+      "id": "masterprotect-1818",
+      "serviceId": "repair-protection",
+      "name": "Masterprotect 1818",
+      "tagline": "",
+      "thumbnail": "/images/products/masterprotect-1818.jpg",
+      "tabs": {
+        "overview": { "text": "", "usage": [], "advantages": [], "packaging": "", "colour": "" },
+        "details": { "keyValues": [] },
+        "application": { "steps": [], "consumption": null, "notes": null },
+        "documents": { "files": [] }
+      }
+    },
+    {
+      "id": "sikacrete-145-in",
+      "serviceId": "repair-protection",
+      "name": "Sikacrete 145 IN",
+      "tagline": "",
+      "thumbnail": "/images/products/sikacrete-145-in.jpg",
+      "tabs": {
+        "overview": { "text": "", "usage": [], "advantages": [], "packaging": "", "colour": "" },
+        "details": { "keyValues": [] },
+        "application": { "steps": [], "consumption": null, "notes": null },
+        "documents": { "files": [] }
+      }
+    },
+    {
+      "id": "sikadur-41",
+      "serviceId": "repair-protection",
+      "name": "Sikadur 41",
+      "tagline": "",
+      "thumbnail": "/images/products/sikadur-41.jpg",
+      "tabs": {
+        "overview": { "text": "", "usage": [], "advantages": [], "packaging": "", "colour": "" },
+        "details": { "keyValues": [] },
+        "application": { "steps": [], "consumption": null, "notes": null },
+        "documents": { "files": [] }
+      }
+    },
+    {
+      "id": "sikadur-42-hes",
+      "serviceId": "repair-protection",
+      "name": "Sikadur 42 HES",
+      "tagline": "",
+      "thumbnail": "/images/products/sikadur-42-hes.jpg",
+      "tabs": {
+        "overview": { "text": "", "usage": [], "advantages": [], "packaging": "", "colour": "" },
+        "details": { "keyValues": [] },
+        "application": { "steps": [], "consumption": null, "notes": null },
+        "documents": { "files": [] }
+      }
+    },
+    {
+      "id": "sikarep-microcrete-4",
+      "serviceId": "structure-strengthening",
+      "name": "Sikarep Microcrete 4",
+      "tagline": "",
+      "thumbnail": "/images/products/sikarep-microcrete-4.jpg",
+      "tabs": {
+        "overview": { "text": "", "usage": [], "advantages": [], "packaging": "", "colour": "" },
+        "details": { "keyValues": [] },
+        "application": { "steps": [], "consumption": null, "notes": null },
+        "documents": { "files": [] }
+      }
+    },
+    {
+      "id": "sikawarp-203-c",
+      "serviceId": "structure-strengthening",
+      "name": "Sikawarp 203 C",
+      "tagline": "",
+      "thumbnail": "/images/products/sikawarp-203-c.jpg",
+      "tabs": {
+        "overview": { "text": "", "usage": [], "advantages": [], "packaging": "", "colour": "" },
+        "details": { "keyValues": [] },
+        "application": { "steps": [], "consumption": null, "notes": null },
+        "documents": { "files": [] }
+      }
+    },
+    {
+      "id": "sikadur-31-sba-02",
+      "serviceId": "structure-strengthening",
+      "name": "Sikadur 31 SBA 02",
+      "tagline": "",
+      "thumbnail": "/images/products/sikadur-31-sba-02.jpg",
+      "tabs": {
+        "overview": { "text": "", "usage": [], "advantages": [], "packaging": "", "colour": "" },
+        "details": { "keyValues": [] },
+        "application": { "steps": [], "consumption": null, "notes": null },
+        "documents": { "files": [] }
+      }
+    },
+    {
+      "id": "sikadur-31",
+      "serviceId": "structure-strengthening",
+      "name": "Sikadur 31",
+      "tagline": "",
+      "thumbnail": "/images/products/sikadur-31.jpg",
+      "tabs": {
+        "overview": { "text": "", "usage": [], "advantages": [], "packaging": "", "colour": "" },
+        "details": { "keyValues": [] },
+        "application": { "steps": [], "consumption": null, "notes": null },
+        "documents": { "files": [] }
+      }
+    },
+    {
+      "id": "sikadur-330",
+      "serviceId": "structure-strengthening",
+      "name": "Sikadur 330",
+      "tagline": "",
+      "thumbnail": "/images/products/sikadur-330.jpg",
+      "tabs": {
+        "overview": { "text": "", "usage": [], "advantages": [], "packaging": "", "colour": "" },
+        "details": { "keyValues": [] },
+        "application": { "steps": [], "consumption": null, "notes": null },
+        "documents": { "files": [] }
+      }
+    },
+    {
+      "id": "sikadur-30-lp",
+      "serviceId": "structure-strengthening",
+      "name": "Sikadur 30 LP",
+      "tagline": "",
+      "thumbnail": "/images/products/sikadur-30-lp.jpg",
+      "tabs": {
+        "overview": { "text": "", "usage": [], "advantages": [], "packaging": "", "colour": "" },
+        "details": { "keyValues": [] },
+        "application": { "steps": [], "consumption": null, "notes": null },
+        "documents": { "files": [] }
+      }
+    },
+    {
+      "id": "sikadur-31-sba-03",
+      "serviceId": "structure-strengthening",
+      "name": "Sikadur 31 SBA 03",
+      "tagline": "",
+      "thumbnail": "/images/products/sikadur-31-sba-03.jpg",
+      "tabs": {
+        "overview": { "text": "", "usage": [], "advantages": [], "packaging": "", "colour": "" },
+        "details": { "keyValues": [] },
+        "application": { "steps": [], "consumption": null, "notes": null },
+        "documents": { "files": [] }
+      }
+    },
+    {
+      "id": "sikadur-31-sba-04",
+      "serviceId": "structure-strengthening",
+      "name": "Sikadur 31 SBA 04",
+      "tagline": "",
+      "thumbnail": "/images/products/sikadur-31-sba-04.jpg",
+      "tabs": {
+        "overview": { "text": "", "usage": [], "advantages": [], "packaging": "", "colour": "" },
+        "details": { "keyValues": [] },
+        "application": { "steps": [], "consumption": null, "notes": null },
+        "documents": { "files": [] }
+      }
+    },
+    {
+      "id": "sikaceram-888",
+      "serviceId": "building-finishing",
+      "name": "Sikaceram 888",
+      "tagline": "",
+      "thumbnail": "/images/products/sikaceram-888.jpg",
+      "tabs": {
+        "overview": { "text": "", "usage": [], "advantages": [], "packaging": "", "colour": "" },
+        "details": { "keyValues": [] },
+        "application": { "steps": [], "consumption": null, "notes": null },
+        "documents": { "files": [] }
+      }
+    },
+    {
+      "id": "sikaceram-50-tikofix",
+      "serviceId": "building-finishing",
+      "name": "Sikaceram 50 Tikofix",
+      "tagline": "",
+      "thumbnail": "/images/products/sikaceram-50-tikofix.jpg",
+      "tabs": {
+        "overview": { "text": "", "usage": [], "advantages": [], "packaging": "", "colour": "" },
+        "details": { "keyValues": [] },
+        "application": { "steps": [], "consumption": null, "notes": null },
+        "documents": { "files": [] }
+      }
+    },
+    {
+      "id": "sika-ceram-125-easy-fix",
+      "serviceId": "building-finishing",
+      "name": "Sika Ceram 125 Easy Fix",
+      "tagline": "",
+      "thumbnail": "/images/products/sika-ceram-125-easy-fix.jpg",
+      "tabs": {
+        "overview": { "text": "", "usage": [], "advantages": [], "packaging": "", "colour": "" },
+        "details": { "keyValues": [] },
+        "application": { "steps": [], "consumption": null, "notes": null },
+        "documents": { "files": [] }
+      }
+    },
+    {
+      "id": "sika-ceram-255-grey",
+      "serviceId": "building-finishing",
+      "name": "Sika Ceram 255 Grey",
+      "tagline": "",
+      "thumbnail": "/images/products/sika-ceram-255-grey.jpg",
+      "tabs": {
+        "overview": { "text": "", "usage": [], "advantages": [], "packaging": "", "colour": "" },
+        "details": { "keyValues": [] },
+        "application": { "steps": [], "consumption": null, "notes": null },
+        "documents": { "files": [] }
+      }
+    },
+    {
+      "id": "sika-ceram-255-white",
+      "serviceId": "building-finishing",
+      "name": "Sika Ceram 255 White",
+      "tagline": "",
+      "thumbnail": "/images/products/sika-ceram-255-white.jpg",
+      "tabs": {
+        "overview": { "text": "", "usage": [], "advantages": [], "packaging": "", "colour": "" },
+        "details": { "keyValues": [] },
+        "application": { "steps": [], "consumption": null, "notes": null },
+        "documents": { "files": [] }
+      }
+    },
+    {
+      "id": "sikaceram-288-flex-s1",
+      "serviceId": "building-finishing",
+      "name": "Sikaceram-288-Flex-S1",
+      "tagline": "",
+      "thumbnail": "/images/products/sikaceram-288-flex-s1.jpg",
+      "tabs": {
+        "overview": { "text": "", "usage": [], "advantages": [], "packaging": "", "colour": "" },
+        "details": { "keyValues": [] },
+        "application": { "steps": [], "consumption": null, "notes": null },
+        "documents": { "files": [] }
+      }
+    },
+    {
+      "id": "sika-chapdur",
+      "serviceId": "industrial-flooring",
+      "name": "Sika Chapdur",
+      "tagline": "",
+      "thumbnail": "/images/products/sika-chapdur.jpg",
+      "tabs": {
+        "overview": { "text": "", "usage": [], "advantages": [], "packaging": "", "colour": "" },
+        "details": { "keyValues": [] },
+        "application": { "steps": [], "consumption": null, "notes": null },
+        "documents": { "files": [] }
+      }
+    },
+    {
+      "id": "sika-curehard-24",
+      "serviceId": "industrial-flooring",
+      "name": "Sika Curehard 24",
+      "tagline": "",
+      "thumbnail": "/images/products/sika-curehard-24.jpg",
+      "tabs": {
+        "overview": { "text": "", "usage": [], "advantages": [], "packaging": "", "colour": "" },
+        "details": { "keyValues": [] },
+        "application": { "steps": [], "consumption": null, "notes": null },
+        "documents": { "files": [] }
+      }
+    },
+    {
+      "id": "sikafloor-161-hc",
+      "serviceId": "industrial-flooring",
+      "name": "Sikafloor 161 HC",
+      "tagline": "",
+      "thumbnail": "/images/products/sikafloor-161-hc.jpg",
+      "tabs": {
+        "overview": { "text": "", "usage": [], "advantages": [], "packaging": "", "colour": "" },
+        "details": { "keyValues": [] },
+        "application": { "steps": [], "consumption": null, "notes": null },
+        "documents": { "files": [] }
+      }
+    },
+    {
+      "id": "sika-floor-290-primer",
+      "serviceId": "industrial-flooring",
+      "name": "Sika Floor 290 Primer",
+      "tagline": "",
+      "thumbnail": "/images/products/sika-floor-290-primer.jpg",
+      "tabs": {
+        "overview": { "text": "", "usage": [], "advantages": [], "packaging": "", "colour": "" },
+        "details": { "keyValues": [] },
+        "application": { "steps": [], "consumption": null, "notes": null },
+        "documents": { "files": [] }
+      }
+    },
+    {
+      "id": "sika-floor-291",
+      "serviceId": "industrial-flooring",
+      "name": "Sika Floor 291",
+      "tagline": "",
+      "thumbnail": "/images/products/sika-floor-291.jpg",
+      "tabs": {
+        "overview": { "text": "", "usage": [], "advantages": [], "packaging": "", "colour": "" },
+        "details": { "keyValues": [] },
+        "application": { "steps": [], "consumption": null, "notes": null },
+        "documents": { "files": [] }
+      }
+    },
+    {
+      "id": "sika-floor-264-hc",
+      "serviceId": "industrial-flooring",
+      "name": "Sika Floor 264 HC",
+      "tagline": "",
+      "thumbnail": "/images/products/sika-floor-264-hc.jpg",
+      "tabs": {
+        "overview": { "text": "", "usage": [], "advantages": [], "packaging": "", "colour": "" },
+        "details": { "keyValues": [] },
+        "application": { "steps": [], "consumption": null, "notes": null },
+        "documents": { "files": [] }
+      }
+    },
+    {
+      "id": "sikafloor-167",
+      "serviceId": "industrial-flooring",
+      "name": "Sikafloor 167",
+      "tagline": "",
+      "thumbnail": "/images/products/sikafloor-167.jpg",
+      "tabs": {
+        "overview": { "text": "", "usage": [], "advantages": [], "packaging": "", "colour": "" },
+        "details": { "keyValues": [] },
+        "application": { "steps": [], "consumption": null, "notes": null },
+        "documents": { "files": [] }
+      }
+    },
+    {
+      "id": "sikafloor-41-purcem",
+      "serviceId": "industrial-flooring",
+      "name": "Sikafloor 41 Purcem",
+      "tagline": "",
+      "thumbnail": "/images/products/sikafloor-41-purcem.jpg",
+      "tabs": {
+        "overview": { "text": "", "usage": [], "advantages": [], "packaging": "", "colour": "" },
+        "details": { "keyValues": [] },
+        "application": { "steps": [], "consumption": null, "notes": null },
+        "documents": { "files": [] }
+      }
+    },
+    {
+      "id": "sika-cool-coat",
+      "serviceId": "roofing",
+      "name": "Sika Cool Coat",
+      "tagline": "",
+      "thumbnail": "/images/products/sika-cool-coat.jpg",
+      "tabs": {
+        "overview": { "text": "", "usage": [], "advantages": [], "packaging": "", "colour": "" },
+        "details": { "keyValues": [] },
+        "application": { "steps": [], "consumption": null, "notes": null },
+        "documents": { "files": [] }
+      }
+    },
+    {
+      "id": "sikalastic-621-tc",
+      "serviceId": "roofing",
+      "name": "Sikalastic 621 TC",
+      "tagline": "",
+      "thumbnail": "/images/products/sikalastic-621-tc.jpg",
+      "tabs": {
+        "overview": { "text": "", "usage": [], "advantages": [], "packaging": "", "colour": "" },
+        "details": { "keyValues": [] },
+        "application": { "steps": [], "consumption": null, "notes": null },
+        "documents": { "files": [] }
+      }
+    },
+    {
+      "id": "sika-sovacryl",
+      "serviceId": "roofing",
+      "name": "Sika Sovacryl",
+      "tagline": "",
+      "thumbnail": "/images/products/sika-sovacryl.jpg",
+      "tabs": {
+        "overview": { "text": "", "usage": [], "advantages": [], "packaging": "", "colour": "" },
+        "details": { "keyValues": [] },
+        "application": { "steps": [], "consumption": null, "notes": null },
+        "documents": { "files": [] }
+      }
+    },
+    {
+      "id": "sikalastic-590",
+      "serviceId": "roofing",
+      "name": "Sikalastic 590",
+      "tagline": "",
+      "thumbnail": "/images/products/sikalastic-590.jpg",
+      "tabs": {
+        "overview": { "text": "", "usage": [], "advantages": [], "packaging": "", "colour": "" },
+        "details": { "keyValues": [] },
+        "application": { "steps": [], "consumption": null, "notes": null },
+        "documents": { "files": [] }
+      }
+    },
+    {
+      "id": "sika-sarnafil-g-410",
+      "serviceId": "roofing",
+      "name": "Sika Sarnafil G 410",
+      "tagline": "",
+      "thumbnail": "/images/products/sika-sarnafil-g-410.jpg",
+      "tabs": {
+        "overview": { "text": "", "usage": [], "advantages": [], "packaging": "", "colour": "" },
+        "details": { "keyValues": [] },
+        "application": { "steps": [], "consumption": null, "notes": null },
+        "documents": { "files": [] }
+      }
+    },
+    {
+      "id": "masterseal-lhm-5000-r",
+      "serviceId": "roofing",
+      "name": "Masterseal LHM 5000 R",
+      "tagline": "",
+      "thumbnail": "/images/products/masterseal-lhm-5000-r.jpg",
+      "tabs": {
+        "overview": { "text": "", "usage": [], "advantages": [], "packaging": "", "colour": "" },
+        "details": { "keyValues": [] },
+        "application": { "steps": [], "consumption": null, "notes": null },
+        "documents": { "files": [] }
+      }
+    },
+    {
+      "id": "sika-polysulphide-gun-grade",
+      "serviceId": "sealing-bonding",
+      "name": "Sika Polysulphide Gun Grade",
+      "tagline": "",
+      "thumbnail": "/images/products/sika-polysulphide-gun-grade.jpg",
+      "tabs": {
+        "overview": { "text": "", "usage": [], "advantages": [], "packaging": "", "colour": "" },
+        "details": { "keyValues": [] },
+        "application": { "steps": [], "consumption": null, "notes": null },
+        "documents": { "files": [] }
+      }
+    },
+    {
+      "id": "sika-flex-127",
+      "serviceId": "sealing-bonding",
+      "name": "Sika Flex 127",
+      "tagline": "",
+      "thumbnail": "/images/products/sika-flex-127.jpg",
+      "tabs": {
+        "overview": { "text": "", "usage": [], "advantages": [], "packaging": "", "colour": "" },
+        "details": { "keyValues": [] },
+        "application": { "steps": [], "consumption": null, "notes": null },
+        "documents": { "files": [] }
+      }
+    },
+    {
+      "id": "sikaflex-11-fc",
+      "serviceId": "sealing-bonding",
+      "name": "Sikaflex 11 FC",
+      "tagline": "",
+      "thumbnail": "/images/products/sikaflex-11-fc.jpg",
+      "tabs": {
+        "overview": { "text": "", "usage": [], "advantages": [], "packaging": "", "colour": "" },
+        "details": { "keyValues": [] },
+        "application": { "steps": [], "consumption": null, "notes": null },
+        "documents": { "files": [] }
+      }
+    },
+    {
+      "id": "sika-multiseal-t",
+      "serviceId": "sealing-bonding",
+      "name": "Sika Multiseal T",
+      "tagline": "",
+      "thumbnail": "/images/products/sika-multiseal-t.jpg",
+      "tabs": {
+        "overview": { "text": "", "usage": [], "advantages": [], "packaging": "", "colour": "" },
+        "details": { "keyValues": [] },
+        "application": { "steps": [], "consumption": null, "notes": null },
+        "documents": { "files": [] }
+      }
+    },
+    {
+      "id": "sika-polysulphide-pour-grade",
+      "serviceId": "sealing-bonding",
+      "name": "Sika Polysulphide Pour Grade",
+      "tagline": "",
+      "thumbnail": "/images/products/sika-polysulphide-pour-grade.jpg",
+      "tabs": {
+        "overview": { "text": "", "usage": [], "advantages": [], "packaging": "", "colour": "" },
+        "details": { "keyValues": [] },
+        "application": { "steps": [], "consumption": null, "notes": null },
+        "documents": { "files": [] }
+      }
+    },
+    {
+      "id": "sika-swell-a",
+      "serviceId": "sealing-bonding",
+      "name": "Sika Swell A",
+      "tagline": "",
+      "thumbnail": "/images/products/sika-swell-a.jpg",
+      "tabs": {
+        "overview": { "text": "", "usage": [], "advantages": [], "packaging": "", "colour": "" },
+        "details": { "keyValues": [] },
+        "application": { "steps": [], "consumption": null, "notes": null },
+        "documents": { "files": [] }
+      }
+    },
+    {
+      "id": "sika-swell-s2",
+      "serviceId": "sealing-bonding",
+      "name": "Sika Swell S 2",
+      "tagline": "",
+      "thumbnail": "/images/products/sika-swell-s2.jpg",
+      "tabs": {
+        "overview": { "text": "", "usage": [], "advantages": [], "packaging": "", "colour": "" },
+        "details": { "keyValues": [] },
+        "application": { "steps": [], "consumption": null, "notes": null },
+        "documents": { "files": [] }
+      }
+    },
+    {
+      "id": "sika-intraplast-n-200",
+      "serviceId": "grouting",
+      "name": "Sika Intraplast N 200",
+      "tagline": "",
+      "thumbnail": "/images/products/sika-intraplast-n-200.jpg",
+      "tabs": {
+        "overview": { "text": "", "usage": [], "advantages": [], "packaging": "", "colour": "" },
+        "details": { "keyValues": [] },
+        "application": { "steps": [], "consumption": null, "notes": null },
+        "documents": { "files": [] }
+      }
+    },
+    {
+      "id": "sika-injection-101-h",
+      "serviceId": "grouting",
+      "name": "Sika Injection 101 H",
+      "tagline": "",
+      "thumbnail": "/images/products/sika-injection-101-h.jpg",
+      "tabs": {
+        "overview": { "text": "", "usage": [], "advantages": [], "packaging": "", "colour": "" },
+        "details": { "keyValues": [] },
+        "application": { "steps": [], "consumption": null, "notes": null },
+        "documents": { "files": [] }
+      }
+    },
+    {
+      "id": "sika-injection-201-in",
+      "serviceId": "grouting",
+      "name": "Sika Injection 201 IN",
+      "tagline": "",
+      "thumbnail": "/images/products/sika-injection-201-in.jpg",
+      "tabs": {
+        "overview": { "text": "", "usage": [], "advantages": [], "packaging": "", "colour": "" },
+        "details": { "keyValues": [] },
+        "application": { "steps": [], "consumption": null, "notes": null },
+        "documents": { "files": [] }
+      }
+    },
+    {
+      "id": "sika-injection-306-set",
+      "serviceId": "grouting",
+      "name": "Sika Injection 306 Set",
+      "tagline": "",
+      "thumbnail": "/images/products/sika-injection-306-set.jpg",
+      "tabs": {
+        "overview": { "text": "", "usage": [], "advantages": [], "packaging": "", "colour": "" },
+        "details": { "keyValues": [] },
+        "application": { "steps": [], "consumption": null, "notes": null },
+        "documents": { "files": [] }
+      }
+    },
+    {
+      "id": "sikadur-55-lp",
+      "serviceId": "grouting",
+      "name": "Sikadur 55 LP",
+      "tagline": "",
+      "thumbnail": "/images/products/sikadur-55-lp.jpg",
+      "tabs": {
+        "overview": { "text": "", "usage": [], "advantages": [], "packaging": "", "colour": "" },
+        "details": { "keyValues": [] },
+        "application": { "steps": [], "consumption": null, "notes": null },
+        "documents": { "files": [] }
+      }
+    },
+    {
+      "id": "sikadur-53-uf",
+      "serviceId": "grouting",
+      "name": "Sikadur 53 UF",
+      "tagline": "",
+      "thumbnail": "/images/products/sikadur-53-uf.jpg",
+      "tabs": {
+        "overview": { "text": "", "usage": [], "advantages": [], "packaging": "", "colour": "" },
+        "details": { "keyValues": [] },
+        "application": { "steps": [], "consumption": null, "notes": null },
+        "documents": { "files": [] }
+      }
+    }
+  ]
+}

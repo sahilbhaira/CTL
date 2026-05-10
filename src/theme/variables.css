@@ -1,0 +1,109 @@
+:root {
+  --ion-font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  --ion-color-primary: #ff5f13;
+  --ion-color-primary-rgb: 255, 95, 19;
+  --ion-color-primary-contrast: #ffffff;
+  --ion-color-primary-contrast-rgb: 255, 255, 255;
+  --ion-color-primary-shade: #e05411;
+  --ion-color-primary-tint: #ff6f2b;
+
+  --ion-color-secondary: #061659;
+  --ion-color-secondary-rgb: 6, 22, 89;
+  --ion-color-secondary-contrast: #ffffff;
+  --ion-color-secondary-contrast-rgb: 255, 255, 255;
+  --ion-color-secondary-shade: #05134e;
+  --ion-color-secondary-tint: #1f2d6a;
+
+  --ion-background-color: #f8f8f7;
+  --ion-text-color: #061659;
+  --ion-toolbar-background: #f8f8f7;
+  --ion-tab-bar-background: #ffffff;
+
+  --ctl-background: #ffffff;
+  --ctl-border: #e8e8e8;
+  --ctl-muted: #f1f5f9;
+  --ctl-muted-text: #64748b;
+  --ctl-secondary: #061659;
+  --ctl-surface: #f8f8f7;
+}
+
+html,
+body {
+  background: var(--ctl-surface);
+  font-family: var(--ion-font-family);
+}
+
+ion-content {
+  --background: var(--ctl-surface);
+}
+
+.ctl-tab-bar {
+  --background: var(--ctl-background);
+  --border: 0;
+  border: 1px solid rgba(232, 232, 232, 0.62);
+  border-radius: 24px;
+  bottom: calc(16px + env(safe-area-inset-bottom));
+  box-shadow: 0 18px 36px rgba(6, 22, 89, 0.12);
+  contain: none;
+  height: 66px;
+  left: 50%;
+  margin: 0;
+  overflow: visible;
+  padding: 7px 8px;
+  position: fixed;
+  right: auto;
+  transform: translateX(-50%);
+  width: min(350px, calc(100% - 40px));
+}
+
+.ctl-tab-bar--hidden {
+  display: none;
+}
+
+.ctl-tab-button {
+  --background: transparent;
+  --color: var(--ctl-muted-text);
+  --color-selected: var(--ion-color-primary);
+  --padding-bottom: 0;
+  --padding-end: 0;
+  --padding-start: 0;
+  --padding-top: 0;
+  font-size: 10px;
+  font-weight: 600;
+  min-width: 0;
+}
+
+.ctl-tab-button ion-icon {
+  font-size: 20px;
+  margin-bottom: 4px;
+}
+
+.ctl-tab-button ion-label {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.ctl-quote-tab {
+  margin-top: -28px;
+  overflow: visible;
+}
+
+.ctl-quote-tab .ctl-quote-tab-icon {
+  background: var(--ion-color-primary);
+  border: 4px solid var(--ctl-background);
+  border-radius: 50%;
+  box-shadow: 0 12px 20px rgba(255, 95, 19, 0.34);
+  color: #ffffff;
+  font-size: 24px;
+  height: 24px;
+  margin-bottom: 4px;
+  padding: 14px;
+  width: 24px;
+}
+
+.ctl-quote-tab ion-label {
+  color: var(--ctl-secondary);
+  font-weight: 800;
+}

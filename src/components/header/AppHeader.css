@@ -1,0 +1,101 @@
+.ctl-app-header {
+  box-shadow: none;
+}
+
+.ctl-app-header ion-toolbar {
+  --background: var(--ctl-surface);
+  --border-color: rgba(232, 232, 232, 0.52);
+  --border-width: 0 0 1px;
+  --color: var(--ctl-secondary);
+  --min-height: 64px;
+  --padding-end: 20px;
+  --padding-start: 20px;
+}
+
+.ctl-app-header--brand ion-toolbar {
+  --background: rgba(248, 248, 247, 0.86);
+  --min-height: 68px;
+  backdrop-filter: blur(14px);
+}
+
+.ctl-header-button {
+  --background: #ffffff;
+  --background-activated: #ffffff;
+  --background-hover: #ffffff;
+  --border-radius: 999px;
+  --box-shadow: 0 2px 8px rgba(6, 22, 89, 0.08);
+  --color: var(--ctl-secondary);
+  border: 1px solid rgba(232, 232, 232, 0.62);
+  border-radius: 999px;
+  height: 40px;
+  margin: 0;
+  width: 40px;
+}
+
+.ctl-header-button::part(native) {
+  padding: 0;
+}
+
+.ctl-brand-title {
+  padding-inline: 76px;
+}
+
+.ctl-brand-lockup {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  width: 100%;
+}
+
+.ctl-brand-mark {
+  align-items: center;
+  background: var(--ion-color-primary);
+  border-radius: 50%;
+  box-shadow: 0 6px 14px rgba(255, 95, 19, 0.2);
+  color: #ffffff;
+  display: flex;
+  font-size: 13px;
+  font-weight: 800;
+  height: 32px;
+  justify-content: center;
+  line-height: 1;
+  width: 32px;
+}
+
+.ctl-brand-copy {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  line-height: 1;
+}
+
+.ctl-brand-copy span {
+  color: var(--ctl-secondary);
+  font-size: 16px;
+  font-weight: 900;
+  letter-spacing: 0;
+}
+
+.ctl-brand-copy small {
+  color: var(--ctl-muted-text);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+}
+
+.ctl-user-avatar {
+  align-items: center;
+  background: rgba(255, 95, 19, 0.1);
+  border: 1px solid rgba(255, 95, 19, 0.2);
+  border-radius: 50%;
+  color: var(--ion-color-primary);
+  display: flex;
+  font-size: 13px;
+  font-weight: 800;
+  height: 40px;
+  justify-content: center;
+  width: 40px;
+}

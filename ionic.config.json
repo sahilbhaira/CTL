@@ -1,0 +1,7 @@
+{
+  "name": "Boomers",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}
