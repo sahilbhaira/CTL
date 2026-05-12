@@ -1,0 +1,34 @@
+.ctl-account-content {
+  --background: var(--ctl-surface);
+  --padding-bottom: 112px;
+}
+
+.ctl-account {
+  background: var(--ctl-surface);
+  color: var(--ctl-secondary);
+  margin: 0 auto;
+  max-width: 430px;
+  min-height: 100%;
+  padding-bottom: 112px;
+  position: relative;
+}
+
+.ctl-account-title {
+  padding: 24px 20px 16px;
+}
+
+.ctl-account-title h1 {
+  color: var(--ctl-secondary);
+  font-size: 28px;
+  font-weight: 900;
+  letter-spacing: 0;
+  line-height: 1.12;
+  margin: 0;
+}
+
+.ctl-account-title p {
+  color: var(--ctl-muted-text);
+  font-size: 13px;
+  line-height: 1.55;
+  margin: 8px 0 0;
+}

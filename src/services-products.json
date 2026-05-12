@@ -1422,102 +1422,285 @@
     {
       "id": "sika-monotop-122-f",
       "serviceId": "repair-protection",
-      "name": "Sika Monotop 122 F",
-      "tagline": "",
+      "name": "Sika MonoTop®-122 F",
+      "tagline": "Dual shrinkage compensated, trowelable fibre reinforced thixotropic repair mortar",
       "thumbnail": "/images/products/sika-monotop-122-f.jpg",
       "tabs": {
-        "overview": { "text": "", "usage": [], "advantages": [], "packaging": "", "colour": "" },
-        "details": { "keyValues": [] },
-        "application": { "steps": [], "consumption": null, "notes": null },
-        "documents": { "files": [] }
+        "overview": {
+          "text": "Sika MonoTop®-122 F trowelable mortar is a dual shrinkage compensated, thixotropic high strength formulation for structural concrete repairs. It is suitable for placing in thicknesses of 5mm to 50mm vertically and 5-15mm overhead.",
+          "usage": ["Repair of spalling and damaged concrete in buildings, bridges, infrastructure and super structure works"],
+          "advantages": ["Easy to use (only to be mixed with water)","Structural and Cosmetic repairs","Possible to apply on vertical substrate in 50mm layers","Good adhesion strength","Ideal where the repairs are more than 5mm","Sprayable - able to repair complex profiles easily with minimal rebound"],
+          "packaging": "30 kg bag",
+          "colour": "Grey powder"
+        },
+        "details": {
+          "keyValues": [
+            { "label": "Chemical Base", "value": "Portland cement, polymer redispersable powder, selected aggregates and additives" },
+            { "label": "Shelf Life", "value": "6 months from date of production if stored as per recommendation" },
+            { "label": "Storage Conditions", "value": "Store properly in undamaged original sealed packaging, in dry conditions at temperatures between +5°C and +40°C." },
+            { "label": "Bulk Density", "value": "~1.3 kg/l at 27°C" },
+            { "label": "Compressive Strength", "value": "1 day: ≥ 20 MPa. 7 days: ≥ 35 MPa. 28 days: ≥ 50 MPa (Ambient Temperature: +30°C, 70mm Cube)" },
+            { "label": "Tensile Strength in Flexure", "value": "7 days: ≥ 8 MPa. 28 days: ≥ 12 MPa (Ambient Temperature: +30°C, 70mm Cube)" },
+            { "label": "Tensile Adhesion Strength", "value": "7 days: ≥ 8 MPa. 28 days: ≥ 12 MPa (Ambient Temperature: +30°C, 70mm Cube)" }
+          ]
+        },
+        "application": {
+          "steps": [
+            { "step": 1, "title": "Mixing Ratio", "description": "Water : Powder = 0.15-0.16 by weight (4.5–4.8 ltr of water per bag)" },
+            { "step": 2, "title": "Ambient Air Temperature", "description": "+10°C min. / +40°C max." },
+            { "step": 3, "title": "Substrate Temperature", "description": "+10°C min. / +40°C max." },
+            { "step": 4, "title": "Pot Life", "description": "~40 minutes @ +20°C" },
+            { "step": 5, "title": "Mixing", "description": "Mix powder mechanically in the correct ratio with water with low speed (max. 500 rpm) electric drill to avoid entraining too much air. Put around 80 to 90% of required water in the mixing drum, followed by Sika MonoTop®-122 F and then add the balance water. Do not use concrete tilting mixer. DO NOT ADD EXTRA WATER. Mix for at least 3 minutes." },
+            { "step": 6, "title": "Application", "description": "Apply Sika MonoTop®-122 F manually using traditional techniques. When a bonding primer is used, ensure it is still 'tacky'. Smoothing with trowel or finishing by Float or sponge can be done as soon as mortar has started to stiffen." },
+            { "step": 7, "title": "Cleaning of Tools", "description": "Clean all tools and application equipment with water immediately after use. Hardened material can only be removed mechanically." }
+          ],
+          "consumption": { "label": "Consumption", "value": "~2200 kg/m². At Water : Powder ratio 0.16." },
+          "notes": null
+        },
+        "documents": {
+          "files": [{ "label": "Sika MonoTop®-122 F", "type": "Product Data Sheet (PDS)", "url": "/docs/sika-monotop-122-f-pds.pdf" }]
+        }
       }
     },
     {
       "id": "sikadur-53-uf-mortar",
       "serviceId": "repair-protection",
-      "name": "Sikadur 53 UF Mortar",
-      "tagline": "",
+      "name": "Sikadur®-53 UF Mortar",
+      "tagline": "Moisture insensitive epoxy resin mortar",
       "thumbnail": "/images/products/sikadur-53-uf-mortar.jpg",
       "tabs": {
-        "overview": { "text": "", "usage": [], "advantages": [], "packaging": "", "colour": "" },
-        "details": { "keyValues": [] },
-        "application": { "steps": [], "consumption": null, "notes": null },
-        "documents": { "files": [] }
+        "overview": {
+          "text": "Sikadur®-53 UF Mortar is a solvent free, three-component moisture insensitive, epoxy resin based mortar. It has been developed to meet special requirement of concrete repair particularly in damp, wet condition. After mixing, the mortar is placed on moist concrete and it cures to form a rigid and high strength material.",
+          "usage": ["For repair of damp and wet concrete","For rapid installation and repair"],
+          "advantages": ["High early strength","Cures without shrinkage","Excellent adhesion to cement substrate even under salt water"],
+          "packaging": "Part A+B+C Pre-batched unit: 10.5 kg × 4 sets (Part A: 1.00 kg plastic container, Part B: 0.50 kg plastic container, Part C: 9.00 kg bag).",
+          "colour": "Part A: Clear. Part B: Reddish Yellow. Part C: Sand. Part A+B+C mixed: Reddish Yellow mortar."
+        },
+        "details": {
+          "keyValues": [
+            { "label": "Chemical Base", "value": "Epoxy resin" },
+            { "label": "Shelf Life", "value": "12 months from date of production" },
+            { "label": "Storage Conditions", "value": "Store properly in original unopened, sealed and undamaged packaging, in dry conditions at temperatures between +5°C and +40°C. Protect from direct sunshine." },
+            { "label": "Density", "value": "Part A+B+C Mixed: 2.1 ± 0.1 kg/L (at +27°C)" },
+            { "label": "Compressive Strength", "value": "3 hours: ≥ 20 N/mm². 6 hours: ≥ 25 N/mm². 1 day: ≥ 35 N/mm². 7 days: ≥ 60 N/mm² (at curing temperature +30°C)" },
+            { "label": "Tensile Adhesion Strength", "value": "14 days dry concrete: ≥ 4 N/mm². 14 days moist concrete: ≥ 4 N/mm² (at curing temperature +30°C, 100% Concrete failure)" }
+          ]
+        },
+        "application": {
+          "steps": [
+            { "step": 1, "title": "Mixing Ratio", "description": "Part A : Part B : Part C = 2 : 1 : 18 (by weight)" },
+            { "step": 2, "title": "Layer Thickness", "description": "60 mm max." },
+            { "step": 3, "title": "Product Temperature", "description": "+10°C min. / +40°C max." },
+            { "step": 4, "title": "Ambient Air Temperature", "description": "+5°C min. / +40°C max." },
+            { "step": 5, "title": "Substrate Temperature", "description": "+5°C min. / +40°C max." },
+            { "step": 6, "title": "Pot Life", "description": "~20 minutes (100 g mass at +27°C) (FIP 5.1)" },
+            { "step": 7, "title": "Substrate Preparation", "description": "Substrate surface (all types) must be clean and free from contaminants such as dirt, oil, grease, existing surface treatments and coatings. Steel substrates must be de-rusted similar to Sa 2.5. All loose particles must be removed." },
+            { "step": 8, "title": "Mixing", "description": "Mix parts A+B together for at least 3 minutes with a mixing spindle on a slow speed electric drill until the material becomes smooth in consistency and uniform colour. Then add part C and continue until mixture is homogeneous. Mix only the quantity which can be used within its potlife." },
+            { "step": 9, "title": "Cleaning of Tools", "description": "Clean all tools and application equipment with Sika® Colma Cleaner immediately after use. Hardened/cured material can only be mechanically removed." }
+          ],
+          "consumption": { "label": "Consumption", "value": "~2.1 kg/m² per mm of thickness." },
+          "notes": null
+        },
+        "documents": {
+          "files": [{ "label": "Sikadur®-53 UF Mortar", "type": "Product Data Sheet (PDS)", "url": "/docs/sikadur-53-uf-mortar-pds.pdf" }]
+        }
       }
     },
     {
       "id": "sikadur-53-uf-grout",
       "serviceId": "repair-protection",
-      "name": "Sikadur 53 UF Grout",
-      "tagline": "",
+      "name": "Sikadur®-53 UF Grout",
+      "tagline": "Moisture insensitive flowable high early strength epoxy resin grout",
       "thumbnail": "/images/products/sikadur-53-uf-grout.jpg",
       "tabs": {
-        "overview": { "text": "", "usage": [], "advantages": [], "packaging": "", "colour": "" },
-        "details": { "keyValues": [] },
-        "application": { "steps": [], "consumption": null, "notes": null },
-        "documents": { "files": [] }
+        "overview": {
+          "text": "Sikadur®-53 UF Grout is a 3-part high performance, high early strength, solvent free, moisture tolerant pourable epoxy grout. It has good flowability, low shrinkage, good mechanical strengths and is suitable for many static or dynamic precision grouting applications. Also suitable as a flowable concrete repair material. Specially designed for grouting in under water/wet conditions. When poured into the cavity, it displaces the water and cures to a rigid high strength material.",
+          "usage": ["High strength grouting and fixing of starter bars, anchors, fasteners, tie rods, crash barrier posts, fence and railing posts","Undergrouting and bedding of machine bases, precision seating of base plates, bridge bearings, mechanical joints","Spalled concrete structures, industrial floors, holes and voids, runways and hardstandings, car park decks, under water applications in dams and hydraulic structures"],
+          "advantages": ["Suitable for dry, damp, wet and underwater conditions","High early strength","Shrinkage free hardening","Seals against moisture and oxygen","Good adhesion to concrete, masonry, stone and steel substrates","Good adhesion to salt-water immersed, cementitious substrates","High density ensures good water displacement","Good mechanical underwater strengths","Easy to apply","Free flowing"],
+          "packaging": "Part A+B+C pre-batched 11 kg set (Part A: 2 kg container, Part B: 1 kg container, Part C: 8 kg bag).",
+          "colour": "Brown Liquid"
+        },
+        "details": {
+          "keyValues": [
+            { "label": "Chemical Base", "value": "Epoxy resin and selected fillers and aggregates" },
+            { "label": "Shelf Life", "value": "12 months from date of production" },
+            { "label": "Storage Conditions", "value": "Store in original, unopened and undamaged sealed packaging in dry conditions at temperatures between +5°C and +40°C. Protect from direct sunlight." },
+            { "label": "Mixing Ratio", "value": "Part A : Part B : Part C = 2 : 1 : 8 (by weight)" },
+            { "label": "Fresh Mortar Density", "value": "1.9 ± 0.1 kg/L (Part A+B+C mixed, +27°C) (EN ISO 2811-1)" },
+            { "label": "Compressive Strength", "value": "3 h: ≥ 20 N/mm². 6 h: ≥ 40 N/mm². 1 d: ≥ 60 N/mm². 7 d: ≥ 80 N/mm² (at curing temperature +30°C, under water)" },
+            { "label": "Tensile Adhesion Strength", "value": "> 10 N/mm² (ASTM C882). Test specimens cured at +30°C under water." },
+            { "label": "Pot Life", "value": "> 20 minutes (100 g mass, +30°C) (FIP 5.1)" }
+          ]
+        },
+        "application": {
+          "steps": [
+            { "step": 1, "title": "Ambient Air Temperature", "description": "+10°C min. / +40°C max." },
+            { "step": 2, "title": "Substrate Preparation", "description": "Concrete must be at least 3-6 weeks old and of sufficient strength. All surfaces to be clean, dry, wet or damp, free from ice, dirt, oil, grease, coatings, laitance. Steel surfaces must be clean, dry, free from oil, grease, coatings, rust scale, loose particles." },
+            { "step": 3, "title": "Mixing", "description": "Mix parts A and B in the Part A container for ~60 seconds with a low speed (< 400 rpm) electric hand held paddle mixer until a uniformly blended colour or viscosity has been achieved. During mixing, scrape down the sides and bottom of the mixing pail. Add parts A+B+C at once, mixing for 3 more minutes. Place the mixed epoxy resin into a clean container and stir again for 1 more minute. Mix only the quantity which can be used within its pot life." },
+            { "step": 4, "title": "Cleaning of Tools", "description": "Clean all tools and application equipment with Sika® Colma Cleaner immediately after use. Hardened/cured material can only be mechanically removed." }
+          ],
+          "consumption": null,
+          "notes": null
+        },
+        "documents": {
+          "files": [{ "label": "Sikadur®-53 UF Grout", "type": "Product Data Sheet (PDS)", "url": "/docs/sikadur-53-uf-grout-pds.pdf" }]
+        }
       }
     },
     {
       "id": "sika-ferrogard-903",
       "serviceId": "repair-protection",
-      "name": "Sika Ferrogard 903",
-      "tagline": "",
+      "name": "Sika® FerroGard®-903",
+      "tagline": "Penetrating, bipolar corrosion inhibiting, impregnation coating for hardened concrete",
       "thumbnail": "/images/products/sika-ferrogard-903.jpg",
       "tabs": {
-        "overview": { "text": "", "usage": [], "advantages": [], "packaging": "", "colour": "" },
-        "details": { "keyValues": [] },
-        "application": { "steps": [], "consumption": null, "notes": null },
-        "documents": { "files": [] }
+        "overview": {
+          "text": "Sika® FerroGard®-903 is a surface applied bipolar corrosion inhibitor, designed for use as an impregnation of steel reinforced concrete. It penetrates the surface and diffuses in vapor or liquid form to the steel reinforcing bars embedded in the concrete. It both delays the start of corrosion and reduces the corrosion rate, increasing service and maintenance life cycles by up to 15 years when used as part of a complete Sika® Concrete Repair and Protection System. Based on organic and inorganic inhibitors that protect both the anodic and cathodic parts of the corrosion cell.",
+          "usage": ["Corrosion protection of steel reinforced concrete, prestressed, precast, post tensioned or marine concrete structures above and below the ground","Corrosion control treatment for undamaged reinforced concrete where reinforcing steel is corroding or at risk from carbonation or chloride contamination","Steel-reinforced concrete, bridges and highways exposed to corrosive environments (deicing salts, weathering)","Extending service life of aesthetically valuable fair-faced concrete surfaces such as historic structures"],
+          "advantages": ["Suitable for method 11.3 (applying inhibitor to the concrete) for Principle 11 (anodic control), EN 1504-9","Does not change the appearance of the concrete structure","Does not alter the water vapour diffusion properties of concrete","Long term protection and durability","Can be applied to the surface of existing repairs and to surrounding areas to prevent the development of incipient anodes","Protects both cathodic (principle 9) and anodic (principle 11) zones of reinforcing steel","Can be applied where other repair/prevention options are not viable","Easily applied by either spray or roller to all existing reinforced concrete","Economic extension of the service life of reinforced concrete structures","Penetration depth can be tested on site using the Sika Qualitative Analysis Test"],
+          "packaging": "20 kg container",
+          "colour": "Colourless to Pale yellow liquid"
+        },
+        "details": {
+          "keyValues": [
+            { "label": "Chemical Base", "value": "Amino alcohol and inorganic combination" },
+            { "label": "Shelf Life", "value": "12 months from date of production" },
+            { "label": "Storage Conditions", "value": "Store properly in undamaged and unopened, original sealed packaging. Store in a cool environment." },
+            { "label": "Density", "value": "~1.14 kg/L (at +20°C)" },
+            { "label": "Viscosity", "value": "~25 Cps" },
+            { "label": "pH-Value", "value": "> 8" },
+            { "label": "Approvals / Standards", "value": "BRE Client Report No. 224-346, 2005; Mott MacDonald evaluation report; SAMARIS Final Report; C-Probe Systems Ltd. Performance of Corrosion Inhibitors in Practice, 2000" }
+          ]
+        },
+        "application": {
+          "steps": [
+            { "step": 1, "title": "Ambient Air Temperature", "description": "+5°C min. / +40°C max." },
+            { "step": 2, "title": "Substrate Temperature", "description": "+5°C min. / +40°C max." }
+          ],
+          "consumption": { "label": "Consumption", "value": "Generally ~0.500 kg/m². For very dense concrete with low permeability the rate of application can be reduced but must not be lower than 0.300 kg/m². To assess project requirements, consumption and depth of penetration shall be checked on site using the Sika 'Qualitative Analysis' – refer to the relevant method statement." },
+          "notes": null
+        },
+        "documents": {
+          "files": [{ "label": "Sika® FerroGard®-903", "type": "Product Data Sheet (PDS)", "url": "/docs/sika-ferrogard-903-pds.pdf" }]
+        }
       }
     },
     {
       "id": "sika-frianzic-r",
       "serviceId": "repair-protection",
-      "name": "Sika Frianzic R",
-      "tagline": "",
+      "name": "Sika Friazinc® R",
+      "tagline": "Epoxy based zinc rich primer for steel",
       "thumbnail": "/images/products/sika-frianzic-r.jpg",
       "tabs": {
-        "overview": { "text": "", "usage": [], "advantages": [], "packaging": "", "colour": "" },
-        "details": { "keyValues": [] },
-        "application": { "steps": [], "consumption": null, "notes": null },
-        "documents": { "files": [] }
+        "overview": {
+          "text": "Two component, low solvent, zinc rich epoxy resin based primer for steel.",
+          "usage": ["Used as protective coating or as primer. Specially suitable for objects which are subjected to mechanical wear, e.g. weirs, interior of pressure pipe line, gates, steel liner of penstocks and tanks etc."],
+          "advantages": ["Easy to apply","Fast application","High mechanical properties","Good adhesion to substrate","Fast curing","Resistance to weathering"],
+          "packaging": "Part A: 1.88 kg × 2 containers. Part B: 0.12 kg × 2 containers. Part A+B: 2.00 kg × 2 ready to use units.",
+          "colour": "Grey"
+        },
+        "details": {
+          "keyValues": [
+            { "label": "Chemical Base", "value": "Epoxy resin" },
+            { "label": "Shelf Life", "value": "12 months from date of production if stored properly in original, unopened and undamaged sealed packaging." },
+            { "label": "Storage Conditions", "value": "Store in dry conditions at temperatures between +5°C and +35°C. Protect from frost." },
+            { "label": "Density - Part A", "value": "~2.37 kg/l" },
+            { "label": "Density - Part B", "value": "~0.96 kg/l" },
+            { "label": "Density - Mixed Resin", "value": "~2.28 kg/l (all density values at +27°C)" }
+          ]
+        },
+        "application": {
+          "steps": [],
+          "consumption": { "label": "Consumption", "value": "Primer - Friazin R: ~0.15-0.25 kg/m². These figures are theoretical and do not allow for any additional material due to surface porosity, surface profile, variations in level and wastage etc." },
+          "notes": null
+        },
+        "documents": {
+          "files": [{ "label": "Sika Friazinc® R", "type": "Product Data Sheet (PDS)", "url": "/docs/sika-frianzic-r-pds.pdf" }]
+        }
       }
     },
     {
       "id": "sikadur-32-lp",
       "serviceId": "repair-protection",
-      "name": "Sikadur 32 LP",
-      "tagline": "",
+      "name": "Sikadur®-32 LP IN",
+      "tagline": "Epoxy structural bonding agent for use at high temperatures",
       "thumbnail": "/images/products/sikadur-32-lp.jpg",
       "tabs": {
-        "overview": { "text": "", "usage": [], "advantages": [], "packaging": "", "colour": "" },
-        "details": { "keyValues": [] },
-        "application": { "steps": [], "consumption": null, "notes": null },
-        "documents": { "files": [] }
+        "overview": {
+          "text": "Sikadur®-32 LP IN is a 2-part, epoxy based structural bonding agent for use at high temperatures. It is moisture tolerant and can bond wet or dry materials to damp or dry substrates. Suitable to use in hot and tropical climatic conditions.",
+          "usage": ["As a structural bonding agent and adhesive for bonding fresh to hardened concrete"],
+          "advantages": ["Application temperature range +20°C to +40°C","Thickness up to 1 mm","Easy to mix and apply","Suitable for dry and damp concrete substrates","Very good adhesion to many construction materials","Hardens without shrinkage","Different coloured parts (for mixing control)","No primer needed","High initial and ultimate mechanical strengths","Impermeable to liquids and water vapour"],
+          "packaging": "1 kg ready to mix unit (Parts A+B). 5 kg ready to mix unit (Parts A+B). 25 kg ready to mix unit (Parts A+B). Refer to current price list for packaging variations.",
+          "colour": "Part A: white. Part B: dark grey. Parts A+B mixed: concrete grey."
+        },
+        "details": {
+          "keyValues": [
+            { "label": "Composition", "value": "Epoxy resin and selected fillers" },
+            { "label": "Shelf Life", "value": "24 months from date of production" },
+            { "label": "Storage Conditions", "value": "Store in original, unopened and undamaged sealed packaging in dry conditions at temperatures between +5°C and +30°C. Always refer to packaging." },
+            { "label": "Density", "value": "Mixed resin ~1.4 ± 0.1 kg/l (Value at +23°C)" },
+            { "label": "Mixing Ratio", "value": "Part A : Part B = 2 : 1 by weight or volume" },
+            { "label": "Layer Thickness", "value": "~1 mm max." },
+            { "label": "Pot Life", "value": "+20°C: ~145 min. +30°C: ~55 min. +40°C: ~35 min (200g)" },
+            { "label": "Approvals / Standards", "value": "CE Marking and Declaration of Performance to EN 1504-4 – Structural bonding" }
+          ]
+        },
+        "application": {
+          "steps": [
+            { "step": 1, "title": "Material Temperature", "description": "+20°C min. / +40°C max." },
+            { "step": 2, "title": "Ambient Air Temperature", "description": "+20°C min. / +40°C max." },
+            { "step": 3, "title": "Substrate Temperature", "description": "+20°C min. / +40°C max." },
+            { "step": 4, "title": "Substrate Moisture Content", "description": "Cementitious substrates must be dry or matt damp (no standing water). Brush the adhesive well into the substrate if matt damp." }
+          ],
+          "consumption": { "label": "Consumption", "value": "~1.3 kg/m² per mm of thickness. This figure is theoretical and does not allow for any additional material due to surface porosity, surface profile, variations in level or wastage etc." },
+          "notes": null
+        },
+        "documents": {
+          "files": [{ "label": "Sikadur®-32 LP IN", "type": "Product Data Sheet (PDS)", "url": "/docs/sikadur-32-lp-pds.pdf" }]
+        }
       }
     },
     {
       "id": "sika-rustoff-100",
       "serviceId": "repair-protection",
-      "name": "Sika Rustoff 100",
-      "tagline": "",
+      "name": "Sika® Rustoff-100",
+      "tagline": "Rust remover cum passivator",
       "thumbnail": "/images/products/sika-rustoff-100.jpg",
       "tabs": {
-        "overview": { "text": "", "usage": [], "advantages": [], "packaging": "", "colour": "" },
-        "details": { "keyValues": [] },
-        "application": { "steps": [], "consumption": null, "notes": null },
-        "documents": { "files": [] }
+        "overview": {
+          "text": "Sika® Rustoff-100 is a single component liquid that removes rust and temporarily prevents further rusting of steel structures by providing a passivating coat.",
+          "usage": ["New or old reinforcement steel in construction","Embedded steel in repairable structures","Various steel structures like tanks, water pipelines, effluent pipelines, trusses, purlins, rafters etc.","Ball bearings, valves, tools etc.","Ideal for protecting reinforcements with insufficient cover or in thin sections"],
+          "advantages": ["Removes rust","Temporarily prevents further rusting by providing a passivating coat","To be applied with brush, cotton waste swab or spray gun on the affected metal surface","Easy to apply since it is in liquid form","For repairable structures when applied with brush/spray gun can reach even the most difficult rusted areas with congested reinforcements"],
+          "packaging": "0.250 kg, 1 kg, 20 kg container",
+          "colour": "Clear liquid"
+        },
+        "details": {
+          "keyValues": [
+            { "label": "Shelf Life", "value": "12 months from date of production" },
+            { "label": "Storage Conditions", "value": "The Product must be stored properly in original, unopened and undamaged sealed packaging in dry conditions at temperatures between +5°C and +35°C." },
+            { "label": "Density", "value": "~1.17 kg/L at +30°C" }
+          ]
+        },
+        "application": {
+          "steps": [
+            { "step": 1, "title": "Substrate Temperature", "description": "+5°C min. / +50°C max." }
+          ],
+          "consumption": null,
+          "notes": null
+        },
+        "documents": {
+          "files": [{ "label": "Sika® Rustoff-100", "type": "Product Data Sheet (PDS)", "url": "/docs/sika-rustoff-100-pds.pdf" }]
+        }
       }
     },
     {
       "id": "masterprotect-1818",
       "serviceId": "repair-protection",
       "name": "Masterprotect 1818",
-      "tagline": "",
+      "tagline": "Concrete protection coating",
       "thumbnail": "/images/products/masterprotect-1818.jpg",
       "tabs": {
-        "overview": { "text": "", "usage": [], "advantages": [], "packaging": "", "colour": "" },
+        "overview": { "text": "Masterprotect 1818 is a concrete protection coating. Product data sheet to be added.", "usage": [], "advantages": [], "packaging": "", "colour": "" },
         "details": { "keyValues": [] },
         "application": { "steps": [], "consumption": null, "notes": null },
         "documents": { "files": [] }
@@ -1526,40 +1709,122 @@
     {
       "id": "sikacrete-145-in",
       "serviceId": "repair-protection",
-      "name": "Sikacrete 145 IN",
-      "tagline": "",
+      "name": "Sikacrete®-145 IN",
+      "tagline": "Superior performance non-shrink cementitious microconcrete for concrete repair",
       "thumbnail": "/images/products/sikacrete-145-in.jpg",
       "tabs": {
-        "overview": { "text": "", "usage": [], "advantages": [], "packaging": "", "colour": "" },
-        "details": { "keyValues": [] },
-        "application": { "steps": [], "consumption": null, "notes": null },
-        "documents": { "files": [] }
+        "overview": {
+          "text": "Sikacrete®-145 IN is factory designed pourable, shrinkage compensated, free flowing and self-compacting superior performance microconcrete with selected cement, aggregate and other chemicals. Recommended water and coarse aggregate to be added at site as per requirement.",
+          "usage": ["Highway bridges and culverts","Wharfs and jetties","Tunnels and mines","Dams and reservoirs","Car parks and basements","Power stations","Sewerage and water treatment structures","Anywhere where localised deep repair is required","Anywhere additional thickness is required (column and beam jacketing, etc.)","Structural strengthening of structure by section enlargement"],
+          "advantages": ["No vibration needed","Easy to mix and apply","Good flow characteristics","Quick strength development","High ultimate strengths","Good pumping properties","Adjustable consistency","Impact resistant","Non-corrosive","Non-toxic","Iron and chloride free","Non-shrink","Good bonding with existing concrete","Low porosity dense concrete"],
+          "packaging": "30 kg bag",
+          "colour": "Powder / Grey"
+        },
+        "details": {
+          "keyValues": [
+            { "label": "Chemical Base", "value": "Portland cement, selected fillers and aggregates, special additives" },
+            { "label": "Shelf Life", "value": "6 months from date of production" },
+            { "label": "Storage Conditions", "value": "The product must be stored properly in undamaged and unopened, original sealed packaging, in dry conditions at temperatures between +5°C and +35°C. Protect from moisture, direct sunlight and frost." },
+            { "label": "Maximum Grain Size", "value": "Dmax: 2.36 m" },
+            { "label": "Mixing Ratio", "value": "Water : Powder = 0.14 to 0.15 (by weight), 4.2 L to 4.8 L water per 30 kg bag, dependent on the desired flow" },
+            { "label": "Fresh Mortar Density", "value": "(2.2 ± 0.1) kg/L (water:powder = 0.15) (EN ISO 2811-1)" },
+            { "label": "Layer Thickness", "value": "Minimum 25 mm per pour. Maximum 100 mm per pour." },
+            { "label": "Pot Life", "value": "~20 minutes (water:powder = 0.15, +30°C)" },
+            { "label": "Curing Time", "value": "7 days minimum (by spraying water). Full cure 28 days." }
+          ]
+        },
+        "application": {
+          "steps": [
+            { "step": 1, "title": "Ambient Air Temperature", "description": "+5°C min. / +40°C max." },
+            { "step": 2, "title": "Substrate Temperature", "description": "+5°C min. / +40°C max." },
+            { "step": 3, "title": "Flowability", "description": "Time: Initial ~280 mm. After 10 minutes of mixing: ~260 mm." }
+          ],
+          "consumption": null,
+          "notes": null
+        },
+        "documents": {
+          "files": [{ "label": "Sikacrete®-145 IN", "type": "Product Data Sheet (PDS)", "url": "/docs/sikacrete-145-in-pds.pdf" }]
+        }
       }
     },
     {
       "id": "sikadur-41",
       "serviceId": "repair-protection",
-      "name": "Sikadur 41",
-      "tagline": "",
+      "name": "Sikadur®-41 IN",
+      "tagline": "3-part thixotropic epoxy patching mortar",
       "thumbnail": "/images/products/sikadur-41.jpg",
       "tabs": {
-        "overview": { "text": "", "usage": [], "advantages": [], "packaging": "", "colour": "" },
-        "details": { "keyValues": [] },
-        "application": { "steps": [], "consumption": null, "notes": null },
-        "documents": { "files": [] }
+        "overview": {
+          "text": "Sikadur®-41 IN is a solvent-free, 3 component thixotropic mortar based on a combination of epoxy resins and selected quartz aggregates. After mixing it becomes an easy to use multipurpose repair and adhesive mortar.",
+          "usage": ["As bonding mortar on stone, concrete, mortar, plaster work, etc.","For vertical and overhead filling of cavities","For damaged stair-nosings and spalled concrete","As abrasion resistant protective layer","Suitable for bearing pad for bridges and heavy machinery"],
+          "advantages": ["Easy to mix and apply","Very good adhesion to most construction materials","High strength mortar","Thixotropic: non-sag in vertical and overhead applications","Hardens without shrinkage","Different coloured components (for mixing control)","No primer needed","High initial and ultimate mechanical strength","Good abrasion resistance"],
+          "packaging": "Pre-batched unit (A+B+C): 6 kg (Part A: 2.00 kg plastic container, Part B: 1.00 kg metal container, Part C: 3.00 kg bag). Pre-batched unit (A+B+C): 60 kg (Part A: 20.00 kg plastic container, Part B: 10.00 kg metal container, Part C: 30.00 kg bag).",
+          "colour": "Part A: White paste. Part B: Black paste. Part C: Sand colour powder. Parts A+B+C mixed: Concrete Grey."
+        },
+        "details": {
+          "keyValues": [
+            { "label": "Chemical Base", "value": "Epoxy Resin" },
+            { "label": "Shelf Life", "value": "Best before 12 months from date of production if stored properly in undamaged, unopened, original sealed packaging. Storage conditions: 12 months from date of production." },
+            { "label": "Storage Conditions", "value": "Store properly in original unopened, sealed and undamaged packaging, in dry conditions at temperatures between +5°C and +40°C. Protect from direct sunshine." },
+            { "label": "Density", "value": "2.00 ± 0.05 kg/liter (Part A+B+C mixed) (at +27°C)" },
+            { "label": "Mixing Ratio", "value": "Part A : Part B : Part C = 2 : 1 : 3 (by weight)" },
+            { "label": "Layer Thickness", "value": "30mm max." },
+            { "label": "Sag Flow", "value": "Non-sag upto 20mm layer thickness on vertical surface (ASTM D 2730)" },
+            { "label": "Pot Life", "value": "~30 minutes (100 g mass at +30°C) (FIP 5.1)" }
+          ]
+        },
+        "application": {
+          "steps": [
+            { "step": 1, "title": "Ambient Air Temperature", "description": "+10°C min. / +40°C max." },
+            { "step": 2, "title": "Substrate Temperature", "description": "+10°C min. / +40°C max." },
+            { "step": 3, "title": "Substrate Moisture Content", "description": "When applied to mat moisture concrete, brush the adhesive well into substrate." }
+          ],
+          "consumption": null,
+          "notes": null
+        },
+        "documents": {
+          "files": [{ "label": "Sikadur®-41 IN", "type": "Product Data Sheet (PDS)", "url": "/docs/sikadur-41-pds.pdf" }]
+        }
       }
     },
     {
       "id": "sikadur-42-hes",
       "serviceId": "repair-protection",
-      "name": "Sikadur 42 HES",
-      "tagline": "",
+      "name": "Sikadur®-42 HES IN",
+      "tagline": "3-part high performance pourable epoxy grout",
       "thumbnail": "/images/products/sikadur-42-hes.jpg",
       "tabs": {
-        "overview": { "text": "", "usage": [], "advantages": [], "packaging": "", "colour": "" },
-        "details": { "keyValues": [] },
-        "application": { "steps": [], "consumption": null, "notes": null },
-        "documents": { "files": [] }
+        "overview": {
+          "text": "Sikadur®-42 HES IN is a 3-part, high-performance, high precision, pourable, and solvent-free moisture-tolerant epoxy grout which develops high early strength. It is suitable for many static or dynamic precision grouting applications. Layer thickness of 25 mm to 75 mm and an application temperature range of +10°C to +35°C.",
+          "usage": ["High-strength grouting and fixing of starter bars, anchors, tie rods, fasteners, crash barrier posts, fence and railing posts, repair and renovation","Precision under-grouting and bedding of machine bases, base plates, bridge bearings, mechanical joints in road, bridges, deck, fasteners","Sleeper-less, direct rail fixing: spalled concrete structures, industrial floor slabs, hole and void filling, runways, hardstandings, car park decks","Interior and exterior applications"],
+          "advantages": ["High early strength","Ready-to-mix, pre-batched units","Good flowability","Tolerant to substrates with high moisture content","Good mechanical resistance","Very low shrinkage","Good creep resistance","Good resistance to vibration","Low coefficient of thermal expansion","Good resistance to vibration","High reactivity for low temperature application (+10°C)","Impermeable to most liquids and water vapour"],
+          "packaging": "Part A+B+C pre-batched 26.5 kg (Part A: 4.5 kg container, Part B: 1.0 kg container, Part C: 21 kg bag).",
+          "colour": "Concrete grey flowable paste"
+        },
+        "details": {
+          "keyValues": [
+            { "label": "Chemical Base", "value": "Epoxy resin, selected fillers and aggregates" },
+            { "label": "Shelf Life", "value": "12 months from date of production" },
+            { "label": "Storage Conditions", "value": "The product must be stored in original, unopened and undamaged sealed packaging in dry conditions at temperatures between +10°C and +35°C. Protect from direct sunlight." },
+            { "label": "Density", "value": "~2.0 kg/l (Part A+B+C mixed, +30°C)" },
+            { "label": "Mixing Ratio", "value": "Part A : Part B : Part C = 4.5 : 1 : 21 (by weight)" },
+            { "label": "Layer Thickness", "value": "Minimum 25 mm. Maximum 75 mm per pour." },
+            { "label": "Product Temperature", "value": "Minimum +20°C. Maximum +30°C." },
+            { "label": "Pot Life", "value": "~60 min (100 g mass, +30°C) (FIP 5.1)" }
+          ]
+        },
+        "application": {
+          "steps": [
+            { "step": 1, "title": "Ambient Air Temperature", "description": "Minimum +10°C. Maximum +35°C." },
+            { "step": 2, "title": "Substrate Temperature", "description": "Minimum +10°C. Maximum +35°C." },
+            { "step": 3, "title": "Dew Point", "description": "Beware of condensation. Substrate temperature during application must be at least +3°C above dew point." }
+          ],
+          "consumption": null,
+          "notes": null
+        },
+        "documents": {
+          "files": [{ "label": "Sikadur®-42 HES IN", "type": "Product Data Sheet (PDS)", "url": "/docs/sikadur-42-hes-pds.pdf" }]
+        }
       }
     },
     {

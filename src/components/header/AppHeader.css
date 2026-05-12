@@ -1,5 +1,6 @@
 .ctl-app-header {
   box-shadow: none;
+  overflow: visible;
 }
 
 .ctl-app-header ion-toolbar {
@@ -10,6 +11,7 @@
   --min-height: 64px;
   --padding-end: 20px;
   --padding-start: 20px;
+  overflow: visible;
 }
 
 .ctl-app-header--brand ion-toolbar {
@@ -34,6 +36,14 @@
 
 .ctl-header-button::part(native) {
   padding: 0;
+}
+
+.ctl-header-user-button {
+  --background: transparent;
+  --background-activated: transparent;
+  --background-hover: transparent;
+  --box-shadow: none;
+  border: 0;
 }
 
 .ctl-brand-title {
@@ -98,4 +108,97 @@
   height: 40px;
   justify-content: center;
   width: 40px;
+}
+
+.ctl-account-menu {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 20;
+}
+
+.ctl-guest-account {
+  align-items: center;
+  appearance: none;
+  background: transparent;
+  border: 0;
+  color: var(--ion-color-primary);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  justify-content: center;
+  margin: 0;
+  min-height: 56px;
+  padding: 0;
+  width: 52px;
+}
+
+.ctl-guest-account__icon {
+  align-items: center;
+  background: #ffffff;
+  border: 2px solid #e5e7eb;
+  border-radius: 50%;
+  color: #07165f;
+  display: flex;
+  height: 40px;
+  justify-content: center;
+  width: 40px;
+}
+
+.ctl-guest-account__icon ion-icon {
+  font-size: 24px;
+}
+
+.ctl-guest-account__label {
+  color: var(--ion-color-primary);
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 1.3px;
+  line-height: 1;
+}
+
+.ctl-account-dropdown {
+  background: #ffffff;
+  border: 1px solid rgba(232, 232, 232, 0.72);
+  border-radius: 12px;
+  box-shadow: 0 14px 30px rgba(6, 22, 89, 0.14);
+  display: flex;
+  flex-direction: column;
+  min-width: 136px;
+  padding: 6px;
+  position: absolute;
+  right: 0;
+  top: calc(100% + 8px);
+  z-index: 50;
+}
+
+.ctl-account-dropdown::before {
+  border-bottom: 8px solid #ffffff;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  content: "";
+  position: absolute;
+  right: 18px;
+  top: -8px;
+}
+
+.ctl-account-dropdown button {
+  appearance: none;
+  background: transparent;
+  border: 0;
+  border-radius: 8px;
+  color: var(--ctl-secondary);
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1;
+  padding: 12px;
+  text-align: left;
+}
+
+.ctl-account-dropdown button:hover,
+.ctl-account-dropdown button:focus-visible {
+  background: rgba(255, 95, 19, 0.08);
+  color: var(--ion-color-primary);
+  outline: none;
 }

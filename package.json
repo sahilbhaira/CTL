@@ -7,6 +7,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
+    "seed:admin": "node scripts/create-admin-user.mjs",
     "test.e2e": "cypress run",
     "test.unit": "vitest",
     "lint": "eslint"
@@ -19,14 +20,19 @@
     "@capacitor/status-bar": "8.0.2",
     "@ionic/react": "^8.5.0",
     "@ionic/react-router": "^8.5.0",
+    "@reduxjs/toolkit": "^2.11.2",
     "@supabase/supabase-js": "^2.105.4",
     "@types/react-router": "^5.1.20",
     "@types/react-router-dom": "^5.3.3",
+    "axios": "^1.16.0",
+    "formik": "^2.4.9",
     "ionicons": "^7.4.0",
     "react": "19.0.0",
     "react-dom": "19.0.0",
+    "react-redux": "^9.2.0",
     "react-router": "^5.3.4",
-    "react-router-dom": "^5.3.4"
+    "react-router-dom": "^5.3.4",
+    "zustand": "^5.0.13"
   },
   "devDependencies": {
     "@capacitor/cli": "8.3.1",

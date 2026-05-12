@@ -1,0 +1,208 @@
+.ctl-catalog-content {
+  --background: var(--ctl-surface);
+  --padding-bottom: 112px;
+}
+
+.ctl-catalog {
+  background: var(--ctl-surface);
+  color: var(--ctl-secondary);
+  margin: 0 auto;
+  max-width: 430px;
+  min-height: 100%;
+  padding-bottom: 112px;
+}
+
+.ctl-catalog-heading {
+  padding: 24px 20px 16px;
+}
+
+.ctl-catalog-title-row {
+  align-items: center;
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.ctl-catalog-heading h1 {
+  color: var(--ctl-secondary);
+  font-size: 24px;
+  font-weight: 900;
+  letter-spacing: 0;
+  line-height: 1.16;
+  margin: 0 0 16px;
+}
+
+.ctl-catalog-title-row h1 {
+  margin: 0;
+}
+
+.ctl-catalog-back {
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid rgba(232, 232, 232, 0.58);
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(6, 22, 89, 0.04);
+  color: var(--ctl-secondary);
+  display: flex;
+  flex: 0 0 auto;
+  height: 32px;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  width: 32px;
+}
+
+.ctl-catalog-back ion-icon {
+  font-size: 16px;
+}
+
+.ctl-catalog-search {
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid rgba(232, 232, 232, 0.58);
+  border-radius: 20px;
+  box-shadow: 0 2px 8px rgba(6, 22, 89, 0.04);
+  color: var(--ctl-muted-text);
+  display: flex;
+  gap: 12px;
+  min-height: 52px;
+  padding: 0 16px;
+}
+
+.ctl-catalog-search ion-icon {
+  font-size: 20px;
+}
+
+.ctl-catalog-search span {
+  color: var(--ctl-muted-text);
+  font-size: 14px;
+}
+
+.ctl-card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 0 20px 24px;
+}
+
+.ctl-service-list-card,
+.ctl-product-list-card {
+  background: #ffffff;
+  border: 1px solid rgba(232, 232, 232, 0.58);
+  border-radius: 24px;
+  box-shadow: 0 2px 8px rgba(6, 22, 89, 0.04);
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+}
+
+.ctl-service-list-card__main,
+.ctl-product-list-card__main {
+  align-items: center;
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.ctl-service-list-card__icon {
+  align-items: center;
+  background: rgba(255, 95, 19, 0.1);
+  border-radius: 18px;
+  color: var(--ion-color-primary);
+  display: flex;
+  flex: 0 0 auto;
+  height: 48px;
+  justify-content: center;
+  width: 48px;
+}
+
+.ctl-service-list-card__icon ion-icon,
+.ctl-product-list-card__icon ion-icon {
+  font-size: 24px;
+}
+
+.ctl-service-list-card h2,
+.ctl-product-list-card h2 {
+  color: var(--ctl-secondary);
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1.2;
+  margin: 0 0 4px;
+}
+
+.ctl-product-list-card h2 {
+  font-size: 16px;
+}
+
+.ctl-service-list-card p,
+.ctl-product-list-card p {
+  color: var(--ctl-muted-text);
+  font-size: 12px;
+  line-height: 1.25;
+  margin: 0;
+}
+
+.ctl-service-list-card__action,
+.ctl-product-action {
+  align-items: center;
+  appearance: none;
+  background: rgba(6, 22, 89, 0.05);
+  border: 0;
+  border-radius: 12px;
+  color: var(--ctl-secondary);
+  display: flex;
+  font-size: 10px;
+  font-weight: 800;
+  gap: 4px;
+  justify-content: center;
+  letter-spacing: 1px;
+  margin: 0;
+  min-height: 38px;
+  padding: 0 12px;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.ctl-service-list-card__action ion-icon,
+.ctl-product-action ion-icon {
+  font-size: 14px;
+}
+
+.ctl-product-list-card__main {
+  align-items: flex-start;
+  margin-bottom: 0;
+}
+
+.ctl-product-list-card__icon {
+  align-items: center;
+  background: rgba(6, 22, 89, 0.05);
+  border: 1px solid rgba(232, 232, 232, 0.58);
+  border-radius: 16px;
+  color: var(--ctl-secondary);
+  display: flex;
+  flex: 0 0 auto;
+  height: 64px;
+  justify-content: center;
+  width: 64px;
+}
+
+.ctl-product-list-card__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 64px;
+}
+
+.ctl-product-actions {
+  border-top: 1px solid rgba(232, 232, 232, 0.58);
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 16px;
+  padding-top: 16px;
+}
+
+.ctl-product-action--quote {
+  background: rgba(255, 95, 19, 0.1);
+  color: var(--ion-color-primary);
+}

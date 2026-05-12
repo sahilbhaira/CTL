@@ -1,4 +1,5 @@
 import { Redirect, Route, useLocation } from 'react-router-dom';
+import type { PropsWithChildren, ReactElement } from 'react';
 import {
   IonApp,
   IonIcon,
@@ -15,7 +16,7 @@ import {
   documentTextOutline,
   gridOutline,
   homeOutline,
-  pulseOutline
+  listOutline
 } from 'ionicons/icons';
 
 /* Core CSS required for Ionic components to work properly */
@@ -47,28 +48,59 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
-import Services from './pages/Services';
-import Contact from './pages/Contact';
-import ForgotPassword from './pages/ForgotPassword';
-import Home from './pages/Home';
-import Login from './pages/Login';
-import ProductDetails from './pages/ProductDetails';
-import Profile from './pages/Profile';
-import Register from './pages/Register';
-import ResetPassword from './pages/ResetPassword';
-import ServiceProducts from './pages/ServiceProducts';
+import './styles/page-shell.css';
+import NavigationMenu from './components/navigation/NavigationMenu';
+import Contact from './pages/account/Contact';
+import Profile from './pages/account/Profile';
+import AdminAcceptedQuotes from './pages/admin/AdminAcceptedQuotes';
+import AdminDashboard from './pages/admin/AdminDashboard';
+import AdminLeads from './pages/admin/AdminLeads';
+import AdminNegotiations from './pages/admin/AdminNegotiations';
+import AdminQuotePreview from './pages/admin/AdminQuotePreview';
+import ForgotPassword from './pages/auth/ForgotPassword';
+import Login from './pages/auth/Login';
+import Register from './pages/auth/Register';
+import ResetPassword from './pages/auth/ResetPassword';
+import Home from './pages/home/Home';
+import ProductDetails from './pages/products/ProductDetails';
+import RequestQuotation from './pages/quote/RequestQuotation';
+import MyQuotes from './pages/quotes/MyQuotes';
+import ServiceProducts from './pages/services/ServiceProducts';
+import Services from './pages/services/Services';
+import { useAuthBootstrap } from './hooks/useAuthBootstrap';
+import { isAdminUser } from './lib/admin';
+import { useAuthStore } from './store/authStore';
 
 setupIonicReact();
 
 const authRoutes = ['/login', '/register', '/forgot-password', '/reset-password'];
+type TabsWithIdProps = PropsWithChildren<{ id: string }>;
+const IonTabsWithId = IonTabs as unknown as (props: TabsWithIdProps) => ReactElement;
 
 const AppTabs: React.FC = () => {
   const location = useLocation();
+  const isAuthReady = useAuthStore((state) => state.isAuthReady);
+  const user = useAuthStore((state) => state.user);
   const isAuthRoute = authRoutes.some((route) => location.pathname.startsWith(route));
-  const shouldHideTabs = isAuthRoute || location.pathname.startsWith('/products/');
+  const isAdminRoute = location.pathname.startsWith('/admin');
+  const isAdmin = isAdminUser(user);
+  const shouldHideTabs =
+    isAuthRoute || isAdminRoute || location.pathname.startsWith('/products/');
+
+  const renderAdminPage = (Component: React.FC) => {
+    if (!isAuthReady) {
+      return null;
+    }
+
+    if (!isAdmin) {
+      return <Redirect to={user ? '/home' : '/login'} />;
+    }
+
+    return <Component />;
+  };
 
   return (
-    <IonTabs>
+    <IonTabsWithId id="main-content">
 
       <IonRouterOutlet>
         <Route path="/login" component={Login} exact />
@@ -81,8 +113,35 @@ const AppTabs: React.FC = () => {
         <Route path="/products/:productId/:tab?" component={ProductDetails} exact />
         <Route path="/contact" component={Contact} exact />
         <Route path="/profile" component={Profile} exact />
-        <Route path="/quote" render={() => <Redirect to="/contact" />} exact />
-        <Route path="/status" render={() => <Redirect to="/home" />} exact />
+        <Route path="/quote" component={RequestQuotation} exact />
+        <Route path="/quotes" component={MyQuotes} exact />
+        <Route path="/status" render={() => <Redirect to="/quotes" />} exact />
+        <Route
+          path="/admin/dashboard"
+          render={() => renderAdminPage(AdminDashboard)}
+          exact
+        />
+        <Route
+          path="/admin/leads"
+          render={() => renderAdminPage(AdminLeads)}
+          exact
+        />
+        <Route
+          path="/admin/negotiations"
+          render={() => renderAdminPage(AdminNegotiations)}
+          exact
+        />
+        <Route
+          path="/admin/accepted"
+          render={() => renderAdminPage(AdminAcceptedQuotes)}
+          exact
+        />
+        <Route
+          path="/admin/quote-preview/:quoteId?"
+          render={() => renderAdminPage(AdminQuotePreview)}
+          exact
+        />
+        <Route path="/admin" render={() => <Redirect to="/admin/dashboard" />} exact />
 
         <Redirect exact from="/" to="/login" />
       </IonRouterOutlet>
@@ -106,9 +165,9 @@ const AppTabs: React.FC = () => {
           <IonLabel>QUOTE</IonLabel>
         </IonTabButton>
 
-        <IonTabButton className="ctl-tab-button" tab="status" href="/status">
-          <IonIcon icon={pulseOutline} />
-          <IonLabel>Status</IonLabel>
+        <IonTabButton className="ctl-tab-button" tab="quotes" href="/quotes">
+          <IonIcon icon={listOutline} />
+          <IonLabel>My Quotes</IonLabel>
         </IonTabButton>
 
         <IonTabButton className="ctl-tab-button" tab="contact" href="/contact">
@@ -117,16 +176,21 @@ const AppTabs: React.FC = () => {
         </IonTabButton>
       </IonTabBar>
 
-    </IonTabs>
+    </IonTabsWithId>
   );
 };
 
-const App: React.FC = () => (
-  <IonApp>
-    <IonReactRouter>
-      <AppTabs />
-    </IonReactRouter>
-  </IonApp>
-);
+const App: React.FC = () => {
+  useAuthBootstrap();
+
+  return (
+    <IonApp>
+      <IonReactRouter>
+        <NavigationMenu contentId="main-content" />
+        <AppTabs />
+      </IonReactRouter>
+    </IonApp>
+  );
+};
 
 export default App;
