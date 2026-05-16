@@ -39,7 +39,6 @@ const QuoteSelectField: FC<QuoteSelectFieldProps> = ({
     <div className="ctl-quote-select">
       <div className="ctl-quote-select__top">
         <IonSelect
-          interface="popover"
           multiple
           name={name}
           onIonBlur={onBlur}

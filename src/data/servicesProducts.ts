@@ -13,6 +13,7 @@ import {
 import servicesProductsJson from '../services-products.json';
 
 export type ProductTab = 'overview' | 'details' | 'application' | 'document';
+export type ProductQuantityUnit = 'kg' | 'liter' | 'm';
 
 export interface ServiceCategory {
   id: string;
@@ -109,6 +110,69 @@ export const getProductsForService = (serviceId: string | undefined) => {
     .filter((product): product is Product => Boolean(product));
 };
 
+export const getProductQuantityUnit = (product: Product): ProductQuantityUnit => {
+  const packaging = product.tabs.overview.packaging.trim().toLowerCase();
+  const measurementUnitMatch = packaging.match(
+    /\d+(?:\.\d+)?\s*(kilograms?|kgs?|kg|grams?|g|pounds?|lbs?|lb|litres?|liters?|l|ml|millilitres?|milliliters?|gallons?|gal|metres?|meters?|m|feet|foot|ft|inches|inch|in)\.?\b/
+  );
+  const textUnitMatch = packaging.match(
+    /\b(kilograms?|kgs?|kg|grams?|g|pounds?|lbs?|lb|litres?|liters?|l|ml|millilitres?|milliliters?|gallons?|gal|metres?|meters?|m|feet|foot|ft|inches|inch|in)\b/
+  );
+  const unit = measurementUnitMatch?.[1] ?? textUnitMatch?.[1];
+
+  if (unit) {
+    if (
+      [
+        'liter',
+        'liters',
+        'litre',
+        'litres',
+        'l',
+        'ml',
+        'milliliter',
+        'milliliters',
+        'millilitre',
+        'millilitres',
+        'gallon',
+        'gallons',
+        'gal'
+      ].includes(unit)
+    ) {
+      return 'liter';
+    }
+
+    if (
+      [
+        'm',
+        'meter',
+        'meters',
+        'metre',
+        'metres',
+        'feet',
+        'foot',
+        'ft',
+        'inch',
+        'inches',
+        'in'
+      ].includes(unit)
+    ) {
+      return 'm';
+    }
+
+    return 'kg';
+  }
+
+  if (/\b(rolls?|length|width)\b/.test(packaging)) {
+    return 'm';
+  }
+
+  if (/\b(drums?|carboys?|tanker|ibc)\b/.test(packaging)) {
+    return 'liter';
+  }
+
+  return 'kg';
+};
+
 export const getServicePath = (serviceId: string) => `/services/${serviceId}`;
 
 export const getProductPath = (productId: string, tab?: ProductTab) => {
@@ -117,4 +181,25 @@ export const getProductPath = (productId: string, tab?: ProductTab) => {
   }
 
   return `/products/${productId}/${tab}`;
+};
+
+export const getQuotePath = ({
+  productId,
+  serviceId
+}: {
+  productId?: string;
+  serviceId?: string;
+}) => {
+  const params = new URLSearchParams();
+
+  if (serviceId) {
+    params.set('serviceId', serviceId);
+  }
+
+  if (productId) {
+    params.set('productId', productId);
+  }
+
+  const query = params.toString();
+  return query ? `/quote?${query}` : '/quote';
 };

@@ -62,7 +62,7 @@ const AdminAcceptedQuotes: React.FC = () => {
           <AdminLeadCard
             actionLabel="VIEW DETAILS"
             key={quote.id}
-            onAction={() => history.push(`/admin/quote-preview/${quote.id}`)}
+            onAction={() => history.push(`/admin/quote/${quote.id}`)}
             quote={quote}
             showAmount
           />
@@ -73,7 +73,8 @@ const AdminAcceptedQuotes: React.FC = () => {
 
   return (
     <AdminPageShell
-      activeTab="Accepted"
+      activeTab="Inquiries"
+      brandLeading="back"
       subtitle="Review quotes that have been finalized and accepted."
       title="Accepted Quotes"
     >

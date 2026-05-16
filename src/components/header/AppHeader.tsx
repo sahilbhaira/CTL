@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, type FC } from 'react';
+import { type FC } from 'react';
 import {
   IonBackButton,
   IonButton,
@@ -16,9 +16,11 @@ import {
   shareSocialOutline
 } from 'ionicons/icons';
 import { useHistory } from 'react-router';
+import { goToPreviousPage } from '../../lib/navigation';
 import { getUserInitials } from '../../lib/userProfile';
 import { useAuthStore } from '../../store/authStore';
 import './AppHeader.css';
+import AppLogo from '../../assets/images/ctl_logo.png';
 
 interface Props {
   title: string;
@@ -44,40 +46,16 @@ const AppHeader: FC<Props> = ({
   userInitials = 'GU'
 }) => {
   const history = useHistory();
-  const menuRef = useRef<HTMLDivElement>(null);
   const user = useAuthStore((state) => state.user);
-  const [isGuestMenuOpen, setIsGuestMenuOpen] = useState(false);
   const [brandName, ...brandRest] = title.split(' ');
   const brandSubtitle = brandRest.join(' ') || 'Trade Link';
   const isGuestAccount = !user;
   const accountInitials = getUserInitials(user, userInitials);
-
-  useEffect(() => {
-    if (!isGuestMenuOpen) {
-      return undefined;
-    }
-
-    const handlePointerDown = (event: MouseEvent) => {
-      if (!menuRef.current?.contains(event.target as Node)) {
-        setIsGuestMenuOpen(false);
-      }
-    };
-
-    document.addEventListener('mousedown', handlePointerDown);
-
-    return () => {
-      document.removeEventListener('mousedown', handlePointerDown);
-    };
-  }, [isGuestMenuOpen]);
-
-  const openAuthRoute = (path: '/login' | '/register') => {
-    setIsGuestMenuOpen(false);
-    history.push(path);
-  };
+  const shouldShowPageTitle = variant === 'brand' && brandLeading === 'back';
 
   const handleAccountClick = () => {
     if (isGuestAccount) {
-      setIsGuestMenuOpen((isOpen) => !isOpen);
+      history.push('/profile');
       return;
     }
 
@@ -89,34 +67,29 @@ const AppHeader: FC<Props> = ({
     history.push('/profile');
   };
 
+  const handleBack = () => {
+    if (onBack) {
+      onBack();
+      return;
+    }
+
+    goToPreviousPage(history);
+  };
+
   const renderAccountControl = () => {
     if (isGuestAccount) {
       return (
-        <div className="ctl-account-menu" ref={menuRef}>
-          <button
-            aria-expanded={isGuestMenuOpen}
-            aria-label="Guest account menu"
-            className="ctl-guest-account"
-            onClick={handleAccountClick}
-            type="button"
-          >
-            <span className="ctl-guest-account__icon">
-              <IonIcon icon={personOutline} />
-            </span>
-            <span className="ctl-guest-account__label">GUEST</span>
-          </button>
-
-          {isGuestMenuOpen ? (
-            <div className="ctl-account-dropdown">
-              <button onClick={() => openAuthRoute('/login')} type="button">
-                Login
-              </button>
-              <button onClick={() => openAuthRoute('/register')} type="button">
-                Register
-              </button>
-            </div>
-          ) : null}
-        </div>
+        <button
+          aria-label="Open guest profile"
+          className="ctl-guest-account"
+          onClick={handleAccountClick}
+          type="button"
+        >
+          <span className="ctl-guest-account__icon">
+            <IonIcon icon={personOutline} />
+          </span>
+          <span className="ctl-guest-account__label">GUEST</span>
+        </button>
       );
     }
 
@@ -142,7 +115,7 @@ const AppHeader: FC<Props> = ({
                 aria-label="Go back"
                 className="ctl-header-button"
                 fill="clear"
-                onClick={onBack}
+                onClick={handleBack}
               >
                 <IonIcon icon={arrowBackOutline} slot="icon-only" />
               </IonButton>
@@ -159,13 +132,17 @@ const AppHeader: FC<Props> = ({
           </IonButtons>
 
           <IonTitle className="ctl-brand-title">
-            <div className="ctl-brand-lockup">
-              <div className="ctl-brand-mark">CTL</div>
-              <div className="ctl-brand-copy">
-                <span>{brandName}</span>
-                <small>{brandSubtitle}</small>
+            {shouldShowPageTitle ? (
+              <span className="ctl-brand-page-title">{title}</span>
+            ) : (
+              <div className="ctl-brand-lockup">
+                <div className="ctl-brand-mark"><img src={AppLogo} /></div>
+                <div className="ctl-brand-copy">
+                  <span>{brandName}</span>
+                  <small>{brandSubtitle}</small>
+                </div>
               </div>
-            </div>
+            )}
           </IonTitle>
 
           <IonButtons slot="end">
@@ -192,7 +169,7 @@ const AppHeader: FC<Props> = ({
       <IonToolbar>
         <IonButtons slot="start">
           {showBack ? (
-            <IonBackButton defaultHref="/home" />
+            <IonBackButton />
           ) : (
             <IonMenuButton data-testid="main-menu-button" menu="main-menu" />
           )}

@@ -3,6 +3,7 @@ import { supabase } from '../lib/supabase';
 import { useAuthStore } from '../store/authStore';
 
 export const useAuthBootstrap = () => {
+  const clearSession = useAuthStore((state) => state.clearSession);
   const setAuthReady = useAuthStore((state) => state.setAuthReady);
   const setSession = useAuthStore((state) => state.setSession);
 
@@ -20,7 +21,13 @@ export const useAuthBootstrap = () => {
 
     const {
       data: { subscription }
-    } = supabase.auth.onAuthStateChange((_event, session) => {
+    } = supabase.auth.onAuthStateChange((event, session) => {
+      if (event === 'SIGNED_OUT') {
+        clearSession();
+        setAuthReady(true);
+        return;
+      }
+
       setSession(session);
       setAuthReady(true);
     });
@@ -29,6 +36,5 @@ export const useAuthBootstrap = () => {
       isMounted = false;
       subscription.unsubscribe();
     };
-  }, [setAuthReady, setSession]);
+  }, [clearSession, setAuthReady, setSession]);
 };
-

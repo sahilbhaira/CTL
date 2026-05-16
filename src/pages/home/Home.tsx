@@ -24,6 +24,7 @@ import {
 } from '../../data/servicesProducts';
 import { getUserDisplayName } from '../../lib/userProfile';
 import { useAuthStore } from '../../store/authStore';
+import { useQuoteAccessStore } from '../../store/quoteAccessStore';
 import './home.css';
 
 const homeServiceIds = [
@@ -47,11 +48,20 @@ const serviceImages: Record<string, string> = {
 const Home: React.FC = () => {
   const history = useHistory();
   const user = useAuthStore((state) => state.user);
+  const openQuoteLoginPrompt = useQuoteAccessStore((state) => state.openLoginPrompt);
   const displayName = getUserDisplayName(user);
 
   const services = homeServiceIds
     .map((serviceId) => getServiceById(serviceId))
     .filter((service): service is ServiceCategory => Boolean(service));
+  const openQuote = () => {
+    if (user) {
+      history.push('/quote');
+      return;
+    }
+
+    openQuoteLoginPrompt('/quote');
+  };
 
   const proofPoints = [
     {
@@ -121,7 +131,7 @@ const Home: React.FC = () => {
 
                 <IonButton
                   className="ctl-quote-button"
-                  onClick={() => history.push('/contact')}
+                  onClick={openQuote}
                 >
                   GET QUOTATION
                   <span className="ctl-quote-button__icon">

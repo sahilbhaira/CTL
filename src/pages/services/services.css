@@ -1,6 +1,6 @@
 .ctl-catalog-content {
   --background: var(--ctl-surface);
-  --padding-bottom: 112px;
+  --padding-bottom: 88px;
 }
 
 .ctl-catalog {
@@ -9,7 +9,7 @@
   margin: 0 auto;
   max-width: 430px;
   min-height: 100%;
-  padding-bottom: 112px;
+  padding-bottom: 16px;
 }
 
 .ctl-catalog-heading {
@@ -190,7 +190,88 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  min-width: 0;
   min-height: 64px;
+  flex: 1 1 auto;
+  padding-right: 4px;
+}
+
+.ctl-product-add-button {
+  align-items: center;
+  appearance: none;
+  background: rgba(255, 95, 19, 0.1);
+  border: 0;
+  border-radius: 50%;
+  color: var(--ion-color-primary);
+  display: flex;
+  flex: 0 0 auto;
+  height: 34px;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  transition: background 160ms ease, color 160ms ease, transform 160ms ease;
+  width: 34px;
+}
+
+.ctl-product-add-button ion-icon {
+  font-size: 18px;
+}
+
+.ctl-product-add-button--confirming {
+  animation: ctl-product-added-pulse 900ms ease;
+  background: rgba(30, 166, 109, 0.12);
+  color: #1ea66d;
+}
+
+.ctl-product-add-button--remove {
+  background: rgba(217, 45, 32, 0.1);
+  color: #d92d20;
+}
+
+.ctl-product-add-button:disabled {
+  opacity: 1;
+}
+
+.ctl-product-added-tooltip {
+  background: #1ea66d;
+  border-radius: 999px;
+  box-shadow: 0 10px 24px rgba(30, 166, 109, 0.22);
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: 800;
+  line-height: 1;
+  padding: 8px 10px;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: calc(100% + 8px);
+  white-space: nowrap;
+  z-index: 4;
+}
+
+.ctl-product-added-tooltip::before {
+  border-bottom: 6px solid #1ea66d;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  content: "";
+  position: absolute;
+  right: 11px;
+  top: -6px;
+}
+
+@keyframes ctl-product-added-pulse {
+  0% {
+    transform: scale(0.92);
+  }
+
+  42% {
+    transform: scale(1.12);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
 
 .ctl-product-actions {
@@ -205,4 +286,52 @@
 .ctl-product-action--quote {
   background: rgba(255, 95, 19, 0.1);
   color: var(--ion-color-primary);
+}
+
+.ctl-product-quantity-control {
+  align-items: center;
+  background: rgba(255, 95, 19, 0.1);
+  border-radius: 12px;
+  color: var(--ion-color-primary);
+  display: grid;
+  gap: 6px;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  min-height: 38px;
+  padding: 0 10px;
+}
+
+.ctl-product-quantity-control span,
+.ctl-product-quantity-control em {
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.ctl-product-quantity-control input {
+  background: #ffffff;
+  border: 1px solid rgba(255, 95, 19, 0.16);
+  border-radius: 8px;
+  color: var(--ctl-secondary);
+  font-size: 12px;
+  font-weight: 800;
+  height: 28px;
+  min-width: 0;
+  outline: none;
+  padding: 0 8px;
+  text-align: center;
+  width: 100%;
+}
+
+.ctl-product-quantity-control--disabled {
+  background: rgba(6, 22, 89, 0.05);
+  color: var(--ctl-muted-text);
+}
+
+.ctl-product-quantity-control--disabled input {
+  background: rgba(255, 255, 255, 0.6);
+  border-color: rgba(232, 232, 232, 0.72);
+  color: var(--ctl-muted-text);
 }

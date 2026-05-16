@@ -151,7 +151,11 @@ const AdminNegotiations: React.FC = () => {
 
           <div className="ctl-admin-customer-message">
             <span>Customer Message</span>
-            <p>{negotiationQuote.notes || 'No customer message was added.'}</p>
+            <p>
+              {negotiationQuote.customerResponseNote ||
+                negotiationQuote.notes ||
+                'No customer message was added.'}
+            </p>
           </div>
         </article>
 
@@ -210,7 +214,8 @@ const AdminNegotiations: React.FC = () => {
 
   return (
     <AdminPageShell
-      activeTab="Negotiation"
+      activeTab="Inquiries"
+      brandLeading="back"
       subtitle="Review customer counter-offers and update quotes."
       title="Negotiations"
     >
@@ -220,4 +225,3 @@ const AdminNegotiations: React.FC = () => {
 };
 
 export default AdminNegotiations;
-

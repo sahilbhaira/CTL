@@ -29,8 +29,10 @@ import {
   getUserInitials
 } from '../../lib/userProfile';
 import { isAdminUser } from '../../lib/admin';
+import { isQuoteAuthPath } from '../../lib/navigation';
 import { authService } from '../../services/authService';
 import { useAuthStore } from '../../store/authStore';
+import { useQuoteAccessStore } from '../../store/quoteAccessStore';
 import './NavigationMenu.css';
 
 interface NavigationMenuProps {
@@ -51,18 +53,17 @@ const mainMenuItems: MenuItemConfig[] = [
   { icon: callOutline, label: 'Contact Us', path: '/contact' }
 ];
 
-const guestMenuItems = mainMenuItems.filter((item) => item.path !== '/quotes');
-
 const adminMenuItems: MenuItemConfig[] = [
   { icon: speedometerOutline, label: 'Admin Dashboard', path: '/admin/dashboard' },
-  { icon: peopleOutline, label: 'Leads', path: '/admin/leads' },
-  { icon: documentTextOutline, label: 'Create Quote', path: '/admin/quote-preview' },
+  { icon: peopleOutline, label: 'Inquiries', path: '/admin/inquiries' },
+  { icon: documentTextOutline, label: 'Create Quote', path: '/admin/quote' },
   { icon: chatbubbleEllipsesOutline, label: 'Negotiations', path: '/admin/negotiations' },
-  { icon: checkmarkDoneCircleOutline, label: 'Accepted Quotes', path: '/admin/accepted' }
+  { icon: checkmarkDoneCircleOutline, label: 'Accepted Quotes', path: '/admin/accepted' },
+  { icon: personOutline, label: 'Profile', path: '/admin/profile' }
 ];
 
 const otherMenuItems: MenuItemConfig[] = [
-  { icon: informationCircleOutline, label: 'About Us' },
+  // { icon: informationCircleOutline, label: 'About Us' },
   { icon: helpCircleOutline, label: 'Help / FAQs' }
 ];
 
@@ -87,6 +88,14 @@ const isItemActive = (pathname: string, path?: string) => {
     return pathname === '/quotes' || pathname === '/status';
   }
 
+  if (path === '/admin/inquiries') {
+    return pathname === '/admin/inquiries' || pathname === '/admin/leads';
+  }
+
+  if (path === '/admin/quote') {
+    return pathname.startsWith('/admin/quote');
+  }
+
   return pathname === path;
 };
 
@@ -96,12 +105,13 @@ const NavigationMenu: FC<NavigationMenuProps> = ({ contentId }) => {
   const clearSession = useAuthStore((state) => state.clearSession);
   const session = useAuthStore((state) => state.session);
   const user = useAuthStore((state) => state.user);
+  const openQuoteLoginPrompt = useQuoteAccessStore((state) => state.openLoginPrompt);
   const menuRef = useRef<HTMLIonMenuElement>(null);
   const isGuest = !user;
   const isAdmin = isAdminUser(user);
   const displayName = getUserDisplayName(user);
   const emailLabel = getUserEmailLabel(user);
-  const visibleMenuItems = isAdmin ? adminMenuItems : isGuest ? guestMenuItems : mainMenuItems;
+  const visibleMenuItems = isAdmin ? adminMenuItems : mainMenuItems;
 
   const closeMenu = async (menuToClose?: HTMLIonMenuElement | null) => {
     const menu =
@@ -119,6 +129,11 @@ const NavigationMenu: FC<NavigationMenuProps> = ({ contentId }) => {
     const currentMenu = event?.currentTarget.closest('ion-menu') as HTMLIonMenuElement | null;
 
     void closeMenu(currentMenu).finally(() => {
+      if (isGuest && isQuoteAuthPath(path)) {
+        openQuoteLoginPrompt(path);
+        return;
+      }
+
       history.push(path);
     });
   };

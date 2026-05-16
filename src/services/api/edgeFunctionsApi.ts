@@ -43,6 +43,8 @@ export interface AdminQuotationRequest {
   createdAt: string;
   customer: AdminQuotationCustomer;
   customerOfferAmount: number | string | null;
+  customerRespondedAt: string | null;
+  customerResponseNote: string | null;
   id: string;
   notes: string | null;
   products: AdminQuotationProduct[];
@@ -81,6 +83,13 @@ export interface UpdateAdminQuotationRequestPayload {
   quoteAmount?: number | null;
   responseNote?: string;
   status?: AdminQuotationStatus;
+}
+
+export interface RespondToMyQuotationRequestPayload {
+  action: 'accept' | 'negotiate';
+  customerOfferAmount?: number | null;
+  id: string;
+  responseNote?: string;
 }
 
 export interface EdgeFunctionRequest<TBody = unknown> {
@@ -165,12 +174,25 @@ export const edgeFunctionsApi = createApi({
       })
     }),
     fetchEdgeFunction: builder.query<unknown, EdgeFunctionRequest>({
+      providesTags: ['EdgeFunction'],
       query: (request) => ({
         ...request,
         method: request.method ?? 'GET'
       })
     }),
+    respondToMyQuotationRequest: builder.mutation<
+      unknown,
+      RespondToMyQuotationRequestPayload
+    >({
+      invalidatesTags: ['EdgeFunction'],
+      query: (body) => ({
+        body,
+        functionName: 'my-quotation-requests',
+        method: 'PATCH'
+      })
+    }),
     invokeEdgeFunction: builder.mutation<unknown, EdgeFunctionRequest>({
+      invalidatesTags: ['AdminQuotationRequests', 'EdgeFunction'],
       query: (request) => request
     })
   }),
@@ -182,5 +204,6 @@ export const {
   useFetchEdgeFunctionQuery,
   useGetAdminQuotationRequestsQuery,
   useInvokeEdgeFunctionMutation,
+  useRespondToMyQuotationRequestMutation,
   useUpdateAdminQuotationRequestMutation
 } = edgeFunctionsApi;

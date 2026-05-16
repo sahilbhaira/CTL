@@ -3,19 +3,23 @@ import type { ReactNode } from 'react';
 import { useHistory } from 'react-router';
 import AppHeader from '../header/AppHeader';
 import AdminBottomNav, { type AdminTab } from './AdminBottomNav';
+import { goToPreviousPage } from '../../lib/navigation';
 import '../../pages/admin/admin.css';
 
 interface AdminPageShellProps {
   activeTab: AdminTab;
+  brandLeading?: 'back' | 'menu';
   children: ReactNode;
-  subtitle: string;
-  title: string;
+  hideTitle?: boolean;
+  subtitle?: string;
+  title?: string;
 }
 
 const AdminPageShell: React.FC<AdminPageShellProps> = ({
   activeTab,
+  brandLeading = 'menu',
   children,
-  subtitle,
+  hideTitle,
   title
 }) => {
   const history = useHistory();
@@ -23,17 +27,21 @@ const AdminPageShell: React.FC<AdminPageShellProps> = ({
   return (
     <IonPage>
       <AppHeader
+        brandLeading={brandLeading}
         brandTrailing="user"
-        onProfile={() => history.push('/admin/dashboard')}
-        title="Chandigarh Trade Link Admin"
+        onBack={() => goToPreviousPage(history)}
+        onProfile={() => history.push('/admin/profile')}
+        title={brandLeading === 'back' && title ? title : 'Chandigarh Trade Link Admin'}
         variant="brand"
       />
       <IonContent className="ctl-admin-content" fullscreen>
         <main className="ctl-admin-page">
-          <section className="ctl-admin-title">
-            <h1>{title}</h1>
-            <p>{subtitle}</p>
-          </section>
+          {!hideTitle && title ? (
+            <section className="ctl-admin-title">
+              {/* <h1>{title}</h1>
+              {subtitle ? <p>{subtitle}</p> : null} */}
+            </section>
+          ) : null}
 
           {children}
         </main>

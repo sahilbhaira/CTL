@@ -10,6 +10,7 @@ import { useFormik } from 'formik';
 import { useState } from 'react';
 import { useHistory } from 'react-router';
 import AuthField from '../../components/auth/AuthField';
+import { goToPreviousPage } from '../../lib/navigation';
 import { authService } from '../../services/authService';
 import { useAuthStore } from '../../store/authStore';
 import './auth.css';
@@ -103,9 +104,9 @@ const Register: React.FC = () => {
           <div className="ctl-auth-panel">
             <header className="ctl-auth-topbar">
               <IonButton
-                aria-label="Back to login"
+                aria-label="Go back"
                 className="ctl-auth-back"
-                onClick={() => history.push('/login')}
+                onClick={() => goToPreviousPage(history)}
               >
                 <IonIcon icon={arrowBackOutline} slot="icon-only" />
               </IonButton>

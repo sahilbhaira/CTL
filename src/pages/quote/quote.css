@@ -1,8 +1,38 @@
 .ctl-quote {
-  padding-bottom: 120px;
+  padding-bottom: 112px;
+}
+
+.ctl-quote-content {
+  --padding-bottom: 0px;
+}
+
+.ctl-quote-topbar {
+  align-items: center;
+  display: flex;
+  padding: calc(14px + env(safe-area-inset-top)) 20px 0;
+}
+
+.ctl-quote-back {
+  align-items: center;
+  appearance: none;
+  background: #ffffff;
+  border: 1px solid rgba(232, 232, 232, 0.72);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(6, 22, 89, 0.04);
+  color: var(--ctl-secondary);
+  display: inline-flex;
+  height: 42px;
+  justify-content: center;
+  padding: 0;
+  width: 42px;
+}
+
+.ctl-quote-back ion-icon {
+  font-size: 20px;
 }
 
 .ctl-quote-title {
+  padding-top: 18px;
   padding-bottom: 8px;
 }
 
@@ -11,6 +41,69 @@
   flex-direction: column;
   gap: 20px;
   padding: 16px 20px 0;
+}
+
+.ctl-quote-service-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.ctl-quote-service-card {
+  background: #ffffff;
+  border: 1px solid rgba(100, 116, 139, 0.38);
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(6, 22, 89, 0.04);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 18px;
+}
+
+.ctl-quote-service-card__header {
+  align-items: center;
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+}
+
+.ctl-quote-service-card__header h2 {
+  color: var(--ctl-secondary);
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.ctl-quote-service-card__chevron {
+  color: var(--ctl-secondary);
+  flex: 0 0 auto;
+  font-size: 18px;
+}
+
+.ctl-quote-remove-service,
+.ctl-quote-add-product,
+.ctl-quote-add-service {
+  align-items: center;
+  appearance: none;
+  border: 0;
+  display: inline-flex;
+  font-size: 13px;
+  font-weight: 900;
+  gap: 7px;
+  justify-content: center;
+}
+
+.ctl-quote-remove-service {
+  background: transparent;
+  color: var(--ion-color-primary);
+  padding: 0;
+}
+
+.ctl-quote-remove-service ion-icon,
+.ctl-quote-add-product ion-icon,
+.ctl-quote-add-service ion-icon {
+  font-size: 17px;
 }
 
 .ctl-quote-field {
@@ -103,6 +196,28 @@
   padding: 12px;
 }
 
+.ctl-quote-select--single {
+  align-items: center;
+  display: grid;
+  gap: 8px;
+  grid-template-columns: minmax(0, 1fr) auto;
+  min-height: 48px;
+  padding: 0 14px;
+}
+
+.ctl-quote-select--single ion-select {
+  --highlight-color-focused: transparent;
+  color: var(--ctl-secondary);
+  font-size: 14px;
+  font-weight: 800;
+  min-height: 46px;
+}
+
+.ctl-quote-select--single > ion-icon {
+  color: var(--ctl-secondary);
+  font-size: 18px;
+}
+
 .ctl-quote-select__top {
   align-items: center;
   border-bottom: 1px solid rgba(232, 232, 232, 0.72);
@@ -158,6 +273,139 @@
   font-weight: 700;
   line-height: 1.3;
   padding: 4px 0;
+}
+
+.ctl-quote-product-box {
+  background: #ffffff;
+  border: 1px solid rgba(232, 232, 232, 0.9);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(6, 22, 89, 0.04);
+  overflow: hidden;
+}
+
+.ctl-quote-product-select-row {
+  align-items: center;
+  display: grid;
+  gap: 8px;
+  grid-template-columns: minmax(0, 1fr) auto;
+  min-height: 48px;
+  padding: 0 14px;
+}
+
+.ctl-quote-product-select-row ion-select {
+  --highlight-color-focused: transparent;
+  color: var(--ctl-muted-text);
+  font-size: 13px;
+  font-weight: 800;
+  min-height: 46px;
+}
+
+.ctl-quote-product-select-row > ion-icon {
+  color: var(--ctl-secondary);
+  font-size: 18px;
+}
+
+.ctl-quote-selected-products {
+  border-top: 1px solid rgba(232, 232, 232, 0.9);
+}
+
+.ctl-quote-selected-product-row {
+  align-items: center;
+  display: grid;
+  gap: 8px;
+  grid-template-columns: minmax(0, 1fr) minmax(64px, 78px) auto 30px;
+  min-height: 48px;
+  padding: 6px 10px 6px 14px;
+}
+
+.ctl-quote-selected-product-row + .ctl-quote-selected-product-row {
+  border-top: 1px solid rgba(232, 232, 232, 0.72);
+}
+
+.ctl-quote-selected-product-row span {
+  color: var(--ctl-secondary);
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.25;
+  min-width: 0;
+}
+
+.ctl-quote-selected-product-row input {
+  appearance: none;
+  background: #ffffff;
+  border: 1px solid rgba(232, 232, 232, 0.95);
+  border-radius: 8px;
+  color: var(--ctl-secondary);
+  font-size: 14px;
+  font-weight: 900;
+  min-height: 36px;
+  min-width: 0;
+  outline: none;
+  padding: 0 10px;
+  text-align: center;
+  width: 100%;
+}
+
+.ctl-quote-selected-product-row em {
+  color: var(--ctl-secondary);
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 1;
+  min-width: 22px;
+  text-align: right;
+}
+
+.ctl-quote-selected-product-row small {
+  color: #c2410c;
+  font-size: 12px;
+  font-weight: 700;
+  grid-column: 1 / -1;
+  line-height: 1.3;
+}
+
+.ctl-quote-remove-product {
+  align-items: center;
+  appearance: none;
+  background: #fef2f2;
+  border: 0;
+  border-radius: 8px;
+  color: #ef4444;
+  display: inline-flex;
+  height: 30px;
+  justify-content: center;
+  padding: 0;
+  width: 30px;
+}
+
+.ctl-quote-remove-product ion-icon {
+  font-size: 15px;
+}
+
+.ctl-quote-add-product {
+  align-self: center;
+  background: transparent;
+  color: var(--ion-color-primary);
+  margin-top: 4px;
+  min-height: 32px;
+  padding: 0 8px;
+}
+
+.ctl-quote-add-product:disabled,
+.ctl-quote-add-service:disabled {
+  color: var(--ctl-muted-text);
+  opacity: 0.62;
+}
+
+.ctl-quote-add-service {
+  background: #ffffff;
+  border: 1px solid rgba(100, 116, 139, 0.38);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(6, 22, 89, 0.04);
+  color: var(--ion-color-primary);
+  font-size: 15px;
+  min-height: 50px;
+  width: 100%;
 }
 
 .ctl-quote-quantity-list {
@@ -232,11 +480,16 @@
   gap: 8px;
   justify-content: center;
   letter-spacing: 1px;
-  margin-top: 4px;
+  left: 50%;
+  margin: 0;
   min-height: 54px;
   padding: 0 16px;
+  position: fixed;
+  bottom: calc(16px + env(safe-area-inset-bottom));
   text-transform: uppercase;
-  width: 100%;
+  transform: translateX(-50%);
+  width: min(390px, calc(100% - 40px));
+  z-index: 20;
 }
 
 .ctl-quote-submit:disabled {
@@ -279,8 +532,29 @@
   flex-direction: column;
   max-width: 335px;
   padding: 24px;
+  position: relative;
   text-align: center;
   width: 100%;
+}
+
+.ctl-quote-success-close {
+  align-items: center;
+  appearance: none;
+  background: rgba(6, 22, 89, 0.05);
+  border: 0;
+  border-radius: 50%;
+  color: var(--ctl-secondary);
+  display: flex;
+  height: 34px;
+  justify-content: center;
+  position: absolute;
+  right: 14px;
+  top: 14px;
+  width: 34px;
+}
+
+.ctl-quote-success-close ion-icon {
+  font-size: 18px;
 }
 
 .ctl-quote-success-icon {

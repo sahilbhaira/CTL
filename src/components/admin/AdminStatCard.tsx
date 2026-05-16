@@ -1,4 +1,5 @@
 import { IonIcon } from '@ionic/react';
+import { arrowForwardOutline } from 'ionicons/icons';
 
 interface AdminStatCardProps {
   active?: boolean;
@@ -24,6 +25,11 @@ const AdminStatCard: React.FC<AdminStatCardProps> = ({
       <span>
         <strong>{label}</strong>
         <em>{value}</em>
+        {onClick ? (
+          <small className="ctl-admin-stat__arrow" aria-hidden="true">
+            <IonIcon icon={arrowForwardOutline} />
+          </small>
+        ) : null}
       </span>
       <span className="ctl-admin-stat__icon">
         <IonIcon icon={icon} />

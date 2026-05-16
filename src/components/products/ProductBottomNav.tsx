@@ -8,7 +8,9 @@ import {
   listOutline
 } from 'ionicons/icons';
 import { useHistory } from 'react-router';
-import { getProductPath, type ProductTab } from '../../data/servicesProducts';
+import { getProductPath, getQuotePath, type ProductTab } from '../../data/servicesProducts';
+import { useAuthStore } from '../../store/authStore';
+import { useQuoteAccessStore } from '../../store/quoteAccessStore';
 import './ProductBottomNav.css';
 
 interface ProductBottomNavProps {
@@ -41,6 +43,18 @@ const navItems = [
 
 const ProductBottomNav: FC<ProductBottomNavProps> = ({ activeTab, productId }) => {
   const history = useHistory();
+  const user = useAuthStore((state) => state.user);
+  const openQuoteLoginPrompt = useQuoteAccessStore((state) => state.openLoginPrompt);
+  const quotePath = getQuotePath({ productId });
+
+  const openQuote = () => {
+    if (user) {
+      history.push(quotePath);
+      return;
+    }
+
+    openQuoteLoginPrompt(quotePath);
+  };
 
   return (
     <nav aria-label="Product navigation" className="ctl-product-nav">
@@ -64,7 +78,7 @@ const ProductBottomNav: FC<ProductBottomNavProps> = ({ activeTab, productId }) =
 
       <button
         className="ctl-product-nav__quote"
-        onClick={() => history.push('/contact')}
+        onClick={openQuote}
         type="button"
       >
         <span className="ctl-product-nav__quote-icon">

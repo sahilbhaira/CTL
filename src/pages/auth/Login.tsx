@@ -1,4 +1,9 @@
-import { IonButton, IonContent, IonIcon, IonPage } from '@ionic/react';
+import {
+  IonButton,
+  IonContent,
+  IonIcon,
+  IonPage
+} from '@ionic/react';
 import {
   eyeOffOutline,
   lockClosedOutline,
@@ -6,9 +11,11 @@ import {
   personOutline,
   shieldCheckmarkOutline
 } from 'ionicons/icons';
+import AppLogo from '../../assets/images/ctl_logo.png';
+import type { User } from '@supabase/supabase-js';
 import { useFormik } from 'formik';
 import { useState } from 'react';
-import { useHistory } from 'react-router';
+import { useHistory, useLocation } from 'react-router';
 import AuthField from '../../components/auth/AuthField';
 import { isAdminUser } from '../../lib/admin';
 import { authService } from '../../services/authService';
@@ -42,9 +49,48 @@ const validateLogin = (values: LoginValues) => {
 };
 
 const adminLoginEmail = '4dxjatt@gmail.com';
+const guardedAuthPaths = ['/login', '/register', '/forgot-password', '/reset-password'];
+
+interface LoginLocationState {
+  from?: string;
+}
+
+const isSafeRedirectPath = (path: string | null | undefined) => {
+  if (!path || !path.startsWith('/') || path.startsWith('//') || path.includes('://')) {
+    return false;
+  }
+
+  return !guardedAuthPaths.some(
+    (authPath) =>
+      path === authPath ||
+      path.startsWith(`${authPath}?`) ||
+      path.startsWith(`${authPath}/`)
+  );
+};
+
+const getPostLoginPath = (
+  user: User | null,
+  search: string,
+  state: LoginLocationState | undefined
+) => {
+  const isAdmin = isAdminUser(user);
+  const fallbackPath = isAdmin ? '/admin/dashboard' : '/home';
+  const redirectPath = new URLSearchParams(search).get('redirect') ?? state?.from;
+
+  if (!isSafeRedirectPath(redirectPath)) {
+    return fallbackPath;
+  }
+
+  if (redirectPath?.startsWith('/admin')) {
+    return isAdmin ? redirectPath : '/home';
+  }
+
+  return isAdmin ? '/admin/dashboard' : redirectPath ?? fallbackPath;
+};
 
 const Login: React.FC = () => {
   const history = useHistory();
+  const location = useLocation<LoginLocationState>();
   const session = useAuthStore((state) => state.session);
   const setGuestSession = useAuthStore((state) => state.setGuestSession);
   const setSession = useAuthStore((state) => state.setSession);
@@ -61,7 +107,9 @@ const Login: React.FC = () => {
       try {
         const { session } = await authService.login(values);
         setSession(session);
-        history.replace(isAdminUser(session?.user ?? null) ? '/admin/dashboard' : '/home');
+        history.replace(
+          getPostLoginPath(session?.user ?? null, location.search, location.state)
+        );
       } catch (error) {
         setSubmitMessage({
           text: error instanceof Error ? error.message : 'Unable to login right now',
@@ -92,7 +140,7 @@ const Login: React.FC = () => {
         <main className="ctl-auth-screen">
           <div className="ctl-auth-panel ctl-login-panel">
             <section className="ctl-auth-logo-block">
-              <div className="ctl-auth-logo">CTL</div>
+              <div className="ctl-auth--login-logo"><img width={100} src={AppLogo} /></div>
               <h1>Chandigarh Trade Link</h1>
             </section>
 

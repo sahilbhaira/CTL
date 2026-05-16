@@ -22,12 +22,12 @@ import {
   getProductById,
   getServiceById,
   getServiceIcon,
-  getServicePath,
   type Product,
   type ProductApplicationStep,
   type ProductKeyValue,
   type ProductTab
 } from '../../data/servicesProducts';
+import { goToPreviousPage } from '../../lib/navigation';
 import './product.css';
 
 interface ProductRouteParams {
@@ -280,8 +280,8 @@ const ProductDetails: React.FC = () => {
       <AppHeader
         brandLeading="back"
         brandTrailing="share"
-        onBack={() => history.push(service ? getServicePath(service.id) : '/services')}
-        title="Chandigarh Trade Link"
+        onBack={() => goToPreviousPage(history)}
+        title={product.name}
         variant="brand"
       />
       <IonContent className="ctl-catalog-content" fullscreen>

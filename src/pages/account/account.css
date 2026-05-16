@@ -104,6 +104,7 @@
   align-items: center;
   display: flex;
   gap: 12px;
+  text-decoration: none;
 }
 
 .ctl-contact-method__icon {
@@ -196,7 +197,7 @@
   display: flex;
   flex: 1 1 auto;
   flex-direction: column;
-  padding: 24px 20px 112px;
+  padding: 24px 20px 18px;
 }
 
 .ctl-profile-card {
@@ -234,6 +235,16 @@
   letter-spacing: 0;
   overflow: hidden;
   width: 96px;
+}
+
+.ctl-profile-avatar--guest {
+  background: #ffffff;
+  border-color: rgba(232, 232, 232, 0.72);
+  color: var(--ctl-secondary);
+}
+
+.ctl-profile-avatar--guest ion-icon {
+  font-size: 54px;
 }
 
 .ctl-profile-camera {

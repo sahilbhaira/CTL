@@ -24,6 +24,9 @@ const allowedStatuses = new Set([
   'sent'
 ]);
 
+const quotationRequestSelect =
+  'id, customer_name, customer_email, customer_phone, notes, service_ids, service_names, status, quote_amount, customer_offer_amount, customer_response_note, customer_responded_at, response_note, admin_notes, quoted_at, accepted_at, created_at, updated_at';
+
 interface QuotationRequestRow {
   accepted_at: string | null;
   admin_notes: string | null;
@@ -32,6 +35,8 @@ interface QuotationRequestRow {
   customer_name: string;
   customer_offer_amount: number | string | null;
   customer_phone: string;
+  customer_responded_at: string | null;
+  customer_response_note: string | null;
   id: string;
   notes: string | null;
   quote_amount: number | string | null;
@@ -129,6 +134,8 @@ const toQuote = (quote: QuotationRequestRow, items: QuotationItemRow[]) => ({
     phone: quote.customer_phone
   },
   customerOfferAmount: quote.customer_offer_amount,
+  customerRespondedAt: quote.customer_responded_at,
+  customerResponseNote: quote.customer_response_note,
   id: quote.id,
   notes: quote.notes,
   products: items
@@ -290,9 +297,7 @@ Deno.serve(async (request) => {
       .from('quotation_requests')
       .update(updateValues)
       .eq('id', id)
-      .select(
-        'id, customer_name, customer_email, customer_phone, notes, service_ids, service_names, status, quote_amount, customer_offer_amount, response_note, admin_notes, quoted_at, accepted_at, created_at, updated_at'
-      )
+      .select(quotationRequestSelect)
       .single();
 
     if (updateError || !updatedQuote) {
@@ -321,9 +326,7 @@ Deno.serve(async (request) => {
 
   const { data: requests, error: requestError } = await supabaseAdmin
     .from('quotation_requests')
-    .select(
-      'id, customer_name, customer_email, customer_phone, notes, service_ids, service_names, status, quote_amount, customer_offer_amount, response_note, admin_notes, quoted_at, accepted_at, created_at, updated_at'
-    )
+    .select(quotationRequestSelect)
     .order('created_at', { ascending: false })
     .limit(limit);
 
@@ -382,4 +385,3 @@ Deno.serve(async (request) => {
     stats
   });
 });
-

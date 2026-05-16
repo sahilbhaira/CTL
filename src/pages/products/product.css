@@ -1,6 +1,6 @@
 .ctl-catalog-content {
   --background: var(--ctl-surface);
-  --padding-bottom: 112px;
+  --padding-bottom: 88px;
 }
 
 .ctl-product {
@@ -9,7 +9,7 @@
   margin: 0 auto;
   max-width: 430px;
   min-height: 100%;
-  padding-bottom: 96px;
+  padding-bottom: 88px;
 }
 
 .ctl-product-title {

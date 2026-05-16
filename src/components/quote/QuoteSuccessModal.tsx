@@ -1,5 +1,5 @@
 import { IonIcon, IonModal } from '@ionic/react';
-import { checkmarkCircleOutline, listOutline } from 'ionicons/icons';
+import { checkmarkCircleOutline, closeOutline, listOutline } from 'ionicons/icons';
 import type { FC } from 'react';
 
 interface QuoteSuccessModalProps {
@@ -26,6 +26,15 @@ const QuoteSuccessModal: FC<QuoteSuccessModalProps> = ({
       className="ctl-quote-success-card"
       role="dialog"
     >
+      <button
+        aria-label="Close quote success"
+        className="ctl-quote-success-close"
+        onClick={onClose}
+        type="button"
+      >
+        <IonIcon icon={closeOutline} />
+      </button>
+
       <div className="ctl-quote-success-icon" aria-hidden="true">
         <span />
         <IonIcon icon={checkmarkCircleOutline} />

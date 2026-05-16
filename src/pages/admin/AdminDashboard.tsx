@@ -2,19 +2,36 @@ import { IonIcon } from '@ionic/react';
 import {
   checkmarkCircleOutline,
   chatbubbleEllipsesOutline,
-  listOutline,
   peopleOutline,
   refreshOutline,
-  sendOutline,
   timeOutline
 } from 'ionicons/icons';
 import { useHistory } from 'react-router';
-import AdminLeadCard from '../../components/admin/AdminLeadCard';
 import AdminPageShell from '../../components/admin/AdminPageShell';
 import AdminStatCard from '../../components/admin/AdminStatCard';
 import { getUserDisplayName } from '../../lib/userProfile';
 import { useGetAdminQuotationRequestsQuery } from '../../services/api/edgeFunctionsApi';
 import { useAuthStore } from '../../store/authStore';
+
+const getRelativeTime = (date: string) => {
+  const diffInMinutes = Math.max(
+    Math.round((Date.now() - new Date(date).getTime()) / 60000),
+    0
+  );
+
+  if (diffInMinutes < 60) {
+    return diffInMinutes <= 1 ? 'Just now' : `${diffInMinutes} mins ago`;
+  }
+
+  const diffInHours = Math.round(diffInMinutes / 60);
+
+  if (diffInHours < 24) {
+    return `${diffInHours} ${diffInHours === 1 ? 'hr' : 'hrs'} ago`;
+  }
+
+  const diffInDays = Math.round(diffInHours / 24);
+  return `${diffInDays} ${diffInDays === 1 ? 'day' : 'days'} ago`;
+};
 
 const AdminDashboard: React.FC = () => {
   const history = useHistory();
@@ -59,72 +76,69 @@ const AdminDashboard: React.FC = () => {
               icon={peopleOutline}
               label="Total Leads"
               value={stats?.total ?? 0}
+              wide
             />
             <AdminStatCard
               icon={timeOutline}
               label="Pending"
+              onClick={() => history.push('/admin/inquiries?status=pending')}
               tone="pending"
               value={stats?.pending ?? 0}
             />
             <AdminStatCard
               icon={checkmarkCircleOutline}
               label="Responded"
+              onClick={() => history.push('/admin/inquiries?status=sent')}
               tone="sent"
               value={stats?.responded ?? 0}
             />
             <AdminStatCard
               icon={chatbubbleEllipsesOutline}
               label="Negotiating"
+              onClick={() => history.push('/admin/negotiations')}
               tone="negotiating"
               value={stats?.negotiating ?? 0}
+            />
+            <AdminStatCard
+              icon={checkmarkCircleOutline}
+              label="Accepted"
+              onClick={() => history.push('/admin/accepted')}
+              tone="accepted"
+              value={stats?.accepted ?? 0}
             />
           </div>
         </section>
 
         <section className="ctl-admin-section">
-          <h3>Quick Actions</h3>
-          <div className="ctl-admin-actions">
-            <button
-              className="ctl-admin-secondary-action"
-              onClick={() => history.push('/admin/leads')}
-              type="button"
-            >
-              <IonIcon icon={listOutline} />
-              VIEW LEADS
-            </button>
-            <button
-              className="ctl-admin-primary-action"
-              onClick={() => history.push('/admin/quote-preview')}
-              type="button"
-            >
-              <IonIcon icon={sendOutline} />
-              CREATE QUOTE
-            </button>
-          </div>
-        </section>
-
-        <section className="ctl-admin-section">
           <div className="ctl-admin-section-heading">
-            <h3>Recent Inquiries</h3>
-            <button onClick={() => history.push('/admin/leads')} type="button">
-              View All
-            </button>
+            <h3>Recent Activity</h3>
           </div>
 
           {recentQuotes.length ? (
-            <div className="ctl-admin-list">
+            <div className="ctl-admin-activity-list">
               {recentQuotes.map((quote) => (
-                <AdminLeadCard
-                  actionLabel="VIEW INQUIRY"
-                  key={quote.id}
-                  onAction={() => history.push(`/admin/quote-preview/${quote.id}`)}
-                  quote={quote}
-                />
+                <article className="ctl-admin-activity-card" key={quote.id}>
+                  <div className="ctl-admin-activity-card__body" onClick={() => history.push(`/admin/quote/${quote.id}`)}>
+                    <h2>{quote.customer.name}</h2>
+                    <p>
+                      {quote.serviceNames[0] ?? 'Inquiry'}
+                      {quote.products[0]?.productName ? ` • ${quote.products[0].productName}` : ''}
+                    </p>
+                    <span>{getRelativeTime(quote.createdAt)}</span>
+                  </div>
+                  <button
+                    className="ctl-admin-card-action"
+                    onClick={() => history.push(`/admin/quote/${quote.id}`)}
+                    type="button"
+                  >
+                    OPEN INQUIRY
+                  </button>
+                </article>
               ))}
             </div>
           ) : (
             <section className="ctl-admin-empty ctl-admin-empty--compact">
-              <h2>No inquiries yet</h2>
+              <h2>No recent activity</h2>
               <p>Customer quotation requests will appear here once submitted.</p>
             </section>
           )}
@@ -136,7 +150,7 @@ const AdminDashboard: React.FC = () => {
   return (
     <AdminPageShell
       activeTab="Dashboard"
-      subtitle={`Welcome back, ${getUserDisplayName(user)}. Here is your overview for today.`}
+      subtitle={`Welcome back, ${getUserDisplayName(user)}`}
       title="Dashboard"
     >
       {renderContent()}

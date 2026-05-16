@@ -1,14 +1,12 @@
 import { IonIcon } from '@ionic/react';
 import {
-  chatbubbleEllipsesOutline,
-  checkmarkDoneCircleOutline,
-  addOutline,
+  personOutline,
   peopleOutline,
   speedometerOutline
 } from 'ionicons/icons';
 import { useHistory } from 'react-router';
 
-export type AdminTab = 'Accepted' | 'Dashboard' | 'Leads' | 'Negotiation';
+export type AdminTab = 'Dashboard' | 'Inquiries' | 'Profile';
 
 interface AdminBottomNavProps {
   activeTab: AdminTab;
@@ -22,9 +20,8 @@ interface AdminNavItem {
 
 const adminNavItems: AdminNavItem[] = [
   { icon: speedometerOutline, label: 'Dashboard', path: '/admin/dashboard' },
-  { icon: peopleOutline, label: 'Leads', path: '/admin/leads' },
-  { icon: chatbubbleEllipsesOutline, label: 'Negotiation', path: '/admin/negotiations' },
-  { icon: checkmarkDoneCircleOutline, label: 'Accepted', path: '/admin/accepted' }
+  { icon: peopleOutline, label: 'Inquiries', path: '/admin/inquiries' },
+  { icon: personOutline, label: 'Profile', path: '/admin/profile' }
 ];
 
 const AdminBottomNav: React.FC<AdminBottomNavProps> = ({ activeTab }) => {
@@ -32,37 +29,7 @@ const AdminBottomNav: React.FC<AdminBottomNavProps> = ({ activeTab }) => {
 
   return (
     <nav className="ctl-admin-bottom-nav" aria-label="Admin navigation">
-      {adminNavItems.slice(0, 2).map((item) => {
-        const isActive = activeTab === item.label;
-
-        return (
-          <button
-            className={`ctl-admin-bottom-nav__item${
-              isActive ? ' ctl-admin-bottom-nav__item--active' : ''
-            }`}
-            key={item.label}
-            onClick={() => history.push(item.path)}
-            type="button"
-          >
-            {isActive ? <span className="ctl-admin-bottom-nav__indicator" /> : null}
-            <IonIcon icon={item.icon} />
-            <span>{item.label}</span>
-          </button>
-        );
-      })}
-
-      <button
-        className="ctl-admin-bottom-nav__quote"
-        onClick={() => history.push('/admin/quote-preview')}
-        type="button"
-      >
-        <span>
-          <IonIcon icon={addOutline} />
-        </span>
-        <strong>QUOTE</strong>
-      </button>
-
-      {adminNavItems.slice(2).map((item) => {
+      {adminNavItems.map((item) => {
         const isActive = activeTab === item.label;
 
         return (
