@@ -1,5 +1,5 @@
 .ctl-account-section {
-  padding: 16px 20px;
+  padding: var(--ctl-section-gap) var(--ctl-page-gutter);
 }
 
 .ctl-account-section-title {
@@ -39,7 +39,7 @@
   flex-direction: column;
   gap: 14px;
   overflow: hidden;
-  padding: 20px;
+  padding: var(--ctl-page-gutter);
   position: relative;
 }
 
@@ -197,7 +197,7 @@
   display: flex;
   flex: 1 1 auto;
   flex-direction: column;
-  padding: 24px 20px 18px;
+  padding: var(--ctl-page-top-space) var(--ctl-page-gutter) var(--ctl-page-bottom-space);
 }
 
 .ctl-profile-card {

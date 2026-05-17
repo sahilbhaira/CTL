@@ -100,7 +100,7 @@ const Register: React.FC = () => {
   return (
     <IonPage>
       <IonContent className="ctl-auth-content" fullscreen>
-        <main className="ctl-auth-screen">
+        <main className="ctl-auth-screen register">
           <div className="ctl-auth-panel">
             <header className="ctl-auth-topbar">
               <IonButton

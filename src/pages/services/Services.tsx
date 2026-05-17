@@ -30,7 +30,19 @@ const Services: React.FC = () => {
 
                     <section className="ctl-card-list" aria-label="Service categories">
                         {serviceCategories.map((service) => (
-                            <article className="ctl-service-list-card" key={service.id}>
+                            <article
+                                className="ctl-service-list-card"
+                                key={service.id}
+                                onClick={() => history.push(getServicePath(service.id))}
+                                onKeyDown={(event) => {
+                                    if (event.key === 'Enter' || event.key === ' ') {
+                                        event.preventDefault();
+                                        history.push(getServicePath(service.id));
+                                    }
+                                }}
+                                role="button"
+                                tabIndex={0}
+                            >
                                 <div className="ctl-service-list-card__main">
                                     <div className="ctl-service-list-card__icon">
                                         <IonIcon icon={getServiceIcon(service.id)} />
@@ -40,14 +52,11 @@ const Services: React.FC = () => {
                                         <p>{service.description}</p>
                                     </div>
                                 </div>
-                                <button
-                                    className="ctl-service-list-card__action"
-                                    onClick={() => history.push(getServicePath(service.id))}
-                                    type="button"
-                                >
-                                    VIEW PRODUCTS
-                                    <IonIcon icon={chevronForwardOutline} />
-                                </button>
+                                <IonIcon
+                                    aria-hidden="true"
+                                    className="ctl-service-list-card__chevron"
+                                    icon={chevronForwardOutline}
+                                />
                             </article>
                         ))}
                     </section>

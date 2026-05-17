@@ -59,6 +59,7 @@ import AdminNegotiations from './pages/admin/AdminNegotiations';
 import AdminProfile from './pages/admin/AdminProfile';
 import AdminInquiries from './pages/admin/inquiries/AdminInquiries';
 import AdminQuote from './pages/admin/quote/AdminQuote';
+import AdminQuotePreview from './pages/admin/quote/AdminQuotePreview';
 import ForgotPassword from './pages/auth/ForgotPassword';
 import Login from './pages/auth/Login';
 import Register from './pages/auth/Register';
@@ -84,6 +85,7 @@ const IonTabsWithId = IonTabs as unknown as (props: TabsWithIdProps) => ReactEle
 const AppTabs: React.FC = () => {
   const location = useLocation();
   const isAuthReady = useAuthStore((state) => state.isAuthReady);
+  const isGuest = useAuthStore((state) => state.isGuest);
   const user = useAuthStore((state) => state.user);
   const isAuthRoute = authRoutes.some((route) => location.pathname.startsWith(route));
   const isAdminRoute = location.pathname.startsWith('/admin');
@@ -137,6 +139,10 @@ const AppTabs: React.FC = () => {
     }
 
     if (!user) {
+      if (isGuest) {
+        return <Redirect to="/home" />;
+      }
+
       if (isAuthRoute) {
         return null;
       }
@@ -160,6 +166,10 @@ const AppTabs: React.FC = () => {
     }
 
     if (!user) {
+      if (isGuest) {
+        return <Redirect to="/home" />;
+      }
+
       if (isAuthRoute) {
         return null;
       }
@@ -180,7 +190,11 @@ const AppTabs: React.FC = () => {
         return null;
       }
 
-      return <Redirect to={user ? '/home' : getLoginRedirectLocation(routeLocation)} />;
+      return (
+        <Redirect
+          to={user || isGuest ? '/home' : getLoginRedirectLocation(routeLocation)}
+        />
+      );
     }
 
     return <Component />;
@@ -266,6 +280,13 @@ const AppTabs: React.FC = () => {
           exact
         />
         <Route
+          path="/admin/negotiations/:quoteId"
+          render={({ location: routeLocation }) =>
+            renderAdminPage(AdminNegotiations, routeLocation)
+          }
+          exact
+        />
+        <Route
           path="/admin/negotiations"
           render={({ location: routeLocation }) =>
             renderAdminPage(AdminNegotiations, routeLocation)
@@ -286,14 +307,9 @@ const AppTabs: React.FC = () => {
         />
         <Route
           path="/admin/quote-preview/:quoteId?"
-          render={({ match }) => {
-            const params = match.params as { quoteId?: string };
-            const quotePath = params.quoteId
-              ? `/admin/quote/${params.quoteId}`
-              : '/admin/quote';
-
-            return <Redirect to={quotePath} />;
-          }}
+          render={({ location: routeLocation }) =>
+            renderAdminPage(AdminQuotePreview, routeLocation)
+          }
           exact
         />
         <Route
@@ -305,7 +321,21 @@ const AppTabs: React.FC = () => {
         />
         <Route path="/admin" render={() => <Redirect to="/admin/dashboard" />} exact />
 
-        <Redirect exact from="/" to="/login" />
+        <Route
+          path="/"
+          render={() => {
+            if (!isAuthReady) {
+              return null;
+            }
+
+            if (isAdmin) {
+              return <Redirect to="/admin/dashboard" />;
+            }
+
+            return <Redirect to={user || isGuest ? '/home' : '/login'} />;
+          }}
+          exact
+        />
       </IonRouterOutlet>
 
       <IonTabBar

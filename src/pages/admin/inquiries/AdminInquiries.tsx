@@ -3,6 +3,7 @@ import { refreshOutline, searchOutline } from 'ionicons/icons';
 import { useEffect, useMemo, useState } from 'react';
 import { useHistory, useLocation } from 'react-router';
 import AdminPageShell from '../../../components/admin/AdminPageShell';
+import AdminStatusBadge from '../../../components/admin/AdminStatusBadge';
 import {
   formatQuotationReference,
   getQuotationStatusGroup,
@@ -75,8 +76,15 @@ const AdminInquiries: React.FC = () => {
     setActiveFilter(getFilterFromSearch(location.search));
   }, [location.search]);
 
-  const openQuote = (quoteId: string) => {
-    history.push(`/admin/quote/${quoteId}`);
+  const openQuote = (quote: AdminQuotationRequest) => {
+    const statusGroup = getQuotationStatusGroup(quote.status);
+
+    if (statusGroup === 'sent' || statusGroup === 'accepted') {
+      history.push(`/admin/quote-preview/${quote.id}`);
+      return;
+    }
+
+    history.push(`/admin/quote/${quote.id}`);
   };
 
   const filteredQuotes = useMemo(() => {
@@ -151,20 +159,23 @@ const AdminInquiries: React.FC = () => {
           <article
             className="ctl-admin-inquiry-card ctl-admin-inquiry-card--clickable"
             key={quote.id}
-            onClick={() => openQuote(quote.id)}
+            onClick={() => openQuote(quote)}
             onKeyDown={(event) => {
               if (event.key === 'Enter' || event.key === ' ') {
                 event.preventDefault();
-                openQuote(quote.id);
+                openQuote(quote);
               }
             }}
             role="button"
             tabIndex={0}
           >
             <div className="ctl-admin-inquiry-card__body">
-              <strong className="ctl-admin-inquiry-reference">
-                {formatQuotationReference(quote.id)}
-              </strong>
+              <div className="ctl-admin-inquiry-card__top">
+                <strong className="ctl-admin-inquiry-reference">
+                  {formatQuotationReference(quote.id)}
+                </strong>
+                {activeFilter === 'sent' ? <AdminStatusBadge status={quote.status} /> : null}
+              </div>
               <h2>{quote.customer.name}</h2>
               <p>{getInquiryService(quote)}</p>
               <span>Qty: {getInquiryQuantity(quote)}</span>
@@ -183,7 +194,11 @@ const AdminInquiries: React.FC = () => {
       activeTab="Inquiries"
       brandLeading={location.search ? 'back' : 'menu'}
       hideTitle
-      title="Inquiries"
+      title={
+        location.search ? 
+        activeFilter == "sent" ? "Responded" : "Pending"
+        : "Inquiries"
+      }
     >
       <section className="ctl-admin-content-stack ctl-admin-inquiries">
         <div className="ctl-admin-inquiries-search">

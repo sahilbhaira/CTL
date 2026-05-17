@@ -6,6 +6,8 @@ import {
 } from 'ionicons/icons';
 import { useFormik } from 'formik';
 import { useMemo } from 'react';
+import { useHistory, useParams } from 'react-router';
+import AdminLeadCard from '../../components/admin/AdminLeadCard';
 import AdminPageShell from '../../components/admin/AdminPageShell';
 import AdminStatusBadge from '../../components/admin/AdminStatusBadge';
 import {
@@ -18,6 +20,10 @@ import {
   useUpdateAdminQuotationRequestMutation
 } from '../../services/api/edgeFunctionsApi';
 
+interface NegotiationRouteParams {
+  quoteId?: string;
+}
+
 interface NegotiationValues {
   quoteAmount: string;
   responseNote: string;
@@ -26,34 +32,44 @@ interface NegotiationValues {
 const parseAmount = (value: string) => Number(value.replace(/,/g, '').trim());
 
 const AdminNegotiations: React.FC = () => {
+  const history = useHistory();
+  const { quoteId } = useParams<NegotiationRouteParams>();
   const { data, error, isFetching, refetch } = useGetAdminQuotationRequestsQuery({
     limit: 100
   });
   const [updateQuote, { isLoading: isUpdating }] = useUpdateAdminQuotationRequestMutation();
-  const negotiationQuote = useMemo(
+  const quotes = useMemo(() => data?.quotes ?? [], [data?.quotes]);
+  const negotiationQuotes = useMemo(
     () =>
-      (data?.quotes ?? []).find((quote) => getQuotationStatusGroup(quote.status) === 'negotiating'),
-    [data?.quotes]
+      quotes.filter((quote) => getQuotationStatusGroup(quote.status) === 'negotiating'),
+    [quotes]
   );
+  const selectedQuote = useMemo(
+    () => (quoteId ? quotes.find((quote) => quote.id === quoteId) : undefined),
+    [quoteId, quotes]
+  );
+  const isSelectedNegotiating =
+    Boolean(selectedQuote) &&
+    getQuotationStatusGroup(selectedQuote?.status ?? 'pending') === 'negotiating';
 
   const formik = useFormik<NegotiationValues>({
     enableReinitialize: true,
     initialValues: {
-      quoteAmount: negotiationQuote?.quoteAmount ? String(negotiationQuote.quoteAmount) : '',
+      quoteAmount: selectedQuote?.quoteAmount ? String(selectedQuote.quoteAmount) : '',
       responseNote:
-        negotiationQuote?.responseNote ??
+        selectedQuote?.responseNote ??
         'We have reviewed your request and can update the quotation with our best available price.'
     },
     onSubmit: async (values, helpers) => {
       helpers.setStatus(null);
 
-      if (!negotiationQuote) {
+      if (!selectedQuote || !isSelectedNegotiating) {
         return;
       }
 
       try {
         await updateQuote({
-          id: negotiationQuote.id,
+          id: selectedQuote.id,
           quoteAmount: parseAmount(values.quoteAmount),
           responseNote: values.responseNote,
           status: 'quoted'
@@ -90,29 +106,33 @@ const AdminNegotiations: React.FC = () => {
 
   const submitMessage = formik.status as { text: string; type: 'error' | 'success' } | null;
 
-  const renderContent = () => {
+  const renderLoading = () => (
+    <section className="ctl-admin-list">
+      <article className="ctl-admin-skeleton ctl-admin-skeleton--large" />
+    </section>
+  );
+
+  const renderError = () => (
+    <section className="ctl-admin-empty">
+      <h2>Unable to load negotiations</h2>
+      <p>Counter-offers are loaded through the admin Edge Function.</p>
+      <button className="ctl-admin-primary-action" onClick={() => refetch()} type="button">
+        <IonIcon icon={refreshOutline} />
+        Retry
+      </button>
+    </section>
+  );
+
+  const renderList = () => {
     if (isFetching) {
-      return (
-        <section className="ctl-admin-list">
-          <article className="ctl-admin-skeleton ctl-admin-skeleton--large" />
-        </section>
-      );
+      return renderLoading();
     }
 
     if (error) {
-      return (
-        <section className="ctl-admin-empty">
-          <h2>Unable to load negotiations</h2>
-          <p>Counter-offers are loaded through the admin Edge Function.</p>
-          <button className="ctl-admin-primary-action" onClick={() => refetch()} type="button">
-            <IonIcon icon={refreshOutline} />
-            Retry
-          </button>
-        </section>
-      );
+      return renderError();
     }
 
-    if (!negotiationQuote) {
+    if (!negotiationQuotes.length) {
       return (
         <section className="ctl-admin-empty">
           <div className="ctl-admin-empty__icon">
@@ -125,35 +145,97 @@ const AdminNegotiations: React.FC = () => {
     }
 
     return (
+      <section className="ctl-admin-list">
+        {negotiationQuotes.map((quote) => (
+          <AdminLeadCard
+            actionLabel="OPEN NEGOTIATION"
+            key={quote.id}
+            onAction={() => history.push(`/admin/negotiations/${quote.id}`)}
+            quote={quote}
+            showAmount
+          />
+        ))}
+      </section>
+    );
+  };
+
+  const renderDetail = () => {
+    if (isFetching) {
+      return renderLoading();
+    }
+
+    if (error) {
+      return renderError();
+    }
+
+    if (!selectedQuote) {
+      return (
+        <section className="ctl-admin-empty">
+          <div className="ctl-admin-empty__icon">
+            <IonIcon icon={chatbubbleEllipsesOutline} />
+          </div>
+          <h2>Negotiation not found</h2>
+          <p>This negotiation may have been removed or refreshed.</p>
+          <button
+            className="ctl-admin-primary-action"
+            onClick={() => history.replace('/admin/negotiations')}
+            type="button"
+          >
+            View Negotiations
+          </button>
+        </section>
+      );
+    }
+
+    if (!isSelectedNegotiating) {
+      return (
+        <section className="ctl-admin-empty">
+          <div className="ctl-admin-empty__icon">
+            <IonIcon icon={documentTextOutline} />
+          </div>
+          <h2>Negotiation already closed</h2>
+          <p>This quote has moved out of negotiations.</p>
+          <button
+            className="ctl-admin-primary-action"
+            onClick={() => history.replace('/admin/inquiries?status=sent')}
+            type="button"
+          >
+            View Responded
+          </button>
+        </section>
+      );
+    }
+
+    return (
       <section className="ctl-admin-content-stack">
         <article className="ctl-admin-negotiation-card">
           <div className="ctl-admin-negotiation-card__top">
             <div>
-              <h2>{negotiationQuote.customer.name}</h2>
+              <h2>{selectedQuote.customer.name}</h2>
               <span>
                 <IonIcon icon={documentTextOutline} />
-                {formatQuotationReference(negotiationQuote.id)}
+                {formatQuotationReference(selectedQuote.id)}
               </span>
             </div>
-            <AdminStatusBadge status={negotiationQuote.status} />
+            <AdminStatusBadge status={selectedQuote.status} />
           </div>
 
           <div className="ctl-admin-price-grid">
             <div>
               <span>Current Quote</span>
-              <strong>{formatIndianCurrency(negotiationQuote.quoteAmount)}</strong>
+              <strong>{formatIndianCurrency(selectedQuote.quoteAmount)}</strong>
             </div>
             <div className="ctl-admin-price-grid__highlight">
               <span>Customer Offer</span>
-              <strong>{formatIndianCurrency(negotiationQuote.customerOfferAmount)}</strong>
+              <strong>{formatIndianCurrency(selectedQuote.customerOfferAmount)}</strong>
             </div>
           </div>
 
           <div className="ctl-admin-customer-message">
             <span>Customer Message</span>
             <p>
-              {negotiationQuote.customerResponseNote ||
-                negotiationQuote.notes ||
+              {selectedQuote.customerResponseNote ||
+                selectedQuote.notes ||
                 'No customer message was added.'}
             </p>
           </div>
@@ -212,12 +294,18 @@ const AdminNegotiations: React.FC = () => {
     );
   };
 
+  const renderContent = () => (quoteId ? renderDetail() : renderList());
+
   return (
     <AdminPageShell
       activeTab="Inquiries"
       brandLeading="back"
-      subtitle="Review customer counter-offers and update quotes."
-      title="Negotiations"
+      subtitle={
+        quoteId
+          ? 'Review the customer counter-offer and update this quote.'
+          : 'Review all customer counter-offers.'
+      }
+      title={quoteId ? 'Negotiation Details' : 'Negotiations'}
     >
       {renderContent()}
     </AdminPageShell>

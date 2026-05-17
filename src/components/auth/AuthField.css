@@ -13,7 +13,7 @@
   display: flex;
   gap: 12px;
   min-height: 58px;
-  padding: 0 20px;
+  padding: 0 var(--ctl-page-gutter);
   transition: border-color 180ms ease, box-shadow 180ms ease;
 }
 

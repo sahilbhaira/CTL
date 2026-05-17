@@ -1,5 +1,5 @@
 .ctl-quotes {
-  padding-bottom: 10px;
+  padding-bottom: var(--ctl-page-bottom-space);
 }
 
 .ctl-quotes-title {
@@ -10,7 +10,7 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
-  padding: 16px 20px 0;
+  padding: var(--ctl-section-gap) var(--ctl-page-gutter) 0;
 }
 
 .ctl-quotes-tabs {
@@ -18,7 +18,7 @@
   border-radius: 16px;
   display: flex;
   gap: 6px;
-  margin: 0 20px 2px;
+  margin: 0 var(--ctl-page-gutter) 2px;
   padding: 6px;
 }
 
@@ -74,7 +74,7 @@
   font-size: 12px;
   font-weight: 800;
   line-height: 1.4;
-  margin: 12px 20px 0;
+  margin: 12px var(--ctl-page-gutter) 0;
   padding: 11px 12px;
 }
 
@@ -580,7 +580,7 @@
 }
 
 .ctl-negotiate {
-  padding-bottom: 10px;
+  padding-bottom: var(--ctl-page-bottom-space);
 }
 
 .ctl-negotiate-title {
@@ -591,7 +591,7 @@
   display: flex;
   flex-direction: column;
   gap: 22px;
-  padding: 16px 20px 0;
+  padding: var(--ctl-section-gap) var(--ctl-page-gutter) 0;
 }
 
 .ctl-negotiate-price-card {
@@ -602,7 +602,7 @@
   box-shadow: 0 2px 8px rgba(6, 22, 89, 0.04);
   display: flex;
   justify-content: space-between;
-  padding: 20px;
+  padding: var(--ctl-page-gutter);
 }
 
 .ctl-negotiate-price-card div {
@@ -742,12 +742,12 @@
   display: flex;
   justify-content: center;
   left: 50%;
-  max-width: 430px;
-  padding: 20px;
+  max-width: var(--ctl-page-max-width);
+  padding: var(--ctl-page-gutter);
   position: fixed;
   top: 0;
   transform: translateX(-50%);
-  width: min(100%, 430px);
+  width: min(100%, var(--ctl-page-max-width));
   z-index: 100;
 }
 

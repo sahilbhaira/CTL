@@ -1,19 +1,19 @@
 .ctl-catalog-content {
   --background: var(--ctl-surface);
-  --padding-bottom: 88px;
+  --padding-bottom: var(--ctl-scroll-bottom-space);
 }
 
 .ctl-catalog {
   background: var(--ctl-surface);
   color: var(--ctl-secondary);
   margin: 0 auto;
-  max-width: 430px;
+  max-width: var(--ctl-page-max-width);
   min-height: 100%;
-  padding-bottom: 16px;
+  padding-bottom: var(--ctl-page-bottom-space);
 }
 
 .ctl-catalog-heading {
-  padding: 24px 20px 16px;
+  padding: var(--ctl-page-top-space) var(--ctl-page-gutter) var(--ctl-section-gap);
 }
 
 .ctl-catalog-title-row {
@@ -82,18 +82,25 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
-  padding: 0 20px 24px;
+  padding: 0 var(--ctl-page-gutter) var(--ctl-page-top-space);
 }
 
 .ctl-service-list-card,
 .ctl-product-list-card {
   background: #ffffff;
   border: 1px solid rgba(232, 232, 232, 0.58);
-  border-radius: 24px;
+  border-radius: var(--ctl-list-card-radius);
   box-shadow: 0 2px 8px rgba(6, 22, 89, 0.04);
   display: flex;
   flex-direction: column;
-  padding: 16px;
+  padding: var(--ctl-card-padding);
+}
+
+.ctl-service-list-card {
+  align-items: center;
+  cursor: pointer;
+  flex-direction: row;
+  gap: 12px;
 }
 
 .ctl-service-list-card__main,
@@ -102,6 +109,18 @@
   display: flex;
   gap: 16px;
   margin-bottom: 16px;
+}
+
+.ctl-service-list-card__main {
+  flex: 1 1 auto;
+  margin-bottom: 0;
+  min-width: 0;
+}
+
+.ctl-service-list-card__chevron {
+  color: var(--ion-color-primary);
+  flex: 0 0 auto;
+  font-size: 20px;
 }
 
 .ctl-service-list-card__icon {

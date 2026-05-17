@@ -13,7 +13,6 @@ import {
   gridOutline,
   helpCircleOutline,
   homeOutline,
-  informationCircleOutline,
   listOutline,
   logInOutline,
   logOutOutline,
@@ -173,14 +172,16 @@ const NavigationMenu: FC<NavigationMenuProps> = ({ contentId }) => {
               {isGuest ? <IonIcon icon={personOutline} /> : getUserInitials(user)}
             </div>
 
-            <h2>{isGuest ? 'Guest User' : displayName}</h2>
-            <p>
-              {isGuest
-                ? 'You are browsing as guest'
-                : isAdmin
-                  ? 'Administrator access'
-                  : emailLabel}
-            </p>
+            <div className='user-details'>
+              <h2>{isGuest ? 'Guest User' : displayName}</h2>
+              <p>
+                {isGuest
+                  ? 'You are browsing as guest'
+                  : isAdmin
+                    ? 'Administrator access'
+                    : emailLabel}
+              </p>
+            </div>
 
             {isGuest ? (
               <IonMenuToggle

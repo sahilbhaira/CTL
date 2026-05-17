@@ -21,6 +21,7 @@ import { getUserDisplayName } from '../../lib/userProfile';
 import { useAuthStore } from '../../store/authStore';
 import { useQuoteDraftStore } from '../../store/quoteDraftStore';
 import './services.css';
+import { useQuoteAccessStore } from '../../store/quoteAccessStore';
 
 interface ServiceRouteParams {
   serviceId: string;
@@ -30,8 +31,19 @@ const ServiceProducts: React.FC = () => {
   const history = useHistory();
   const { serviceId } = useParams<ServiceRouteParams>();
   const user = useAuthStore((state) => state.user);
+  const userId = user?.id ?? null;
   const addProductToDraft = useQuoteDraftStore((state) => state.addProductToDraft);
-  const quoteDraft = useQuoteDraftStore((state) => state.values);
+  const quoteDraft = useQuoteDraftStore((state) => {
+    if (!state.values) {
+      return null;
+    }
+
+    if (state.ownerUserId && state.ownerUserId !== userId) {
+      return null;
+    }
+
+    return state.values;
+  });
   const removeProductFromDraft = useQuoteDraftStore(
     (state) => state.removeProductFromDraft
   );
@@ -42,6 +54,8 @@ const ServiceProducts: React.FC = () => {
   const products = getProductsForService(service?.id);
   const [confirmingProductIds, setConfirmingProductIds] = useState<string[]>([]);
   const confirmationTimersRef = useRef<Record<string, ReturnType<typeof setTimeout>>>({});
+  const isAuthReady = useAuthStore((state) => state.isAuthReady);
+  const openQuoteLoginPrompt = useQuoteAccessStore((state) => state.openLoginPrompt);
   const selectedQuoteProductIds = useMemo(
     () =>
       new Set(
@@ -111,6 +125,15 @@ const ServiceProducts: React.FC = () => {
   };
 
   const handleQuoteProductToggle = (productId: string) => {
+    if (!isAuthReady) {
+      return;
+    }
+
+    if (!user) {
+      openQuoteLoginPrompt('/quote');
+      return;
+    }
+
     if (selectedQuoteProductIds.has(productId)) {
       removeProductForQuotation(productId);
       return;

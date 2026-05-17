@@ -9,8 +9,8 @@
   --border-width: 0 0 1px;
   --color: var(--ctl-secondary);
   --min-height: 64px;
-  --padding-end: 20px;
-  --padding-start: 20px;
+  --padding-end: var(--ctl-page-gutter);
+  --padding-start: var(--ctl-page-gutter);
   overflow: visible;
 }
 
@@ -60,7 +60,7 @@
   align-items: center;
   background: var(--ion-color-primary);
   border-radius: 50%;
-  box-shadow: 0 6px 14px rgba(255, 95, 19, 0.2);
+  /* box-shadow: 0 6px 14px rgba(255, 95, 19, 0.2); */
   color: #ffffff;
   display: flex;
   font-size: 13px;

@@ -2,13 +2,14 @@ import { IonIcon } from '@ionic/react';
 import {
   addOutline,
   documentTextOutline,
+  eyeOutline,
+  lockClosedOutline,
   receiptOutline,
   refreshOutline,
-  sendOutline,
   trashOutline
 } from 'ionicons/icons';
 import { getIn, useFormik } from 'formik';
-import { useMemo, useState } from 'react';
+import { useMemo } from 'react';
 import { useHistory, useParams } from 'react-router';
 import AdminPageShell from '../../../components/admin/AdminPageShell';
 import {
@@ -16,192 +17,28 @@ import {
   formatQuotationReference,
   getQuotationStatusGroup
 } from '../../../lib/quotation';
+import { getProductsForService } from '../../../data/servicesProducts';
 import {
   type AdminQuotationRequest,
-  useGetAdminQuotationRequestsQuery,
-  useUpdateAdminQuotationRequestMutation
+  useGetAdminQuotationRequestsQuery
 } from '../../../services/api/edgeFunctionsApi';
+import { useAdminQuotePreviewStore } from '../../../store/adminQuotePreviewStore';
+import {
+  calculateQuoteTotals,
+  createBlankItem,
+  createInitialValues,
+  groupQuoteItemsByService,
+  parseNumberInput,
+  sanitizeNumericInput,
+  toAmount,
+  type QuoteFormValues,
+  type QuoteItemValues
+} from './adminQuoteUtils';
 import '../admin.css';
 
 interface RouteParams {
   quoteId?: string;
 }
-
-interface QuoteItemValues {
-  id: string;
-  price: string;
-  productName: string;
-  quantity: string;
-}
-
-interface QuoteFormValues {
-  deliveryCharges: string;
-  gstPercent: string;
-  items: QuoteItemValues[];
-  responseNote: string;
-}
-
-interface StoredQuoteItem {
-  id?: unknown;
-  price?: unknown;
-  productName?: unknown;
-  quantity?: unknown;
-}
-
-interface StoredQuoteBreakdown {
-  deliveryCharges?: unknown;
-  gstPercent?: unknown;
-  items?: StoredQuoteItem[];
-  responseNote?: unknown;
-  type?: unknown;
-}
-
-const adminQuoteNotesType = 'ctl-admin-quote';
-const defaultDeliveryCharges = 0;
-const defaultGstPercent = 18;
-const defaultResponseNote =
-  'Delivery within 2-3 business days. Please review the quote and confirm to proceed.';
-
-const createBlankItem = (id: number | string): QuoteItemValues => ({
-  id: `custom-${id}`,
-  price: '',
-  productName: '',
-  quantity: ''
-});
-
-const parseNumberInput = (value: number | string | null | undefined) => {
-  if (typeof value === 'number') {
-    return Number.isFinite(value) ? value : null;
-  }
-
-  const normalized = String(value ?? '')
-    .replace(/[₹,\s]/g, '')
-    .trim();
-
-  if (!normalized) {
-    return null;
-  }
-
-  const amount = Number(normalized);
-  return Number.isFinite(amount) ? amount : null;
-};
-
-const toAmount = (value: number | string | null | undefined) => {
-  const amount = parseNumberInput(value);
-  return amount && amount > 0 ? amount : 0;
-};
-
-const toStoredAmount = (value: unknown) =>
-  toAmount(value as number | string | null | undefined);
-
-const toInputValue = (value: unknown, fallback = '') => {
-  const amount = parseNumberInput(value as number | string | null | undefined);
-  return amount !== null ? String(amount) : fallback;
-};
-
-const parseStoredQuoteBreakdown = (adminNotes: string | null) => {
-  if (!adminNotes) {
-    return null;
-  }
-
-  try {
-    const parsed = JSON.parse(adminNotes) as StoredQuoteBreakdown;
-    return parsed?.type === adminQuoteNotesType ? parsed : null;
-  } catch {
-    return null;
-  }
-};
-
-const calculateQuoteTotals = (values: QuoteFormValues) => {
-  const subtotal = values.items.reduce(
-    (total, item) => total + toAmount(item.price),
-    0
-  );
-  const delivery = toAmount(values.deliveryCharges);
-  const gstRate = toAmount(values.gstPercent);
-  const gst = Math.round((subtotal * gstRate) / 100);
-
-  return {
-    delivery,
-    gst,
-    gstRate,
-    subtotal,
-    total: Math.round(subtotal + delivery + gst)
-  };
-};
-
-const getFallbackItemPrice = (
-  quote: AdminQuotationRequest,
-  itemCount: number,
-  deliveryCharges: number,
-  gstPercent: number
-) => {
-  const quoteAmount = toAmount(quote.quoteAmount);
-
-  if (!quoteAmount || !itemCount) {
-    return '';
-  }
-
-  const estimatedSubtotal = Math.max(
-    Math.round((quoteAmount - deliveryCharges) / (1 + gstPercent / 100)),
-    0
-  );
-
-  return estimatedSubtotal ? String(Math.round(estimatedSubtotal / itemCount)) : '';
-};
-
-const createInitialValues = (quote: AdminQuotationRequest | undefined): QuoteFormValues => {
-  if (!quote) {
-    return {
-      deliveryCharges: String(defaultDeliveryCharges),
-      gstPercent: String(defaultGstPercent),
-      items: [createBlankItem('empty')],
-      responseNote: defaultResponseNote
-    };
-  }
-
-  const stored = parseStoredQuoteBreakdown(quote.adminNotes);
-  const deliveryCharges = toStoredAmount(stored?.deliveryCharges) || defaultDeliveryCharges;
-  const gstPercent = toStoredAmount(stored?.gstPercent) || defaultGstPercent;
-  const storedItems =
-    stored?.items
-      ?.map((item, index) => ({
-        id: String(item.id ?? `custom-${index}`),
-        price: toInputValue(item.price),
-        productName: typeof item.productName === 'string' ? item.productName : '',
-        quantity: typeof item.quantity === 'string' ? item.quantity : ''
-      }))
-      .filter((item) => item.productName || item.quantity || item.price) ?? [];
-
-  const fallbackPrice = getFallbackItemPrice(
-    quote,
-    quote.products.length,
-    deliveryCharges,
-    gstPercent
-  );
-  const requestItems = quote.products.map((product) => ({
-    id: product.id,
-    price: fallbackPrice,
-    productName: product.productName,
-    quantity: product.quantity
-  }));
-
-  let items = storedItems;
-
-  if (!items.length) {
-    items = requestItems.length ? requestItems : [createBlankItem(0)];
-  }
-
-  return {
-    deliveryCharges: String(deliveryCharges),
-    gstPercent: String(gstPercent),
-    items,
-    responseNote:
-      quote.responseNote ||
-      (typeof stored?.responseNote === 'string' ? stored.responseNote : '') ||
-      defaultResponseNote
-  };
-};
 
 const getTargetQuote = (
   quotes: AdminQuotationRequest[],
@@ -218,32 +55,13 @@ const getTargetQuote = (
   );
 };
 
-const createAdminNotes = (values: QuoteFormValues) =>
-  JSON.stringify({
-    deliveryCharges: toAmount(values.deliveryCharges),
-    gstPercent: toAmount(values.gstPercent),
-    items: values.items.map((item) => ({
-      id: item.id,
-      price: toAmount(item.price),
-      productName: item.productName.trim(),
-      quantity: item.quantity.trim()
-    })),
-    responseNote: values.responseNote.trim(),
-    type: adminQuoteNotesType,
-    updatedAt: new Date().toISOString(),
-    version: 1
-  });
-
 const AdminQuote: React.FC = () => {
   const history = useHistory();
   const { quoteId } = useParams<RouteParams>();
   const { data, error, isFetching, refetch } = useGetAdminQuotationRequestsQuery({
     limit: 100
   });
-  const [updateQuote, { isLoading: isSending }] = useUpdateAdminQuotationRequestMutation();
-  const [message, setMessage] = useState<{ text: string; type: 'error' | 'success' } | null>(
-    null
-  );
+  const setPreview = useAdminQuotePreviewStore((state) => state.setPreview);
   const quote = useMemo(
     () => getTargetQuote(data?.quotes ?? [], quoteId),
     [data?.quotes, quoteId]
@@ -253,33 +71,13 @@ const AdminQuote: React.FC = () => {
   const formik = useFormik<QuoteFormValues>({
     enableReinitialize: true,
     initialValues,
-    onSubmit: async (values) => {
+    onSubmit: (values) => {
       if (!quote) {
         return;
       }
 
-      const totals = calculateQuoteTotals(values);
-      setMessage(null);
-
-      try {
-        await updateQuote({
-          adminNotes: createAdminNotes(values),
-          id: quote.id,
-          quoteAmount: totals.total,
-          responseNote: values.responseNote.trim(),
-          status: 'sent'
-        }).unwrap();
-
-        setMessage({
-          text: 'Quotation sent to customer.',
-          type: 'success'
-        });
-      } catch {
-        setMessage({
-          text: 'Unable to send quotation right now.',
-          type: 'error'
-        });
-      }
+      setPreview(quote.id, values);
+      history.push(`/admin/quote-preview/${quote.id}`);
     },
     validate: (values) => {
       const errors: Record<string, unknown> = {};
@@ -325,6 +123,7 @@ const AdminQuote: React.FC = () => {
   });
 
   const totals = calculateQuoteTotals(formik.values);
+  const groupedItems = groupQuoteItemsByService(formik.values.items);
 
   const getFieldError = (name: string) => {
     const error = getIn(formik.errors, name);
@@ -332,16 +131,48 @@ const AdminQuote: React.FC = () => {
     return touched && typeof error === 'string' ? error : null;
   };
 
-  const addItem = () => {
+  const getProductError = (index: number) => {
+    const error = getIn(formik.errors, `items.${index}.productName`);
+    const touched =
+      getIn(formik.touched, `items.${index}.productName`) ||
+      getIn(formik.touched, `items.${index}.productId`) ||
+      formik.submitCount > 0;
+
+    return touched && typeof error === 'string' ? error : null;
+  };
+
+  const setNumericField = (name: string, value: string) => {
+    void formik.setFieldValue(name, sanitizeNumericInput(value));
+  };
+
+  const addProduct = (serviceId: string, serviceName: string) => {
     void formik.setFieldValue('items', [
       ...formik.values.items,
-      createBlankItem(Date.now())
+      createBlankItem(Date.now(), serviceId, serviceName)
     ]);
   };
 
+  const handleProductSelect = (index: number, serviceId: string, productId: string) => {
+    const product = getProductsForService(serviceId).find(
+      (serviceProduct) => serviceProduct.id === productId
+    );
+
+    void formik.setFieldValue(`items.${index}.productId`, product?.id ?? '');
+    void formik.setFieldValue(`items.${index}.productName`, product?.name ?? '');
+  };
+
   const removeItem = (index: number) => {
+    const item = formik.values.items[index];
+
+    if (item?.locked) {
+      return;
+    }
+
     const nextItems = formik.values.items.filter((_, itemIndex) => itemIndex !== index);
-    void formik.setFieldValue('items', nextItems.length ? nextItems : [createBlankItem(Date.now())]);
+    void formik.setFieldValue(
+      'items',
+      nextItems.length ? nextItems : [createBlankItem(Date.now())]
+    );
   };
 
   const renderContent = () => {
@@ -402,71 +233,131 @@ const AdminQuote: React.FC = () => {
         <section className="ctl-admin-quote-form-section">
           <h3>Quote Items</h3>
 
-          {formik.values.items.map((item, index) => (
-            <article className="ctl-admin-quote-item" key={item.id}>
+          {groupedItems.map((group) => (
+            <div className="ctl-admin-quote-service-group" key={`${group.serviceId}:${group.serviceName}`}>
+              <div className="ctl-admin-quote-service-heading">
+                <span>Service</span>
+                <strong>{group.serviceName}</strong>
+              </div>
+
+              {group.items.map(({ index, item }) => (
+                <article
+                  className={`ctl-admin-quote-item${
+                    item.locked ? ' ctl-admin-quote-item--locked' : ''
+                  }`}
+                  key={item.id}
+                >
+                  {item.locked ? (
+                    <span className="ctl-admin-quote-lock">
+                      <IonIcon icon={lockClosedOutline} />
+                      Customer request
+                    </span>
+                  ) : (
+                    <button
+                      aria-label="Remove quote item"
+                      className="ctl-admin-quote-remove"
+                      onClick={() => removeItem(index)}
+                      type="button"
+                    >
+                      <IonIcon icon={trashOutline} />
+                    </button>
+                  )}
+
+                  <label className="ctl-admin-quote-field ctl-admin-quote-field--wide">
+                    <span>Product Name</span>
+                    {item.locked ? (
+                      <input
+                        name={`items.${index}.productName`}
+                        onBlur={formik.handleBlur}
+                        placeholder="Product name"
+                        readOnly
+                        value={item.productName}
+                      />
+                    ) : (
+                      <select
+                        name={`items.${index}.productId`}
+                        onBlur={formik.handleBlur}
+                        onChange={(event) =>
+                          handleProductSelect(index, group.serviceId, event.target.value)
+                        }
+                        value={item.productId}
+                      >
+                        <option value="">Select product</option>
+                        {getProductsForService(group.serviceId).map((product) => (
+                          <option key={product.id} value={product.id}>
+                            {product.name}
+                          </option>
+                        ))}
+                        {item.productId &&
+                        !getProductsForService(group.serviceId).some(
+                          (product) => product.id === item.productId
+                        ) ? (
+                          <option value={item.productId}>{item.productName}</option>
+                        ) : null}
+                      </select>
+                    )}
+                    {getProductError(index) ? <small>{getProductError(index)}</small> : null}
+                  </label>
+
+                  <div className="ctl-admin-quote-row">
+                    <label className="ctl-admin-quote-field">
+                      <span>Quantity</span>
+                      <input
+                        inputMode="numeric"
+                        name={`items.${index}.quantity`}
+                        onBlur={formik.handleBlur}
+                        onChange={(event) =>
+                          item.locked
+                            ? undefined
+                            : setNumericField(
+                                `items.${index}.quantity`,
+                                event.target.value
+                              )
+                        }
+                        pattern="[0-9]*"
+                        placeholder="50"
+                        readOnly={item.locked}
+                        value={item.quantity}
+                      />
+                      {getFieldError(`items.${index}.quantity`) ? (
+                        <small>{getFieldError(`items.${index}.quantity`)}</small>
+                      ) : null}
+                    </label>
+
+                    <label className="ctl-admin-quote-field">
+                      <span>Price</span>
+                      <div className="ctl-admin-quote-money">
+                        <em>₹</em>
+                        <input
+                          inputMode="numeric"
+                          name={`items.${index}.price`}
+                          onBlur={formik.handleBlur}
+                          onChange={(event) =>
+                            setNumericField(`items.${index}.price`, event.target.value)
+                          }
+                          pattern="[0-9]*"
+                          placeholder="0"
+                          value={item.price}
+                        />
+                      </div>
+                      {getFieldError(`items.${index}.price`) ? (
+                        <small>{getFieldError(`items.${index}.price`)}</small>
+                      ) : null}
+                    </label>
+                  </div>
+                </article>
+              ))}
+
               <button
-                aria-label="Remove quote item"
-                className="ctl-admin-quote-remove"
-                onClick={() => removeItem(index)}
+                className="ctl-admin-add-item ctl-admin-add-item--service"
+                onClick={() => addProduct(group.serviceId, group.serviceName)}
                 type="button"
               >
-                <IonIcon icon={trashOutline} />
+                <IonIcon icon={addOutline} />
+                ADD PRODUCT
               </button>
-
-              <label className="ctl-admin-quote-field ctl-admin-quote-field--wide">
-                <span>Product Name</span>
-                <input
-                  name={`items.${index}.productName`}
-                  onBlur={formik.handleBlur}
-                  onChange={formik.handleChange}
-                  placeholder="Product name"
-                  value={item.productName}
-                />
-                {getFieldError(`items.${index}.productName`) ? (
-                  <small>{getFieldError(`items.${index}.productName`)}</small>
-                ) : null}
-              </label>
-
-              <div className="ctl-admin-quote-row">
-                <label className="ctl-admin-quote-field">
-                  <span>Quantity</span>
-                  <input
-                    name={`items.${index}.quantity`}
-                    onBlur={formik.handleBlur}
-                    onChange={formik.handleChange}
-                    placeholder="50 bags"
-                    value={item.quantity}
-                  />
-                  {getFieldError(`items.${index}.quantity`) ? (
-                    <small>{getFieldError(`items.${index}.quantity`)}</small>
-                  ) : null}
-                </label>
-
-                <label className="ctl-admin-quote-field">
-                  <span>Price</span>
-                  <div className="ctl-admin-quote-money">
-                    <em>₹</em>
-                    <input
-                      inputMode="decimal"
-                      name={`items.${index}.price`}
-                      onBlur={formik.handleBlur}
-                      onChange={formik.handleChange}
-                      placeholder="0"
-                      value={item.price}
-                    />
-                  </div>
-                  {getFieldError(`items.${index}.price`) ? (
-                    <small>{getFieldError(`items.${index}.price`)}</small>
-                  ) : null}
-                </label>
-              </div>
-            </article>
+            </div>
           ))}
-
-          <button className="ctl-admin-add-item" onClick={addItem} type="button">
-            <IonIcon icon={addOutline} />
-            ADD ITEM
-          </button>
         </section>
 
         <section className="ctl-admin-quote-form-section">
@@ -477,10 +368,11 @@ const AdminQuote: React.FC = () => {
               <div className="ctl-admin-quote-money">
                 <em>₹</em>
                 <input
-                  inputMode="decimal"
+                  inputMode="numeric"
                   name="deliveryCharges"
                   onBlur={formik.handleBlur}
-                  onChange={formik.handleChange}
+                  onChange={(event) => setNumericField('deliveryCharges', event.target.value)}
+                  pattern="[0-9]*"
                   value={formik.values.deliveryCharges}
                 />
               </div>
@@ -493,10 +385,11 @@ const AdminQuote: React.FC = () => {
               <span>GST (%)</span>
               <div className="ctl-admin-quote-money ctl-admin-quote-money--suffix">
                 <input
-                  inputMode="decimal"
+                  inputMode="numeric"
                   name="gstPercent"
                   onBlur={formik.handleBlur}
-                  onChange={formik.handleChange}
+                  onChange={(event) => setNumericField('gstPercent', event.target.value)}
+                  pattern="[0-9]*"
                   value={formik.values.gstPercent}
                 />
                 <em>%</em>
@@ -542,30 +435,13 @@ const AdminQuote: React.FC = () => {
           </div>
         </section>
 
-        {message ? (
-          <p className={`ctl-admin-form-message ctl-admin-form-message--${message.type}`}>
-            {message.text}
-          </p>
-        ) : null}
-
-        <section className="ctl-admin-quote-actions">
-          <button
-            className="ctl-admin-secondary-action ctl-admin-primary-action--full"
-            onClick={() => window.print()}
-            type="button"
-          >
-            <IonIcon icon={documentTextOutline} />
-            PREVIEW PDF
-          </button>
-          <button
-            className="ctl-admin-primary-action ctl-admin-primary-action--full"
-            disabled={formik.isSubmitting || isSending}
-            type="submit"
-          >
-            <IonIcon icon={sendOutline} />
-            {formik.isSubmitting || isSending ? 'SENDING...' : 'SEND QUOTATION'}
-          </button>
-        </section>
+        <button
+          className="ctl-admin-primary-action ctl-admin-primary-action--full"
+          type="submit"
+        >
+          <IonIcon icon={eyeOutline} />
+          PREVIEW QUOTATION
+        </button>
       </form>
     );
   };

@@ -4359,8 +4359,8 @@
               "description": "Clean all tools and application equipment with Sika® Colma Cleaner immediately after use. Hardened/cured material can only be mechanically removed."
             }
           ],
-          "consumption": null,
-          "notes": null
+          "consumption": "",
+          "notes": ""
         },
         "documents": {
           "files": [
@@ -4575,7 +4575,7 @@
               "description": "Beware of condensation. The substrate and uncured applied resin must be at least +3°C above dew point to reduce the risk of condensation or blooming on the resin surface."
             }
           ],
-          "consumption": null,
+          "consumption": {},
           "notes": null
         },
         "documents": {
@@ -4789,8 +4789,8 @@
               "description": "When applied to matt moisture concrete, brush the adhesive well into substrate."
             }
           ],
-          "consumption": null,
-          "notes": null
+          "consumption": "",
+          "notes": ""
         },
         "documents": {
           "files": [
@@ -6733,7 +6733,7 @@
               "description": "Apply directly from the pail using a brush or roller. Apply in 3 layers for the complete waterproofing system. Allow each layer to dry before applying the next."
             }
           ],
-          "consumption": null,
+          "consumption": {},
           "notes": null
         },
         "documents": {
@@ -6973,7 +6973,7 @@
               "description": "The seams must be mechanically tested with screw driver (rounded edges) to ensure the integrity/completion of the weld. Any imperfections must be rectified by hot air welding."
             }
           ],
-          "consumption": null,
+          "consumption": {},
           "notes": null
         },
         "documents": {
@@ -7056,353 +7056,1290 @@
     {
       "id": "sika-polysulphide-gun-grade",
       "serviceId": "sealing-bonding",
-      "name": "Sika Polysulphide Gun Grade",
-      "tagline": "",
+      "name": "Sika® Polysulphide Gun Grade",
+      "tagline": "Two component polysulphide sealant - Gun Grade",
       "thumbnail": "/images/products/sika-polysulphide-gun-grade.jpg",
       "tabs": {
         "overview": {
-          "text": "",
-          "usage": [],
-          "advantages": [],
-          "packaging": "",
-          "colour": ""
+          "text": "Sika® Polysulphide Gun Grade is a two component Polysulphide sealant. It is used for sealing expansion joints where large movement is anticipated in concrete construction and for joints between diverse construction materials. It is suitable for sealing joints subjected to vehicular traffic and is chemically resistant to water, fuels, oils and solvents.",
+          "usage": [
+            "Precast concrete elements",
+            "Dams, Reservoirs and water treatment plants",
+            "Residential & Commercial buildings",
+            "Subways, bridges, culverts, tunnels",
+            "Rigid pavements of highways, airport runways, aprons, etc"
+          ],
+          "advantages": [
+            "Excellent adhesion with most common construction materials",
+            "Resistant to UV and weathering in exposed conditions",
+            "High movement accommodation",
+            "Non-sag in vertical and overhead joints",
+            "Good chemical resistance",
+            "Permanently elastic and forms watertight seal",
+            "Flame and fuel resistant",
+            "Easy to use",
+            "Economical"
+          ],
+          "packaging": "Part A: 3.68 kg, Part B: 0.32 kg, Part A+B: 4 kg x 2 sets",
+          "colour": "Grey Paste"
         },
         "details": {
-          "keyValues": []
+          "keyValues": [
+            {
+              "label": "Chemical Base",
+              "value": "Cross linking polysulphide"
+            },
+            {
+              "label": "Shelf Life",
+              "value": "12 months from the date of production"
+            },
+            {
+              "label": "Storage Conditions",
+              "value": "Store properly in unopened, undamaged and sealed original packaging in cool and dry condition at temperature +5°C to +25°C at a Relative Humidity of 50%"
+            },
+            {
+              "label": "Density",
+              "value": "1.6-1.7 kg/litre at 30°C (JIS K 6820)"
+            },
+            {
+              "label": "Approvals / Standards",
+              "value": "BS 4254-1983, BS S212-1990, IRC: 57-2006, IS: 12118 (Part 1), JIS K 6820"
+            }
+          ]
         },
         "application": {
-          "steps": [],
-          "consumption": null,
-          "notes": null
+          "steps": [
+            {
+              "step": 1,
+              "title": "Substrate Preparation",
+              "description": "All surfaces must be clean, dry and free from any loosely adhering particles. Check the joints edges for soundness and if found weak cut recess and fill up with suitable repair mortar. Correct joint depth can be established by inserting polyethylene based Sika® Backer Material tightly into the joint. Use bond breaker tape over the backer material. Protect surfaces with masking tape. Sika® Primer-3 should be used as a primer only on the two sides. Allow a flash-off time of at least 45 minutes before sealant application (maximum 8 hours)."
+            },
+            {
+              "step": 2,
+              "title": "Mixing",
+              "description": "The two components are mixed in the ratio Comp A : Comp B = 92 : 8 by weight with a low speed mixer (300-600 rpm). Mix for approximately 8-10 minutes until a smooth, even consistency is achieved."
+            },
+            {
+              "step": 3,
+              "title": "Cleaning of Tools",
+              "description": "Clean all the tools with Solvent immediately after use. Hardened/Cured material can only be mechanically removed."
+            }
+          ],
+          "consumption": {
+            "label": "Curing Time (for 500 g mix)",
+            "value": "Skinning Time: ~6 hrs at +30°C. Initial Setting: ~24 hrs at +30°C. Full Cure: ~7 days at +30°C. Tack Free Time: 16±0.1 hrs (BS 5212-1990). Pot Life: >90 minutes at 30°C (500g mix)."
+          },
+          "notes": "Mixing Ratio: Part A : Part B = 92 : 8 (by weight). Ambient Air Temperature: +5°C min. / +40°C max. Substrate Temperature: +5°C min. / +40°C max. Sag Flow: Non Sag."
         },
         "documents": {
-          "files": []
+          "files": [
+            {
+              "label": "Sika® Polysulphide Gun Grade",
+              "type": "Product Data Sheet (PDS)",
+              "url": "/docs/sika-polysulphide-gun-grade-pds.pdf"
+            }
+          ]
         }
       }
     },
     {
       "id": "sika-flex-127",
       "serviceId": "sealing-bonding",
-      "name": "Sika Flex 127",
-      "tagline": "",
+      "name": "Sikaflex®-127",
+      "tagline": "Multipurpose sealant and adhesive based on hybrid polyurethane",
       "thumbnail": "/images/products/sika-flex-127.jpg",
       "tabs": {
         "overview": {
-          "text": "",
-          "usage": [],
-          "advantages": [],
-          "packaging": "",
-          "colour": ""
+          "text": "Sikaflex®-127 is a single component, elastic, moisture curing, hybrid polyurethane based construction sealant and adhesive. Its good adhesion to most construction materials and good weathering resistance makes it especially suitable for a variety of interior and exterior sealing applications.",
+          "usage": [
+            "Connection joints",
+            "Window and door frames",
+            "Precast concrete elements",
+            "Applications requiring over-painting of sealant",
+            "Facades",
+            "Interior and exterior use",
+            "As an adhesive to bond: Concrete, Masonry, Most stones, Ceramic, Wood, Metals, Glass, Plastic, PVC, Aluminium Composite Panels"
+          ],
+          "advantages": [
+            "Single component, ready to use",
+            "Good ageing resistance",
+            "Good weathering resistance",
+            "Bonds well to a wide variety of substrates without the need for special pre-treatment",
+            "Easy to apply",
+            "Suitable for gluing gutters, drip trays, flashings, and connection joints",
+            "Moisture cured",
+            "Fast skinning",
+            "Isocyanate and solvent free",
+            "Can be overpainted",
+            "Low odour"
+          ],
+          "packaging": "600 ml foil pack, 20 foil packs per box. 300 ml cartridge, 12 cartridges per box.",
+          "colour": "Concrete grey, white, black"
         },
         "details": {
-          "keyValues": []
+          "keyValues": [
+            {
+              "label": "Chemical Base",
+              "value": "Hybrid polyurethane based on silane terminated polymer"
+            },
+            {
+              "label": "Shelf Life",
+              "value": "12 months from the date of production"
+            },
+            {
+              "label": "Storage Conditions",
+              "value": "The product must be stored in original, unopened and undamaged sealed packaging in dry conditions at temperatures between +10°C and +25°C. Protect from direct sunlight."
+            },
+            {
+              "label": "Density",
+              "value": "~1.65 kg/L"
+            },
+            {
+              "label": "Shore A Hardness",
+              "value": "~35 (after 28 days) (ISO 868)"
+            },
+            {
+              "label": "Tensile Strength",
+              "value": "~1.0 N/mm² (ISO 37)"
+            },
+            {
+              "label": "Elongation at Break",
+              "value": "~350% (ISO 37)"
+            },
+            {
+              "label": "Tear Propagation Resistance",
+              "value": "~4.0 N/mm (ISO 34)"
+            },
+            {
+              "label": "Service Temperature",
+              "value": "-60°C min. / +90°C max."
+            }
+          ]
         },
         "application": {
-          "steps": [],
+          "steps": [
+            {
+              "step": 1,
+              "title": "Substrate Quality",
+              "description": "The substrate must be sound, clean, dry and free of all contaminants such as dirt, oil, grease, cement laitance, old sealants and poorly bonded paint coatings. The substrate should be of sufficient strength to resist the stresses induced by the sealant during movement."
+            },
+            {
+              "step": 2,
+              "title": "Substrate Preparation",
+              "description": "Removal techniques such as wire brushing, grinding, sanding or other suitable mechanical tools can be used. All dust, loose and friable material must be completely removed from all surfaces before application."
+            },
+            {
+              "step": 3,
+              "title": "Application",
+              "description": "Sikaflex®-127 sausages is applied with hand operated closed type cartridge gun and cartridges is applied with open type cartridge gun. Apply in beads, strips or spots at intervals of a few centimetres each. Use hand pressure only to fix the components into position before skinning of the adhesive occurs."
+            },
+            {
+              "step": 4,
+              "title": "Cleaning of Tools",
+              "description": "Clean all tools and application equipment immediately after use with Sika® Remover-208. Once cured, hardened material can only be removed mechanically. For cleaning skin use Sika® Cleaning Wipes 100."
+            }
+          ],
           "consumption": null,
-          "notes": null
+          "notes": "Ambient Air Temperature: +5°C min. / +40°C max. Substrate Temperature: +5°C min. / +40°C max., min. 3°C above dew point temperature. Curing Rate: ~2mm/24 hours (+23°C / 50% r.h.). Skin Time: ~40 minutes (+23°C / 50% r.h.)."
         },
         "documents": {
-          "files": []
+          "files": [
+            {
+              "label": "Sikaflex®-127",
+              "type": "Product Data Sheet (PDS)",
+              "url": "/docs/sika-flex-127-pds.pdf"
+            }
+          ]
         }
       }
     },
     {
       "id": "sikaflex-11-fc",
       "serviceId": "sealing-bonding",
-      "name": "Sikaflex 11 FC",
-      "tagline": "",
+      "name": "Sikaflex®-11 FC+",
+      "tagline": "One part advanced polyurethane, elastomeric sealant/adhesive",
       "thumbnail": "/images/products/sikaflex-11-fc.jpg",
       "tabs": {
         "overview": {
-          "text": "",
-          "usage": [],
-          "advantages": [],
-          "packaging": "",
-          "colour": ""
+          "text": "Sikaflex®-11 FC+ is a one-component, gun-grade, adhesive and sealing compound of permanent elasticity. This dual-purpose material is based on a special moisture-cured polyurethane with an accelerated curing time that meets ASTM C920 Type S, Grade NS, Class 12.5, Use NT, I, M, A, O and Federal Specification TT-S-00230C, Type II, Class B.",
+          "usage": [
+            "Cover plates, gaskets and coverings",
+            "Acoustic ceiling tiles",
+            "Floor moldings and door sills",
+            "Light weight construction materials",
+            "Wood or metal and door frames",
+            "Roof tiles",
+            "Air ducts and high vacuum systems",
+            "Containers, tanks, and silos",
+            "Gaskets in openings in walls or floors for ducts, piling, etc.",
+            "Reservoirs or water retaining structures",
+            "Aluminum fabrication",
+            "Bolted lap joints"
+          ],
+          "advantages": [
+            "Excellent adhesion on all cement-based materials, brick, ceramics, glass, metals, wood, epoxy, polyester and acrylic resin",
+            "Fast cure rate",
+            "Good weathering and water resistance",
+            "Non-corrosive",
+            "Can be painted over with water, oil, and rubber-based paints (Preliminary tests recommended)",
+            "High durability",
+            "Can be used in tamper resistant joints"
+          ],
+          "packaging": "10.1 fl. oz. (300 ml) cartridge, 20 fl. oz. (600 ml) sausage, 4.5 gal (17 L) in a 5 gal pail",
+          "colour": "White, Aluminum Gray, Black"
         },
         "details": {
-          "keyValues": []
+          "keyValues": [
+            {
+              "label": "Chemical Base",
+              "value": "Moisture-cured polyurethane"
+            },
+            {
+              "label": "Shelf Life",
+              "value": "12 months in unopened container"
+            },
+            {
+              "label": "Storage Conditions",
+              "value": "Store at 40-95°F (4-35°C). Condition material to 65-75°F before using."
+            },
+            {
+              "label": "Volatile Organic Compound (VOC) Content",
+              "value": "25 g/L"
+            },
+            {
+              "label": "Shore A Hardness",
+              "value": "40-45 (73°F (23°C) and 50% R.H.) (ASTM D-2240)"
+            },
+            {
+              "label": "Tensile Strength",
+              "value": "225 psi (73°F (23°C) and 50% R.H.) (ASTM D-412)"
+            },
+            {
+              "label": "Lap Shear Strength",
+              "value": "165 psi (73°F (23°C) and 50% R.H.) (ASTM D-1002, modified, glass substrate)"
+            },
+            {
+              "label": "Elastic Recovery",
+              "value": ">80% (73°F (23°C) and 50% R.H.) (ASTM C-719)"
+            },
+            {
+              "label": "Service Temperature",
+              "value": "-40°F to 170°F"
+            },
+            {
+              "label": "Approvals / Standards",
+              "value": "ASTM C920 Type S, Grade NS, Class 12.5, Use NT, I, M, A, O. Federal Specification TTS-00230C, Type II, Class B. Certified to NSF/ANSI/CAN 61 for potable water."
+            }
+          ]
         },
         "application": {
-          "steps": [],
-          "consumption": null,
-          "notes": null
+          "steps": [
+            {
+              "step": 1,
+              "title": "Substrate Preparation",
+              "description": "Clean all surfaces. Joint walls must be sound, clean, dry, frost-free, and free of oil and grease. Curing compound residues and any other foreign matter must be thoroughly removed. A roughened surface will also enhance bond. Bond breaker tape or backer rod must be used at bottom or base of joint void to prevent three sided adhesion."
+            },
+            {
+              "step": 2,
+              "title": "Priming",
+              "description": "Priming is not usually necessary for anodized aluminum, steel, non-absorbent materials such as glass, ceramics, stoneware and tiles. Most substrates only require priming if testing indicates a need or where sealant will be subjected to water immersion or chemical exposure after cure."
+            }
+          ],
+          "consumption": {
+            "label": "Coverage (300ml cartridge)",
+            "value": "Width 1/4\" x Depth 1/4\": 24.3 ft. 3/8\" x 1/4\": 16.2 ft. 1/2\" x 1/4\": 12.1 ft. 1/2\" x 3/8\": 8.1 ft. 1/2\" x 1/2\": 6.1 ft."
+          },
+          "notes": "Ambient Air Temperature: 40°F to 100°F. Sealant should be installed when joint is at mid-range of its anticipated movement. Tack-free Time: 1 to 2 hours depending on climate. Final Cure: 3 to 5 days."
         },
         "documents": {
-          "files": []
+          "files": [
+            {
+              "label": "Sikaflex®-11 FC+",
+              "type": "Product Data Sheet (PDS)",
+              "url": "/docs/sikaflex-11-fc-pds.pdf"
+            }
+          ]
         }
       }
     },
     {
       "id": "sika-multiseal-t",
       "serviceId": "sealing-bonding",
-      "name": "Sika Multiseal T",
-      "tagline": "",
+      "name": "Sika® MultiSeal T",
+      "tagline": "Self-adhesive elastomeric bituminous sealing tape",
       "thumbnail": "/images/products/sika-multiseal-t.jpg",
       "tabs": {
         "overview": {
-          "text": "",
-          "usage": [],
-          "advantages": [],
-          "packaging": "",
-          "colour": ""
+          "text": "Sika® MultiSeal T is a self-adhesive, modified bituminous sealing tape laminated with an aluminium film on the upper side.",
+          "usage": [
+            "Roofs including sheet metal work",
+            "Facades",
+            "Broken roof tiles",
+            "Leaking roof gutters",
+            "Chimneys and roof lights",
+            "Caravans and trailers",
+            "Office containers",
+            "Various types of ductwork"
+          ],
+          "advantages": [
+            "Very easy to apply",
+            "Can be applied at low temperatures",
+            "Good adhesion to many common building materials",
+            "Weather-proof",
+            "Resistant to UV exposure",
+            "Self-adhesive",
+            "Can be over-painted"
+          ],
+          "packaging": "Rolls of 10 m length in widths: 50mm (6/12/24/36 rolls/box), 75mm (4/8/12 rolls/box), 100mm (3/6 rolls/box), 150mm (2/4/6 rolls/box), 225mm (1/4 rolls/box), 300mm (1/4 rolls/box). Refer to current price list for packaging variations.",
+          "colour": "Top (aluminium film side): silver. Bottom (release film side): grey/black."
         },
         "details": {
-          "keyValues": []
+          "keyValues": [
+            {
+              "label": "Chemical Base",
+              "value": "Modified bitumen and aluminium film"
+            },
+            {
+              "label": "Shelf Life",
+              "value": "24 months from date of production"
+            },
+            {
+              "label": "Storage Conditions",
+              "value": "The product must be stored in original, unopened and undamaged packaging in dry conditions at temperatures between +5°C and +25°C. Always refer to packaging."
+            },
+            {
+              "label": "Thickness",
+              "value": "~1.5 mm (including aluminium film) (DIN EN 1849-1)"
+            },
+            {
+              "label": "Tensile Strength",
+              "value": ">200 N/50 mm (EN 12311-1)"
+            },
+            {
+              "label": "Service Temperature",
+              "value": "-20°C to +80°C"
+            },
+            {
+              "label": "Resistance to UV Exposure",
+              "value": "The aluminium film provides UV resistance"
+            }
+          ]
         },
         "application": {
-          "steps": [],
+          "steps": [
+            {
+              "step": 1,
+              "title": "Substrate Preparation",
+              "description": "The substrate must be stable, clean, dry and free of all contaminants such as dirt, oil, grease, cement laitance, old sealants and poorly bonded paint coatings. Removal techniques such as wire brushing, grinding, sanding or other suitable mechanical tools can be used. All dust, loose and friable material must be completely removed."
+            },
+            {
+              "step": 2,
+              "title": "Non Porous Substrates",
+              "description": "Metals, plastics, coated surfaces, glazed tiles and similar substrates must be cleaned and pre-treated with Sika® Aktivator-205 by using a clean towel. Before sealing allow a flash-off time of ≥15 minutes (≤8 hours)."
+            },
+            {
+              "step": 3,
+              "title": "Porous Substrates",
+              "description": "Concrete, aerated concrete and cementitious plasters, mortars, brick, etc. can be pre-heated to increase the adhesion."
+            }
+          ],
           "consumption": null,
-          "notes": null
+          "notes": "Ambient Air Temperature: +5°C min. / +40°C max. Substrate Temperature: +5°C min. / +40°C max. Primer-600 can be used to improve adhesion for optimal results."
         },
         "documents": {
-          "files": []
+          "files": [
+            {
+              "label": "Sika® MultiSeal T",
+              "type": "Product Data Sheet (PDS)",
+              "url": "/docs/sika-multiseal-t-pds.pdf"
+            }
+          ]
         }
       }
     },
     {
       "id": "sika-polysulphide-pour-grade",
       "serviceId": "sealing-bonding",
-      "name": "Sika Polysulphide Pour Grade",
-      "tagline": "",
+      "name": "Sika® Polysulphide, Pour Grade",
+      "tagline": "Two component polysulphide sealant - Pour grade",
       "thumbnail": "/images/products/sika-polysulphide-pour-grade.jpg",
       "tabs": {
         "overview": {
-          "text": "",
-          "usage": [],
-          "advantages": [],
-          "packaging": "",
-          "colour": ""
+          "text": "Sika® Polysulphide, Pour Grade is a two component Polysulphide sealant. It is used for sealing expansion joints where large movement is anticipated in concrete construction and for joints between diverse construction materials. It is suitable for sealing joints subjected to vehicular traffic and is chemically resistant to water, fuels, oils and solvents.",
+          "usage": [
+            "Precast concrete elements",
+            "Dams, Reservoirs and water treatment plants",
+            "Residential & Commercial buildings",
+            "Subways, bridges, culverts, tunnels",
+            "Rigid pavements of highways, airport runways, aprons, etc"
+          ],
+          "advantages": [
+            "Excellent adhesion with most common construction materials",
+            "Resistant to UV and weathering in exposed conditions",
+            "High movement accommodation",
+            "Good chemical resistance",
+            "Permanently elastic and forms watertight seal",
+            "Flame and fuel resistant",
+            "Easy to use",
+            "Economical"
+          ],
+          "packaging": "Part A: 3.68 kg, Part B: 0.32 kg, Total: 4 kg. 1 Box = 4 kg x 2 sets",
+          "colour": "Grey Paste"
         },
         "details": {
-          "keyValues": []
+          "keyValues": [
+            {
+              "label": "Chemical Base",
+              "value": "Cross linking polysulphide"
+            },
+            {
+              "label": "Shelf Life",
+              "value": "12 months in unopened condition from the date of production"
+            },
+            {
+              "label": "Storage Conditions",
+              "value": "Store properly in unopened, undamaged original packaging in cool and dry condition at temperature +5°C to +25°C at a Relative Humidity of 50%"
+            },
+            {
+              "label": "Density",
+              "value": "1.6-1.75 kg/litre at 30°C (JIS K6820)"
+            },
+            {
+              "label": "Approvals / Standards",
+              "value": "BS 4254-1983, BS S212-1990, IRC: 57-2006, IS: 12118 (Part 1), JIS K 6820"
+            },
+            {
+              "label": "Shore A Hardness",
+              "value": "11±3 (ASTM D 2240)"
+            },
+            {
+              "label": "Elongation",
+              "value": "≥450% (ASTM D882)"
+            },
+            {
+              "label": "Elastic Recovery",
+              "value": "Before Ageing >75%, After Heat Ageing (70°C/14 days) >75%, After fuel immersion (48 hrs) >75%"
+            },
+            {
+              "label": "Service Temperature",
+              "value": "-40°C to +80°C"
+            }
+          ]
         },
         "application": {
-          "steps": [],
-          "consumption": null,
-          "notes": null
+          "steps": [
+            {
+              "step": 1,
+              "title": "Substrate Preparation",
+              "description": "All surfaces must be clean, dry and free from any loosely adhering particles. Check the joints edges for soundness and if found weak cut recess and fill up with suitable repair mortar. Correct joint depth can be established by inserting polyethylene based Sika® Backer Material, glass rod, etc. tightly into the joint. Use bond breaker tape over the backer material. Protect surfaces with masking tape. Sika® Primer 3 IN/Sika® Primer 3 should be used as a primer only on the two sides. Allow a flash-off time of at least 45 minutes before sealant application (maximum 4 hours)."
+            },
+            {
+              "step": 2,
+              "title": "Mixing",
+              "description": "The two components are mixed in the ratio Comp A : Comp B = 92 : 8 by weight with a low speed mixer (300-600 rpm). Mix for approximately 8-10 minutes until a smooth, even consistency is achieved."
+            },
+            {
+              "step": 3,
+              "title": "Cleaning of Tools",
+              "description": "Clean all tools and application equipment with Solvent immediately after use. Hardened/cured material can only be mechanically removed."
+            }
+          ],
+          "consumption": {
+            "label": "Curing Time",
+            "value": "Basic Curing: 6 hrs at 30°C for 500g mix. Handling strength: 24 hrs at 30°C. Total Cure for full properties: 7 days. Tack Free Time: 16±0.1 hrs (BS 5212-1990). Application Time: >30 minutes."
+          },
+          "notes": "Mixing Ratio: Part A : Part B = 92 : 8 (by weight). Ambient Air Temperature: +5°C min. / +45°C max. Substrate Temperature: +5°C min. / +45°C max. Substrate Moisture Content: Dry joint with sound concrete edges. For joints under wet conditions, use Sika® Primer 3 IN. Pot Life: >90 minutes at 30°C (500g mix)."
         },
         "documents": {
-          "files": []
+          "files": [
+            {
+              "label": "Sika® Polysulphide, Pour Grade",
+              "type": "Product Data Sheet (PDS)",
+              "url": "/docs/sika-polysulphide-pour-grade-pds.pdf"
+            }
+          ]
         }
       }
     },
     {
       "id": "sika-swell-a",
       "serviceId": "sealing-bonding",
-      "name": "Sika Swell A",
-      "tagline": "",
+      "name": "SikaSwell® A",
+      "tagline": "Hydrophilic swellable joint sealing profiles",
       "thumbnail": "/images/products/sika-swell-a.jpg",
       "tabs": {
         "overview": {
-          "text": "",
-          "usage": [],
-          "advantages": [],
-          "packaging": "",
-          "colour": ""
+          "text": "SikaSwell® A is a rectangular acrylic sealing profile. It swells in contact with water to seal all types of construction joints and penetrations in concrete structures.",
+          "usage": [
+            "Construction joints",
+            "Pipe and steel work penetrations through walls and floor slabs",
+            "Around all types of penetrations and connection joints",
+            "Construction joints in cable ducts"
+          ],
+          "advantages": [
+            "Highly economical joint sealing solution",
+            "Unique properties fill small cracks and voids",
+            "Versatile solution for joints and details",
+            "Permanently water resistant (wet & dry cycles)",
+            "Resistant to various chemical substances",
+            "Easy and fast to apply",
+            "Can be applied on different substrates",
+            "BBA system approvals with SikaSwell S-2",
+            "Available in different sizes"
+          ],
+          "packaging": "Single rolls packed in vacuum foil. Multiple single rolls packed in cardboard boxes. Refer to current price list for packaging variations.",
+          "colour": "Red/orange profile (swells on contact with water)"
         },
         "details": {
-          "keyValues": []
+          "keyValues": [
+            {
+              "label": "Chemical Base",
+              "value": "Acrylic polymer"
+            },
+            {
+              "label": "Shelf Life",
+              "value": "36 months from the date of production"
+            },
+            {
+              "label": "Storage Conditions",
+              "value": "The product must be stored in original, unopened and undamaged packaging in dry conditions at temperatures between +5°C and +35°C. Always refer to packaging."
+            },
+            {
+              "label": "Density",
+              "value": "1.50 kg/l (at +23°C) (EN ISO 2811-1)"
+            },
+            {
+              "label": "Dimensions - SikaSwell® A 2005",
+              "value": "Width: 20mm, Height: 5mm, Length: 20m"
+            },
+            {
+              "label": "Dimensions - SikaSwell® A 2010",
+              "value": "Width: 20mm, Height: 10mm, Length: 10m"
+            },
+            {
+              "label": "Dimensions - SikaSwell® A 2015",
+              "value": "Width: 20mm, Height: 15mm, Length: 7m"
+            },
+            {
+              "label": "Dimensions - SikaSwell® A 2025",
+              "value": "Width: 20mm, Height: 25mm, Length: 5m"
+            },
+            {
+              "label": "Approvals / Standards",
+              "value": "Resistance to water pressure and durability: SikaSwell® A2010, SikaSwell® S-2, BBA, Certificate No.13/4994. Functional watertightness test, SikaSwell® A, WISSBAU, Test report No. 2012-206"
+            }
+          ]
         },
         "application": {
-          "steps": [],
+          "steps": [
+            {
+              "step": 1,
+              "title": "Substrate Quality",
+              "description": "The substrate must be sound, clean, dry or matt damp, free from all surface contaminants that could impair the adhesion."
+            },
+            {
+              "step": 2,
+              "title": "Substrate Preparation — Existing Concrete",
+              "description": "Rough surfaces are susceptible to leaking. If the surface roughness cannot be leveled with SikaSwell® S-2 the roughness need to be removed by an appropriate Sika leveling mortar or mechanical treatment before the SikaSwell® S-2 and SikaSwell® profile is applied."
+            },
+            {
+              "step": 3,
+              "title": "Substrate Preparation — Freshly Cast Concrete",
+              "description": "Freshly cast concrete can be smoothed with a batten where SikaSwell® S-2 is to be placed."
+            },
+            {
+              "step": 4,
+              "title": "Application",
+              "description": "Apply SikaSwell® S-2 adhesive in a narrow bed (size of triangular section ~12mm tall and ~12mm wide) onto the prepared substrate. Place the SikaSwell® profile in the centre of the concrete structure. Press the SikaSwell® profile firmly into the fresh applied SikaSwell® S-2 within a maximum of 30 minutes (+23°C / 50% r.h.). Allow SikaSwell® S-2 to harden minimum 12 hours before placing concrete. For pouring height >50 cm, SikaSwell® S-2 must harden for at least 24 hours. Protect from water until the concrete is placed. During placement compact the fresh concrete well around the profile to achieve dense concrete without any honeycombing or voids."
+            },
+            {
+              "step": 5,
+              "title": "Cleaning of Tools",
+              "description": "Clean all tools and application equipment immediately after use with Sika® Colma Cleaner. Hardened material can only be removed mechanically."
+            }
+          ],
           "consumption": null,
-          "notes": null
+          "notes": "Substrate Moisture Content: Dry or matt damp. Do not apply in construction joints with existing standing water. Ambient Air Temperature: +5°C min. / +35°C max. Substrate Temperature: +5°C min. / +35°C max."
         },
         "documents": {
-          "files": []
+          "files": [
+            {
+              "label": "SikaSwell® A",
+              "type": "Product Data Sheet (PDS)",
+              "url": "/docs/sika-swell-a-pds.pdf"
+            }
+          ]
         }
       }
     },
     {
       "id": "sika-swell-s2",
       "serviceId": "sealing-bonding",
-      "name": "Sika Swell S 2",
-      "tagline": "",
+      "name": "SikaSwell® S-2",
+      "tagline": "Hydrophilic swellable joint sealant",
       "thumbnail": "/images/products/sika-swell-s2.jpg",
       "tabs": {
         "overview": {
-          "text": "",
-          "usage": [],
-          "advantages": [],
-          "packaging": "",
-          "colour": ""
+          "text": "SikaSwell® S-2 is a 1-part polyurethane hydrophilic sealant which swells in contact with water to seal all types of construction joints and penetrations in concrete structures. It is used to adhere the SikaSwell® A and SikaSwell® P profiles to the structure.",
+          "usage": [
+            "Construction joints",
+            "Pipe and steel work penetrations through walls and floor slabs",
+            "Around all types of penetrations and construction joints",
+            "Construction joints in cable ducts",
+            "Fixing/Adhering SikaSwell® A Profiles",
+            "Fixing/Adhering SikaSwell® P Profiles"
+          ],
+          "advantages": [
+            "1-part, easy and fast to apply",
+            "Highly economical joint sealing solution",
+            "Versatile solution for joints and details",
+            "Optimised expansion rate",
+            "Permanently water resistant (wet & dry cycles)",
+            "Good adhesion to various substrates",
+            "BBA system approvals with SikaSwell® A-2010"
+          ],
+          "packaging": "300 ml cartridges: 12 cartridges/box. 600 ml unipacs: 20 unipacs/box.",
+          "colour": "Oxide red"
         },
         "details": {
-          "keyValues": []
+          "keyValues": [
+            {
+              "label": "Chemical Base",
+              "value": "1-part polyurethane, moisture curing"
+            },
+            {
+              "label": "Shelf Life",
+              "value": "9 months from the date of production"
+            },
+            {
+              "label": "Storage Conditions",
+              "value": "The product must be stored in original, unopened and undamaged packaging in dry conditions at temperatures between +5°C and +25°C. Always refer to packaging."
+            },
+            {
+              "label": "Density",
+              "value": "1.24 kg/l (at +23°C) (ISO 2811)"
+            },
+            {
+              "label": "System Structure — Stand-alone",
+              "value": "Sealant: SikaSwell® S-2"
+            },
+            {
+              "label": "System Structure — With SikaSwell® Profile",
+              "value": "Adhesive: SikaSwell® S-2. Swelling profile: SikaSwell® A or SikaSwell® P"
+            }
+          ]
         },
         "application": {
-          "steps": [],
-          "consumption": null,
-          "notes": null
+          "steps": [
+            {
+              "step": 1,
+              "title": "Substrate Quality",
+              "description": "The substrate must be sound, clean, dry or matt damp and free from all surface contaminants that could impair the adhesion of the sealant."
+            },
+            {
+              "step": 2,
+              "title": "Substrate Preparation — Existing Concrete",
+              "description": "Rough surfaces are susceptible to leaking. If the surface roughness cannot be leveled with SikaSwell® S-2 the roughness need to be removed. Use an appropriate Sika leveling mortar or mechanical treatment before the SikaSwell® S-2 and SikaSwell® A or SikaSwell® P profile is applied."
+            },
+            {
+              "step": 3,
+              "title": "Substrate Preparation — Freshly Cast Concrete",
+              "description": "Freshly cast concrete can be smoothed with a batten where SikaSwell® S-2 is to be placed."
+            },
+            {
+              "step": 4,
+              "title": "Cleaning of Tools",
+              "description": "Clean all tools and application equipment immediately after use with Sika® Colma Cleaner. Hardened material can only be removed mechanically."
+            }
+          ],
+          "consumption": {
+            "label": "Consumption",
+            "value": "12mm triangular section: 300ml cartridges=4.1m, 600ml unipacs=8.2m. 15mm section: 300ml=3.1m, 600ml=6.2m. 20mm section: 300ml=1.8m, 600ml=3.6m. Consumption depends on roughness and absorbency of the substrate."
+          },
+          "notes": "Sag Flow: <2mm (+23°C / 50% r.h.) (ISO 7390). Product Temperature: +5°C min. / +35°C max. Ambient Air Temperature: +5°C min. / +35°C max. Substrate Temperature: +5°C min. / +35°C max. Substrate Moisture Content: Dry or matt damp. Do not apply in construction joints with standing water. Curing Rate: 1 day=~2.0mm, 10 days=~10.0mm (+23°C/50% r.h.). Skin Time: 60 minutes (+23°C / 50% r.h.) (EN 15651-1)."
         },
         "documents": {
-          "files": []
+          "files": [
+            {
+              "label": "SikaSwell® S-2",
+              "type": "Product Data Sheet (PDS)",
+              "url": "/docs/sika-swell-s2-pds.pdf"
+            }
+          ]
         }
       }
     },
     {
-      "id": "sika-intraplast-n-200",
-      "serviceId": "grouting",
-      "name": "Sika Intraplast N 200",
-      "tagline": "",
-      "thumbnail": "/images/products/sika-intraplast-n-200.jpg",
-      "tabs": {
-        "overview": {
-          "text": "",
-          "usage": [],
-          "advantages": [],
-          "packaging": "",
-          "colour": ""
+    "id": "sika-intraplast-n-200",
+    "serviceId": "grouting",
+    "name": "Sika® Intraplast® N-200",
+    "tagline": "Expanding grout admixture",
+    "thumbnail": "/images/products/sika-intraplast-n-200.jpg",
+    "tabs": {
+      "overview": {
+        "text": "Sika® Intraplast® N-200 is an expanding grout admixture for pressure/injection grouting. By introducing into the concrete mix, wet volume expansion and increased fluidity without segregation are produced. It is used to increase flow and cohesion in cement grouts (addition of sand is possible) and to develop non-shrink property.",
+        "usage": [
+          "Pre-stressed cable ducts",
+          "Rock and soil anchoring",
+          "Bearing plates",
+          "Pre-placed aggregates",
+          "Tunnel linings"
+        ],
+        "advantages": [
+          "Improved fluidity",
+          "Increased cohesion",
+          "Volume expansion in the wet state to develop nonshrink property",
+          "Chloride free - does not attack reinforcement or prestressed cables"
+        ],
+        "packaging": "12.5 kg Bag",
+        "colour": "Light Brown Powder"
+      },
+      "details": {
+        "keyValues": [
+          {
+            "label": "Chemical Base",
+            "value": "Modified Napthalene"
+          },
+          {
+            "label": "Shelf Life",
+            "value": "12 months from date of production if stored as per recommendation"
+          },
+          {
+            "label": "Storage Conditions",
+            "value": "Store properly in dry conditions in undamaged and unopened original sealed packaging. But after opening, it should be consumed within one month & should be packed properly after use."
+          },
+          {
+            "label": "Density",
+            "value": "~0.80 kg/l at 27°C"
+          },
+          {
+            "label": "pH-Value",
+            "value": "≥ 6"
+          },
+          {
+            "label": "Approvals / Standards",
+            "value": "IS 2645"
+          }
+        ]
+      },
+      "application": {
+        "steps": [
+          {
+            "step": 1,
+            "title": "Mixing",
+            "description": "Add directly to the cement / water mix in the mixer. Sand may be added as required."
+          },
+          {
+            "step": 2,
+            "title": "Application Method / Tools",
+            "description": "Add directly to the cement / water mix in the mixer. Sand may be added as required."
+          },
+          {
+            "step": 3,
+            "title": "Cleaning of Tools",
+            "description": "Clean all tools and application equipment with water immediately after use. Hardened/cured material can only be mechanically removed."
+          }
+        ],
+        "consumption": {
+          "label": "Recommended Dosage",
+          "value": "0.40% by weight of cement (200 gm per 50 kg bag of cement)."
         },
-        "details": {
-          "keyValues": []
-        },
-        "application": {
-          "steps": [],
-          "consumption": null,
-          "notes": null
-        },
-        "documents": {
-          "files": []
-        }
-      }
-    },
-    {
-      "id": "sika-injection-101-h",
-      "serviceId": "grouting",
-      "name": "Sika Injection 101 H",
-      "tagline": "",
-      "thumbnail": "/images/products/sika-injection-101-h.jpg",
-      "tabs": {
-        "overview": {
-          "text": "",
-          "usage": [],
-          "advantages": [],
-          "packaging": "",
-          "colour": ""
-        },
-        "details": {
-          "keyValues": []
-        },
-        "application": {
-          "steps": [],
-          "consumption": null,
-          "notes": null
-        },
-        "documents": {
-          "files": []
-        }
-      }
-    },
-    {
-      "id": "sika-injection-201-in",
-      "serviceId": "grouting",
-      "name": "Sika Injection 201 IN",
-      "tagline": "",
-      "thumbnail": "/images/products/sika-injection-201-in.jpg",
-      "tabs": {
-        "overview": {
-          "text": "",
-          "usage": [],
-          "advantages": [],
-          "packaging": "",
-          "colour": ""
-        },
-        "details": {
-          "keyValues": []
-        },
-        "application": {
-          "steps": [],
-          "consumption": null,
-          "notes": null
-        },
-        "documents": {
-          "files": []
-        }
-      }
-    },
-    {
-      "id": "sika-injection-306-set",
-      "serviceId": "grouting",
-      "name": "Sika Injection 306 Set",
-      "tagline": "",
-      "thumbnail": "/images/products/sika-injection-306-set.jpg",
-      "tabs": {
-        "overview": {
-          "text": "",
-          "usage": [],
-          "advantages": [],
-          "packaging": "",
-          "colour": ""
-        },
-        "details": {
-          "keyValues": []
-        },
-        "application": {
-          "steps": [],
-          "consumption": null,
-          "notes": null
-        },
-        "documents": {
-          "files": []
-        }
-      }
-    },
-    {
-      "id": "sikadur-55-lp",
-      "serviceId": "grouting",
-      "name": "Sikadur 55 LP",
-      "tagline": "",
-      "thumbnail": "/images/products/sikadur-55-lp.jpg",
-      "tabs": {
-        "overview": {
-          "text": "",
-          "usage": [],
-          "advantages": [],
-          "packaging": "",
-          "colour": ""
-        },
-        "details": {
-          "keyValues": []
-        },
-        "application": {
-          "steps": [],
-          "consumption": null,
-          "notes": null
-        },
-        "documents": {
-          "files": []
-        }
-      }
-    },
-    {
-      "id": "sikadur-53-uf",
-      "serviceId": "grouting",
-      "name": "Sikadur 53 UF",
-      "tagline": "",
-      "thumbnail": "/images/products/sikadur-53-uf.jpg",
-      "tabs": {
-        "overview": {
-          "text": "",
-          "usage": [],
-          "advantages": [],
-          "packaging": "",
-          "colour": ""
-        },
-        "details": {
-          "keyValues": []
-        },
-        "application": {
-          "steps": [],
-          "consumption": null,
-          "notes": null
-        },
-        "documents": {
-          "files": []
-        }
+        "notes": null
+      },
+      "documents": {
+        "files": [
+          {
+            "label": "Sika® Intraplast® N-200",
+            "type": "Product Data Sheet (PDS)",
+            "url": "/docs/sika-intraplast-n-200-pds.pdf"
+          }
+        ]
       }
     }
+  },
+  {
+    "id": "sika-injection-101-h",
+    "serviceId": "grouting",
+    "name": "Sika® Injection-101 h",
+    "tagline": "Flexible water reactive PUR-Injection foam for temporary water stopping",
+    "thumbnail": "/images/products/sika-injection-101-h.jpg",
+    "tabs": {
+      "overview": {
+        "text": "Sika® Injection-101 h is a low viscous, fast foaming and solvent-free water-reactive polyurethane injection, which cures to form a dense flexible foam with a fine cellular structure. No reaction takes place unless it comes with direct contact with water. Free foaming when in contact with water is up to 20 times; in controlled settings the foaming has been observed even up to 40 times.",
+        "usage": [
+          "Temporary water stopping of high water intrusions in cracks, joints and cavities in concrete, brickwork and natural stonework",
+          "To achieve permanent watertight crack sealing, Sika® Injection-201 or Sika® Injection-202 (IN) should be injected subsequently"
+        ],
+        "advantages": [
+          "No reaction takes place unless it comes with direct contact with water",
+          "Free foaming when in contact with water is up to 20 times; in controlled settings the foaming has been observed even up to 40 times"
+        ],
+        "packaging": "Pack A: 10 kg. Pack B: 0.9 kg.",
+        "colour": "Pack A: Brown. Pack B: Clear."
+      },
+      "details": {
+        "keyValues": [
+          {
+            "label": "Chemical Base",
+            "value": "Solvent free polyurethane two component injection system"
+          },
+          {
+            "label": "Shelf Life",
+            "value": "12 months if stored in original unopened conditions"
+          },
+          {
+            "label": "Storage Conditions",
+            "value": "The material must be stored in a Dry Place within the temperature range of +10°C to +40°C"
+          },
+          {
+            "label": "Density - Pack A",
+            "value": "1130 ± 30 kg/m³"
+          },
+          {
+            "label": "Density - Pack B",
+            "value": "900 ± 30 kg/m³"
+          },
+          {
+            "label": "Viscosity",
+            "value": "200-700 cps, mixed viscosity of mixture at 30°C"
+          },
+          {
+            "label": "Expansion Starts",
+            "value": "~15 sec after contact with water"
+          },
+          {
+            "label": "Expansion Ends",
+            "value": "~50 sec after contact with water"
+          }
+        ]
+      },
+      "application": {
+        "steps": [
+          {
+            "step": 1,
+            "title": "Mixing",
+            "description": "Empty parts A and B into a mixing vessel and mix slowly and thoroughly for at least 3 min (max. 250 rpm) until homogeneous, thereby observing the safety precautions. The containers are supplied according to the required mixing ratio of 9±1:1 parts by volume. Partial quantities can be measured out in separate vessels. After mixing, pour the material into the pump's feed container; stir briefly and apply within the pot life."
+          },
+          {
+            "step": 2,
+            "title": "Cleaning of Tools",
+            "description": "Clean all tools and application equipment with a good quality thinner."
+          }
+        ],
+        "consumption": null,
+        "notes": "Mixing Ratio: Pack A : Pack B = 9±1 : 1 (by volume). Ambient Air Temperature: +5°C min. / +35°C max. Substrate Temperature: +5°C min. / +35°C max. Pot Life: ~3 hours."
+      },
+      "documents": {
+        "files": [
+          {
+            "label": "Sika® Injection-101 h",
+            "type": "Product Data Sheet (PDS)",
+            "url": "/docs/sika-injection-101-h-pds.pdf"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "sika-injection-201-in",
+    "serviceId": "grouting",
+    "name": "Sika® Injection-201 IN",
+    "tagline": "Elastic polyurethane injection resin for permanent watertight sealing",
+    "thumbnail": "/images/products/sika-injection-201-in.jpg",
+    "tabs": {
+      "overview": {
+        "text": "Sika® Injection-201 IN is a very low viscous, elastic and solvent-free polyurethane injection resin. In contact with water, a uniform, closed and therefore watertight pore structure forms, which is elastic and flexible. Due to its low viscosity it can penetrate into cracks > 0.2 mm in width.",
+        "usage": [
+          "Permanent watertight sealing with some flexibility to absorb limited movement, in dry, damp or water-bearing cracks and joints in concrete, brickwork and natural stone",
+          "Injection of the Sika® Fuko System (non re-injectable)",
+          "Injection in water-bearing cracks under hydrostatic pressure (preliminary injection with Sika® Injection-101h or cementitious injection system for temporary reduction in water pressure)"
+        ],
+        "advantages": [
+          "Permanently elastic, can absorb limited movements",
+          "No shrinkage in subsequent dry conditions",
+          "Due to its low viscosity it can penetrate into cracks > 0.2 mm in width",
+          "Cured Sika® Injection-201 IN is inert and chemically-resistant. Solvent-free, environmental friendly, usable in ground water protection zones"
+        ],
+        "packaging": "16 kg (Part A + Part B)",
+        "colour": "Part A: Translucent. Part B: Dark Brown."
+      },
+      "details": {
+        "keyValues": [
+          {
+            "label": "Chemical Base",
+            "value": "Solvent free, water reactive 2-part polyurethane resin (liquid)"
+          },
+          {
+            "label": "Shelf Life",
+            "value": "36 months from date of production"
+          },
+          {
+            "label": "Storage Conditions",
+            "value": "Store in unopened, undamaged and original sealed packaging, in dry conditions at temperatures between +10°C and +35°C."
+          },
+          {
+            "label": "Density - Part A",
+            "value": "~1.04 ± 0.02 kg/m³"
+          },
+          {
+            "label": "Density - Part B",
+            "value": "~1.22 ± 0.02 kg/m³"
+          },
+          {
+            "label": "Viscosity",
+            "value": "~250-600 mPa.s or centipoise (cps) (Mixed A+B at +30°C)"
+          }
+        ]
+      },
+      "application": {
+        "steps": [
+          {
+            "step": 1,
+            "title": "Equipment",
+            "description": "Use injection pumps suitable for single component products or two component products."
+          },
+          {
+            "step": 2,
+            "title": "Substrate Preparation",
+            "description": "Surfaces of cavities and cracks need to be clean, free of loose particles, dust, oil and any other bond-breaking substances. Any dirt must be blown out by compressed air."
+          },
+          {
+            "step": 3,
+            "title": "Mixing",
+            "description": "Empty parts A and B into a mixing vessel and mix slowly and thoroughly for at least 2 min (max. 250 rpm) until homogeneous, observing safety precautions. Containers are supplied according to the required mixing ratio of 2:1 parts by volume. Partial quantities can be measured out in separate vessels. After mixing, pour material into the pump's feed container, stir briefly and apply within the pot life."
+          },
+          {
+            "step": 4,
+            "title": "Cleaning of Tools",
+            "description": "Clean all tools and application equipment with Xylene. Hardened/cured material can only be removed mechanically."
+          }
+        ],
+        "consumption": null,
+        "notes": "Mixing Ratio: 2:1 parts by volume (Part A : Part B). Ambient Air Temperature: +5°C min. / +35°C max. Substrate Temperature: +5°C min. / +35°C max. Gel Time: Minimum ~70 minutes, Maximum ~90 minutes (Mixed System at +20°C)."
+      },
+      "documents": {
+        "files": [
+          {
+            "label": "Sika® Injection-201 IN",
+            "type": "Product Data Sheet (PDS)",
+            "url": "/docs/sika-injection-201-in-pds.pdf"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "sika-injection-306-set",
+    "serviceId": "grouting",
+    "name": "Sika® Injection-306",
+    "tagline": "Elastic polyacrylic injection resin used for permanent watertight sealing",
+    "thumbnail": "/images/products/sika-injection-306-set.jpg",
+    "tabs": {
+      "overview": {
+        "text": "Sika® Injection-306 is a very low viscous, elastic polyacrylic injection resin with a versatile and adjustable reaction time. It has adjustable curing time between 8 and 50 minutes, is permanently elastic, can absorb limited movements and is capable of reversibly absorbing (swelling) and releasing (shrinking) moisture.",
+        "usage": [
+          "Repair by injection of damaged waterproofing membranes (single and double layer system)",
+          "Post-construction, external injection sealing system for construction and limited movement expansion or drainage pipe joints, covered with damp or water saturated soil",
+          "Injection of SikaFuko® injection hoses to seal construction joints",
+          "Sealing water-bearing cracks and voids",
+          "Making new sealing walls (curtains) in damp or water saturated ground conditions, situated in close proximity to the building component or within the building structure"
+        ],
+        "advantages": [
+          "Adjustable curing time between 8 and 50 minutes",
+          "Permanently elastic, can absorb limited movements",
+          "Capable of reversibly absorbing (swelling) and releasing (shrinking) moisture",
+          "Solvent free acrylic resin",
+          "High pH-value of 9 to 10",
+          "Very low viscosity comparable to that of water",
+          "Cured Sika® Injection-306 is insoluble in water and hydrocarbons and resistant to acids and alkalis",
+          "Can be used in ground water protection zones"
+        ],
+        "packaging": "Component A (Resin): 2 × 8.0 kg. Accelerator: 1 × 1.0 kg. Hardener powder: 4 × 40 g. Measuring cup: 1 piece. Additional Accelerator 4 × 1 kg - used for faster reaction times.",
+        "colour": "Component A (Resin): blue-transparent. Accelerator: yellow-transparent. Hardener powder: white."
+      },
+      "details": {
+        "keyValues": [
+          {
+            "label": "Chemical Base",
+            "value": "3-part polyacrylic resin"
+          },
+          {
+            "label": "Shelf Life",
+            "value": "12 months shelf life from date of production if stored properly in undamaged, unopened, original sealed packaging"
+          },
+          {
+            "label": "Storage Conditions",
+            "value": "Dry storage at temperatures between +10°C and +30°C. Protect from direct sunlight and humidity."
+          },
+          {
+            "label": "Viscosity",
+            "value": "~3-11 mPa·s (mixture, at 20°C) (acc. ISO 3219)"
+          },
+          {
+            "label": "Approvals / Standards",
+            "value": "Wissbau No. 2002-094-(1A) – Function test with SikaFuko® VT 1. Wissbau No. 2002-094-(1A) – Function test with SikaFuko® Eco 1. FH Aachen – expertise, mechanical long time stability – 01/11/2016. MPA TU Braunschweig No. 1200/550/15b – Compatibility Test with Sikaplan WP/WT Membranes 03/02/2016."
+          }
+        ]
+      },
+      "application": {
+        "steps": [
+          {
+            "step": 1,
+            "title": "Mixing",
+            "description": "1. Dissolve the content of 2 bags of the hardener powder in 10 litres of water in a separate, clean container. Stir the hardener solution thoroughly until the hardener powder is completely dissolved. 2. Determine the required quantity of accelerator from the Accelerator Metering Chart, considering the ambient processing temperature and the required reaction time. Dilute the selected quantity of accelerator with water to a total quantity of 2 litres in a separate, clean container. 3. Pour the 2 litres of accelerator solution into a 8 kg canister of component A (Resin) and mix thoroughly by shaking the canister."
+          },
+          {
+            "step": 2,
+            "title": "Application",
+            "description": "When using a one-component pump: Pour partial amount of the premixed components in a ratio of 1:1 by volume into a clean mixing container and mix mechanically. When using a two-component pump: Fill partial amounts of the premixed components into the storage container of the pump. Set the pump to work at a mixing ratio of 1:1 by volume."
+          },
+          {
+            "step": 3,
+            "title": "Cleaning of Tools",
+            "description": "Clean all tools and application equipment according to the Product Data Sheet for the Sika® Injection Cleaning System."
+          }
+        ],
+        "consumption": null,
+        "notes": "Ambient Air Temperature: +5°C min. / +40°C max. Substrate Temperature: +5°C min. / +40°C max. Curing Time: 8 to 50 minutes. Workability time (pot life) = Reaction time (see metering chart) – 10 minutes."
+      },
+      "documents": {
+        "files": [
+          {
+            "label": "Sika® Injection-306",
+            "type": "Product Data Sheet (PDS)",
+            "url": "/docs/sika-injection-306-set-pds.pdf"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "sikadur-55-lp",
+    "serviceId": "grouting",
+    "name": "Sikadur®-55 LP IN",
+    "tagline": "Low viscosity, moisture tolerant epoxy injection resin and crack sealer",
+    "thumbnail": "/images/products/sikadur-55-lp.jpg",
+    "tabs": {
+      "overview": {
+        "text": "Sikadur®-55 LP IN is a two part, low viscosity, moisture insensitive injection liquid, based on high strength epoxy resin specifically formulated for dry or damp crack sealing. Suitable for use in hot and tropical climatic conditions. Conforms to ASTM C881, Type II and IV, Grade-1, Class F.",
+        "usage": [
+          "To repair cracks by injection in structural concrete in slabs, columns, beams, walls, foundations, etc.",
+          "For surface treatment of cracks in interior and exterior slabs",
+          "For roof slabs, parking lots and structures exposed to pedestrian and vehicular traffic"
+        ],
+        "advantages": [
+          "Solvent-free",
+          "Suitable for both, dry and damp conditions",
+          "Usable at high temperatures",
+          "Shrinkage free hardening",
+          "High mechanical strengths",
+          "High bond strength even in wet cracks",
+          "Hard but not brittle",
+          "Low viscosity",
+          "Injectable with single component pumps"
+        ],
+        "packaging": "Small packaging: Part A+B pre-batched 1 kg (Part A: 0.8 kg container, Part B: 0.2 kg container). Bulk packaging: Part A+B pre-batched 62.5 kg (Part A: 50 kg container, Part B: 12.5 kg container).",
+        "colour": "Part A+B mixed: Clear pale yellow. Part A: Colourless. Part B: Pale yellow."
+      },
+      "details": {
+        "keyValues": [
+          {
+            "label": "Product Declaration",
+            "value": "Confirms to ASTM C881, Type II and IV, Grade-1, Class F"
+          },
+          {
+            "label": "Chemical Base",
+            "value": "Epoxy resin"
+          },
+          {
+            "label": "Shelf Life",
+            "value": "12 months from date of production"
+          },
+          {
+            "label": "Storage Conditions",
+            "value": "The product must be stored properly in unopened and undamaged and sealed original packaging, in dry conditions at temperatures between +5°C and +40°C."
+          },
+          {
+            "label": "Density",
+            "value": "~1.08 kg/LP (Part A+B mixed, +27°C) (EN ISO 2811-1)"
+          },
+          {
+            "label": "Viscosity",
+            "value": "~250 mPa·s (at +30°C)"
+          },
+          {
+            "label": "Compressive Strength",
+            "value": "~70 N/mm² (7 days, +30°C) (ASTM D695)"
+          },
+          {
+            "label": "Flexural Strength",
+            "value": "~50 N/mm² (7 days, +30°C) (EN 196-1)"
+          },
+          {
+            "label": "Tensile Strength",
+            "value": "~50 N/mm² (7 days, +30°C) (ASTM D638)"
+          },
+          {
+            "label": "Elongation at Break",
+            "value": "~1.9% (ASTM D638)"
+          },
+          {
+            "label": "Tensile Adhesion Strength",
+            "value": "2 d moist cure: ≥7 N/mm². 14 d moist cure: ≥10 N/mm²."
+          },
+          {
+            "label": "Water Absorption",
+            "value": "~0.6% (24 h) (ASTM D570)"
+          }
+        ]
+      },
+      "application": {
+        "steps": [
+          {
+            "step": 1,
+            "title": "Substrate Quality",
+            "description": "Substrates must be sound, clean, free from oil and grease, old coatings and surface treatments etc."
+          },
+          {
+            "step": 2,
+            "title": "Substrate Preparation",
+            "description": "Concrete, mortar, stone should be thoroughly prepared by high pressure water jetting or mechanical means such as grinding, chiselling etc. Cracks must be cleaned to remove dust by using compressed air."
+          },
+          {
+            "step": 3,
+            "title": "Mixing",
+            "description": "Pre-batched packaging: Add all of Part B to Part A. Mix with an electric mixer at slow speed (max. 250 rpm) for at least 3 minutes. Avoid entraining air. Bulk packaging: Part mixing is recommended. Add both parts in the correct proportion into suitable clean and dry container; mix in the same way as for the pre-batched units."
+          },
+          {
+            "step": 4,
+            "title": "Application — Horizontal Planes",
+            "description": "Saturate the crack by applying the product by paint brush or roller in several passes or by pouring between two 'barriers' made with Sikaflex® sealant. The crack penetrating through structure must be sealed on the underside with Sikadur®-31 IN epoxy mortar or a suitable Sika® cementitious mortars."
+          },
+          {
+            "step": 5,
+            "title": "Application — Horizontal / Vertical Planes",
+            "description": "Sikadur®-55 LP IN can be injected under pressure into cracks using a single-component injection pump. The injectors should be placed at a distance of 25 cm and the fissure between sections of injectors should be superficially sealed with Sikadur®-31 IN epoxy mortar or a suitable Sika® cementitious mortars. Vertical cracks must be injected from the bottom up. Maximum width of cracks to be injected: 5 mm."
+          },
+          {
+            "step": 6,
+            "title": "Cleaning of Tools",
+            "description": "Clean all tools and application equipment with Sika® Colma Cleaner immediately after use. Hardened or cured material can only be mechanically removed."
+          }
+        ],
+        "consumption": null,
+        "notes": "Mixing Ratio: Part A : Part B = 4 : 1 (by weight). Ambient Air Temperature: +10°C min. / +40°C max. Substrate Temperature: +10°C min. / +40°C max. Substrate Moisture Content: Sikadur®-55 LP IN is suitable for dry and moist condition. No standing water. Pot Life: >60 min (100 g mass, +30°C)."
+      },
+      "documents": {
+        "files": [
+          {
+            "label": "Sikadur®-55 LP IN",
+            "type": "Product Data Sheet (PDS)",
+            "url": "/docs/sikadur-55-lp-pds.pdf"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "sikadur-53-uf",
+    "serviceId": "grouting",
+    "name": "Sikadur®-53 UF Mortar",
+    "tagline": "Moisture insensitive epoxy resin mortar",
+    "thumbnail": "/images/products/sikadur-53-uf.jpg",
+    "tabs": {
+      "overview": {
+        "text": "Sikadur®-53 UF Mortar is a solvent free, three-component moisture insensitive, epoxy resin based mortar. It has been developed to meet special requirement of concrete repair particularly in damp, wet condition. After mixing, the mortar is placed on moist concrete and it cures to form a rigid and high strength material.",
+        "usage": [
+          "For repair of damp and wet concrete",
+          "For rapid installation and repair"
+        ],
+        "advantages": [
+          "High early strength",
+          "Cures without shrinkage",
+          "Excellent adhesion to cement substrate even under salt water"
+        ],
+        "packaging": "Part A+B+C Pre-batched unit: 10.5 kg × 4 sets (Part A: 1.00 kg plastic container, Part B: 0.50 kg plastic container, Part C: 9.00 kg bag).",
+        "colour": "Part A: Clear. Part B: Reddish Yellow. Part C: Sand. Part A+B+C mixed: Reddish Yellow mortar."
+      },
+      "details": {
+        "keyValues": [
+          {
+            "label": "Chemical Base",
+            "value": "Epoxy resin"
+          },
+          {
+            "label": "Shelf Life",
+            "value": "12 months from date of production"
+          },
+          {
+            "label": "Storage Conditions",
+            "value": "Store properly in original unopened, sealed and undamaged packaging, in dry conditions at temperatures between +5°C and +40°C. Protect from direct sunshine."
+          },
+          {
+            "label": "Density",
+            "value": "Part A+B+C Mixed: 2.1 ± 0.1 kg/L (at +27°C)"
+          },
+          {
+            "label": "Compressive Strength",
+            "value": "3 hours: ≥20 N/mm². 6 hours: ≥25 N/mm². 1 day: ≥35 N/mm². 7 days: ≥60 N/mm² (at curing temperature +30°C)"
+          },
+          {
+            "label": "Tensile Strength in Flexure",
+            "value": "1 day: 15 N/mm². 7 days: 16.5 N/mm² (Curing Temperature at +30°C)"
+          },
+          {
+            "label": "Tensile Strength",
+            "value": "10.2 N/mm² (after 7 days at +30°C) (ISO 527-2)"
+          },
+          {
+            "label": "Tensile Adhesion Strength",
+            "value": "14 days dry concrete: ≥4 N/mm². 14 days moist concrete: ≥4 N/mm² (at curing temperature +30°C, 100% Concrete failure)"
+          },
+          {
+            "label": "Heat Deflection Temperature",
+            "value": "+47°C (7 days / +30°C) (ASTM D648)"
+          }
+        ]
+      },
+      "application": {
+        "steps": [
+          {
+            "step": 1,
+            "title": "Substrate Quality",
+            "description": "Verify the substrate strength (concrete, masonry, natural stone). The substrate surface (all types) must be clean and free from contaminants such as dirt, oil, grease, existing surface treatments and coatings etc. Steel substrates must be de-rusted similar to Sa 2.5. The substrate must be sound and all loose particles must be removed."
+          },
+          {
+            "step": 2,
+            "title": "Substrate Preparation",
+            "description": "Concrete/masonry/mortar/stone: Substrates must be sound, clean and free from laitance, grease, oils, old surface treatments or coatings and all loose or friable particles must be removed to achieve a laitance and contaminant free, open textured surface. Steel: Must be cleaned and prepared thoroughly to an acceptable quality i.e. by blast cleaning and vacuum. Avoid dew point conditions. Other surfaces (polyester, epoxy, glass, ceramic): On these substrates pre-apply Sikadur®-31 and then, 'wet on wet' apply Sikadur®-53 UF Mortar."
+          },
+          {
+            "step": 3,
+            "title": "Mixing",
+            "description": "Mix parts A+B together for at least 3 minutes with a mixing spindle attached to a slow speed electric drill (max. 600 rpm) until the material becomes smooth in consistency and a uniform colour. Then add part C and continue until mixture is homogeneous. Avoid aeration while mixing. Pour the whole mix into a clean container and stir again for 1 more minute at low speed to keep air entrapment at a minimum. Mix only that quantity which can be used within its potlife."
+          },
+          {
+            "step": 4,
+            "title": "Cleaning of Tools",
+            "description": "Clean all tools and application equipment with Sika® Colma Cleaner immediately after use. Hardened/cured material can only be mechanically removed."
+          }
+        ],
+        "consumption": {
+          "label": "Consumption",
+          "value": "~2.1 kg/m² per mm of thickness."
+        },
+        "notes": "Mixing Ratio: Part A : Part B : Part C = 2 : 1 : 18 (by weight). Layer Thickness: 60 mm max. Sag Flow: Non-sag up to 20mm thickness on vertical surface. Product Temperature: +10°C min. / +40°C max. Ambient Air Temperature: +5°C min. / +40°C max. Substrate Temperature: +5°C min. / +40°C max. Pot Life: ~20 minutes (100 g mass at +27°C) (FIP 5.1)."
+      },
+      "documents": {
+        "files": [
+          {
+            "label": "Sikadur®-53 UF Mortar",
+            "type": "Product Data Sheet (PDS)",
+            "url": "/docs/sikadur-53-uf-pds.pdf"
+          }
+        ]
+      }
+    }
+  }
   ]
 }

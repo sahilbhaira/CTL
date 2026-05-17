@@ -1,19 +1,19 @@
 .ctl-catalog-content {
   --background: var(--ctl-surface);
-  --padding-bottom: 88px;
+  --padding-bottom: var(--ctl-scroll-bottom-space);
 }
 
 .ctl-product {
   background: var(--ctl-surface);
   color: var(--ctl-secondary);
   margin: 0 auto;
-  max-width: 430px;
+  max-width: var(--ctl-page-max-width);
   min-height: 100%;
-  padding-bottom: 88px;
+  padding-bottom: var(--ctl-page-bottom-space);
 }
 
 .ctl-product-title {
-  padding: 24px 20px 8px;
+  padding: var(--ctl-page-top-space) var(--ctl-page-gutter) 8px;
 }
 
 .ctl-product-title__top {
@@ -69,7 +69,7 @@
 }
 
 .ctl-product-section {
-  padding: 16px 20px;
+  padding: var(--ctl-section-gap) var(--ctl-page-gutter);
 }
 
 .ctl-product-section-title {

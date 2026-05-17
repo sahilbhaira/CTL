@@ -1,19 +1,32 @@
 import { IonIcon, IonModal } from '@ionic/react';
 import { checkmarkCircleOutline, closeOutline, listOutline } from 'ionicons/icons';
 import type { FC } from 'react';
+import '../../pages/quote/quote.css';
 
 interface QuoteSuccessModalProps {
+  actionIcon?: string;
+  actionLabel?: string;
+  closeLabel?: string;
+  description?: string;
   isOpen: boolean;
   onClose: () => void;
-  onGoToQuotes: () => void;
+  onGoToQuotes?: () => void;
+  referenceLabel?: string;
   referenceId?: string | null;
+  title?: string;
 }
 
 const QuoteSuccessModal: FC<QuoteSuccessModalProps> = ({
+  actionIcon = listOutline,
+  actionLabel = 'GO TO MY QUOTES',
+  closeLabel = 'Close quote success',
+  description = 'Your quotation request has been submitted successfully. Our team will get back to you shortly.',
   isOpen,
   onClose,
   onGoToQuotes,
-  referenceId
+  referenceId,
+  referenceLabel = 'Reference ID',
+  title = 'Request Sent!'
 }) => (
   <IonModal
     className="ctl-quote-success-modal"
@@ -27,7 +40,7 @@ const QuoteSuccessModal: FC<QuoteSuccessModalProps> = ({
       role="dialog"
     >
       <button
-        aria-label="Close quote success"
+        aria-label={closeLabel}
         className="ctl-quote-success-close"
         onClick={onClose}
         type="button"
@@ -40,21 +53,20 @@ const QuoteSuccessModal: FC<QuoteSuccessModalProps> = ({
         <IonIcon icon={checkmarkCircleOutline} />
       </div>
 
-      <h2 id="quote-success-title">Request Sent!</h2>
-      <p>
-        Your quotation request has been submitted successfully. Our team will get
-        back to you shortly.
-      </p>
+      <h2 id="quote-success-title">{title}</h2>
+      <p>{description}</p>
 
       <div className="ctl-quote-reference">
-        <span>Reference ID</span>
+        <span>{referenceLabel}</span>
         <strong>{referenceId ?? 'QT-PENDING'}</strong>
       </div>
 
-      <button className="ctl-quote-success-action" onClick={onGoToQuotes} type="button">
-        <IonIcon icon={listOutline} />
-        GO TO MY QUOTES
-      </button>
+      {onGoToQuotes ? (
+        <button className="ctl-quote-success-action" onClick={onGoToQuotes} type="button">
+          <IonIcon icon={actionIcon} />
+          {actionLabel}
+        </button>
+      ) : null}
     </section>
   </IonModal>
 );

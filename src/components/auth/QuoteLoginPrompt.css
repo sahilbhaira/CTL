@@ -5,12 +5,12 @@
   display: flex;
   justify-content: center;
   left: 50%;
-  max-width: 430px;
-  padding: 24px;
+  max-width: var(--ctl-page-max-width);
+  padding: var(--ctl-page-top-space);
   position: fixed;
   top: 0;
   transform: translateX(-50%);
-  width: min(100%, 430px);
+  width: min(100%, var(--ctl-page-max-width));
   z-index: 1000;
 }
 

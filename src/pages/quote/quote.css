@@ -1,15 +1,15 @@
 .ctl-quote {
-  padding-bottom: 112px;
+  padding-bottom: var(--ctl-page-bottom-space);
 }
 
 .ctl-quote-content {
-  --padding-bottom: 0px;
+  --padding-bottom: var(--ctl-fixed-action-bottom-space);
 }
 
 .ctl-quote-topbar {
   align-items: center;
   display: flex;
-  padding: calc(14px + env(safe-area-inset-top)) 20px 0;
+  padding: calc(14px + env(safe-area-inset-top)) var(--ctl-page-gutter) 0;
 }
 
 .ctl-quote-back {
@@ -40,7 +40,7 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-  padding: 16px 20px 0;
+  padding: var(--ctl-section-gap) var(--ctl-page-gutter) 0;
 }
 
 .ctl-quote-service-list {
@@ -485,10 +485,13 @@
   min-height: 54px;
   padding: 0 16px;
   position: fixed;
-  bottom: calc(16px + env(safe-area-inset-bottom));
+  bottom: var(--ctl-fixed-action-bottom);
   text-transform: uppercase;
   transform: translateX(-50%);
-  width: min(390px, calc(100% - 40px));
+  width: min(
+    calc(var(--ctl-page-max-width) - (var(--ctl-page-gutter) * 2)),
+    calc(100% - (var(--ctl-page-gutter) * 2))
+  );
   z-index: 20;
 }
 
@@ -519,7 +522,7 @@
   box-shadow: none;
   display: flex;
   justify-content: center;
-  padding: 20px;
+  padding: var(--ctl-page-gutter);
 }
 
 .ctl-quote-success-card {

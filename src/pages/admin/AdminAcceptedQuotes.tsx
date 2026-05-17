@@ -62,7 +62,7 @@ const AdminAcceptedQuotes: React.FC = () => {
           <AdminLeadCard
             actionLabel="VIEW DETAILS"
             key={quote.id}
-            onAction={() => history.push(`/admin/quote/${quote.id}`)}
+            onAction={() => history.push(`/admin/quote-preview/${quote.id}`)}
             quote={quote}
             showAmount
           />

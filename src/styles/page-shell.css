@@ -1,20 +1,20 @@
 .ctl-account-content {
   --background: var(--ctl-surface);
-  --padding-bottom: 88px;
+  --padding-bottom: var(--ctl-scroll-bottom-space);
 }
 
 .ctl-account {
   background: var(--ctl-surface);
   color: var(--ctl-secondary);
   margin: 0 auto;
-  max-width: 430px;
+  max-width: var(--ctl-page-max-width);
   min-height: 100%;
-  padding-bottom: 10px;
+  padding-bottom: var(--ctl-page-bottom-space);
   position: relative;
 }
 
 .ctl-account-title {
-  padding: 24px 20px 16px;
+  padding: var(--ctl-page-top-space) var(--ctl-page-gutter) var(--ctl-section-gap);
 }
 
 .ctl-account-title h1 {

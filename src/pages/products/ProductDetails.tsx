@@ -1,6 +1,5 @@
 import { IonContent, IonIcon, IonPage } from '@ionic/react';
 import {
-  addOutline,
   checkmarkCircleOutline,
   cubeOutline,
   documentTextOutline,
@@ -22,12 +21,12 @@ import {
   getProductById,
   getServiceById,
   getServiceIcon,
+  getServicePath,
   type Product,
   type ProductApplicationStep,
   type ProductKeyValue,
   type ProductTab
 } from '../../data/servicesProducts';
-import { goToPreviousPage } from '../../lib/navigation';
 import './product.css';
 
 interface ProductRouteParams {
@@ -105,7 +104,7 @@ const OverviewTab = ({ product }: { product: Product }) => (
         {product.tabs.overview.advantages.map((advantage) => (
           <div className="ctl-advantage-card" key={advantage}>
             <div className="ctl-advantage-card__icon">
-              <IonIcon icon={addOutline} />
+              <IonIcon icon={checkmarkCircleOutline} />
             </div>
             <span>{advantage}</span>
           </div>
@@ -280,7 +279,7 @@ const ProductDetails: React.FC = () => {
       <AppHeader
         brandLeading="back"
         brandTrailing="share"
-        onBack={() => goToPreviousPage(history)}
+        onBack={() => history.replace(getServicePath(product.serviceId))}
         title={product.name}
         variant="brand"
       />

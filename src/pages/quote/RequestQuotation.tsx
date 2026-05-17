@@ -284,23 +284,22 @@ const RequestQuotation: React.FC = () => {
   const [successReferenceId, setSuccessReferenceId] = useState<string | null>(null);
   const skipNextDraftSaveRef = useRef(false);
   const userId = user?.id ?? null;
-  const initialValues = useMemo<QuotationValues>(
-    () => {
-      const prefilledBlock = createPrefilledServiceBlock(location.search);
-      const fallbackValues = {
-        email: user?.email ?? '',
-        name: user ? getUserDisplayName(user) : '',
-        notes: '',
-        phone: '',
-        serviceBlocks: [prefilledBlock]
-      };
-      const savedDraft = useQuoteDraftStore.getState().getDraftForUser(userId);
-      const draftValues = normalizeDraftValues(savedDraft, fallbackValues);
+  const savedDraft = useQuoteDraftStore((state) => state.getDraftForUser(userId));
+  const initialValues = useMemo<QuotationValues>(() => {
+    const prefilledBlock = createPrefilledServiceBlock(location.search);
 
-      return mergeServiceBlockIntoValues(draftValues, prefilledBlock);
-    },
-    [location.search, user, userId]
-  );
+    const fallbackValues = {
+      email: user?.email ?? '',
+      name: user ? getUserDisplayName(user) : '',
+      notes: '',
+      phone: '',
+      serviceBlocks: [prefilledBlock]
+    };
+
+    const draftValues = normalizeDraftValues(savedDraft, fallbackValues);
+
+    return mergeServiceBlockIntoValues(draftValues, prefilledBlock);
+  }, [location.search, user, savedDraft]);
 
   const formik = useFormik<QuotationValues>({
     enableReinitialize: true,
@@ -391,12 +390,17 @@ const RequestQuotation: React.FC = () => {
     ? formik.touched.serviceBlocks
     : [];
 
-  const updateServiceBlocks = (blocks: QuoteServiceBlockValue[]) => {
-    formik.setFieldValue('serviceBlocks', blocks);
+  const updateServiceBlocks = async (blocks: QuoteServiceBlockValue[]) => {
+    await formik.setFieldValue('serviceBlocks', blocks, true);
   };
 
   const handleAddService = () => {
-    updateServiceBlocks([...formik.values.serviceBlocks, createServiceBlock(Date.now())]);
+    formik.setFieldValue('serviceBlocks', [
+      ...formik.values.serviceBlocks,
+      createServiceBlock(Date.now())
+    ]);
+
+    formik.setFieldTouched('serviceBlocks', true, false);
   };
 
   const handleRemoveService = (index: number) => {

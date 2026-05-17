@@ -9,9 +9,9 @@
   display: flex;
   justify-content: center;
   margin: 0 auto;
-  min-height: 800px;
+  height: 100%;
   overflow: hidden;
-  padding: 24px;
+  padding: var(--ctl-page-top-space);
   position: relative;
 }
 
@@ -19,11 +19,14 @@
   background: rgba(6, 22, 89, 0.05);
   border-radius: 0 0 60px 60px;
   content: "";
-  height: 320px;
+  height: 295px;
   left: 0;
   position: absolute;
   top: 0;
   width: 100%;
+}
+.ctl-auth-screen.register::before {
+  height: 260px;
 }
 
 .ctl-auth-panel {
@@ -38,7 +41,7 @@
 }
 
 .ctl-login-panel {
-  margin-top: 40px;
+  padding-top: 60px;
 }
 
 .ctl-auth-logo-block {
@@ -73,6 +76,7 @@
   letter-spacing: 0;
   line-height: 1;
   margin: 0;
+  padding-top: 10px;
 }
 
 .ctl-auth-intro {
@@ -155,7 +159,7 @@
   display: flex;
   margin-bottom: 40px;
   min-height: 40px;
-  padding-top: 16px;
+  padding-top: 40px;
   position: relative;
 }
 
@@ -183,7 +187,7 @@
   left: 0;
   margin: 0;
   position: absolute;
-  top: 16px;
+  top: 36px;
   width: 40px;
 }
 
@@ -392,12 +396,12 @@
   font-size: 14px;
   line-height: 1.4;
   margin-top: auto;
-  padding-bottom: 24px;
+  padding-bottom: var(--ctl-page-top-space);
   text-align: center;
 }
 
 @media (min-width: 520px) {
   .ctl-auth-screen {
-    max-width: 430px;
+    max-width: var(--ctl-page-max-width);
   }
 }
