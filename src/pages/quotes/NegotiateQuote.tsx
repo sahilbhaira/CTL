@@ -186,7 +186,7 @@ const NegotiateQuote: React.FC = () => {
             onClick={() => history.push('/quotes')}
             type="button"
           >
-            My Quotes
+            Track
           </button>
         </section>
       );
@@ -309,7 +309,7 @@ const NegotiateQuote: React.FC = () => {
               type="button"
             >
               <IonIcon icon={listOutline} />
-              GO TO MY QUOTES
+              GO TO TRACK
             </button>
           </section>
         </div>

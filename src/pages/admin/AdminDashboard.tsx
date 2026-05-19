@@ -9,8 +9,13 @@ import {
 import { useHistory } from 'react-router';
 import AdminPageShell from '../../components/admin/AdminPageShell';
 import AdminStatCard from '../../components/admin/AdminStatCard';
+import AdminStatusBadge from '../../components/admin/AdminStatusBadge';
+import { getQuotationStatusGroup } from '../../lib/quotation';
 import { getUserDisplayName } from '../../lib/userProfile';
-import { useGetAdminQuotationRequestsQuery } from '../../services/api/edgeFunctionsApi';
+import {
+  type AdminQuotationRequest,
+  useGetAdminQuotationRequestsQuery
+} from '../../services/api/edgeFunctionsApi';
 import { useAuthStore } from '../../store/authStore';
 
 const getRelativeTime = (date: string) => {
@@ -31,6 +36,20 @@ const getRelativeTime = (date: string) => {
 
   const diffInDays = Math.round(diffInHours / 24);
   return `${diffInDays} ${diffInDays === 1 ? 'day' : 'days'} ago`;
+};
+
+const getRecentInquiryPath = (quote: AdminQuotationRequest) => {
+  const statusGroup = getQuotationStatusGroup(quote.status);
+
+  if (statusGroup === 'pending') {
+    return `/admin/quote/${quote.id}`;
+  }
+
+  if (statusGroup === 'negotiating') {
+    return `/admin/negotiations/${quote.id}`;
+  }
+
+  return `/admin/quote-preview/${quote.id}`;
 };
 
 const AdminDashboard: React.FC = () => {
@@ -116,25 +135,35 @@ const AdminDashboard: React.FC = () => {
 
           {recentQuotes.length ? (
             <div className="ctl-admin-activity-list">
-              {recentQuotes.map((quote) => (
-                <article className="ctl-admin-activity-card" key={quote.id}>
-                  <div className="ctl-admin-activity-card__body" onClick={() => history.push(`/admin/quote/${quote.id}`)}>
-                    <h2>{quote.customer.name}</h2>
-                    <p>
-                      {quote.serviceNames[0] ?? 'Inquiry'}
-                      {quote.products[0]?.productName ? ` • ${quote.products[0].productName}` : ''}
-                    </p>
-                    <span>{getRelativeTime(quote.createdAt)}</span>
-                  </div>
-                  <button
-                    className="ctl-admin-card-action"
-                    onClick={() => history.push(`/admin/quote/${quote.id}`)}
-                    type="button"
-                  >
-                    OPEN INQUIRY
-                  </button>
-                </article>
-              ))}
+              {recentQuotes.map((quote) => {
+                const inquiryPath = getRecentInquiryPath(quote);
+
+                return (
+                  <article className="ctl-admin-activity-card" key={quote.id}>
+                    <div
+                      className="ctl-admin-activity-card__body"
+                      onClick={() => history.push(inquiryPath)}
+                    >
+                      <div className="ctl-admin-activity-card__top">
+                        <h2>{quote.customer.name}</h2>
+                        <AdminStatusBadge status={quote.status} />
+                      </div>
+                      <p>
+                        {quote.serviceNames[0] ?? 'Inquiry'}
+                        {quote.products[0]?.productName ? ` • ${quote.products[0].productName}` : ''}
+                      </p>
+                      <span>{getRelativeTime(quote.createdAt)}</span>
+                    </div>
+                    <button
+                      className="ctl-admin-card-action"
+                      onClick={() => history.push(inquiryPath)}
+                      type="button"
+                    >
+                      OPEN INQUIRY
+                    </button>
+                  </article>
+                );
+              })}
             </div>
           ) : (
             <section className="ctl-admin-empty ctl-admin-empty--compact">

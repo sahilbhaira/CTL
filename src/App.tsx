@@ -2,22 +2,11 @@ import { Redirect, Route, useLocation } from 'react-router-dom';
 import type { PropsWithChildren, ReactElement } from 'react';
 import {
   IonApp,
-  IonIcon,
-  IonLabel,
   IonRouterOutlet,
-  IonTabBar,
-  IonTabButton,
   IonTabs,
   setupIonicReact
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import {
-  callOutline,
-  documentTextOutline,
-  gridOutline,
-  homeOutline,
-  listOutline
-} from 'ionicons/icons';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -50,6 +39,7 @@ import '@ionic/react/css/display.css';
 import './theme/variables.css';
 import './styles/page-shell.css';
 import QuoteLoginPrompt from './components/auth/QuoteLoginPrompt';
+import BottomNav from './components/navigation/BottomNav';
 import NavigationMenu from './components/navigation/NavigationMenu';
 import Contact from './pages/account/Contact';
 import Profile from './pages/account/Profile';
@@ -60,6 +50,7 @@ import AdminProfile from './pages/admin/AdminProfile';
 import AdminInquiries from './pages/admin/inquiries/AdminInquiries';
 import AdminQuote from './pages/admin/quote/AdminQuote';
 import AdminQuotePreview from './pages/admin/quote/AdminQuotePreview';
+import AuthCallback from './pages/auth/AuthCallback';
 import ForgotPassword from './pages/auth/ForgotPassword';
 import Login from './pages/auth/Login';
 import Register from './pages/auth/Register';
@@ -73,12 +64,18 @@ import ServiceProducts from './pages/services/ServiceProducts';
 import Services from './pages/services/Services';
 import { useAuthBootstrap } from './hooks/useAuthBootstrap';
 import { isAdminUser } from './lib/admin';
+import { hasAuthRedirectParams } from './services/authService';
 import { useAuthStore } from './store/authStore';
-import { useQuoteAccessStore } from './store/quoteAccessStore';
 
 setupIonicReact();
 
-const authRoutes = ['/login', '/register', '/forgot-password', '/reset-password'];
+const authRoutes = [
+  '/auth/callback',
+  '/login',
+  '/register',
+  '/forgot-password',
+  '/reset-password'
+];
 type TabsWithIdProps = PropsWithChildren<{ id: string }>;
 const IonTabsWithId = IonTabs as unknown as (props: TabsWithIdProps) => ReactElement;
 
@@ -91,8 +88,7 @@ const AppTabs: React.FC = () => {
   const isAdminRoute = location.pathname.startsWith('/admin');
   const isFocusedQuoteRoute = location.pathname === '/quote';
   const isAdmin = isAdminUser(user);
-  const openQuoteLoginPrompt = useQuoteAccessStore((state) => state.openLoginPrompt);
-  const shouldHideTabs =
+  const shouldHideBottomNav =
     isAuthRoute ||
     isAdminRoute ||
     isFocusedQuoteRoute ||
@@ -104,23 +100,6 @@ const AppTabs: React.FC = () => {
       from: `${routeLocation.pathname}${routeLocation.search}`
     }
   });
-  const handleGuestQuoteTabClick = (
-    path: string,
-    event: { preventDefault: () => void }
-  ) => {
-    if (!isAuthReady) {
-      event.preventDefault();
-      return;
-    }
-
-    if (user) {
-      return;
-    }
-
-    event.preventDefault();
-    openQuoteLoginPrompt(path);
-  };
-
   const renderGuestOnlyPage = (Component: React.FC) => {
     if (!isAuthReady) {
       return null;
@@ -157,27 +136,23 @@ const AppTabs: React.FC = () => {
     return <Component />;
   };
 
-  const renderAuthenticatedPage = (
-    Component: React.FC,
-    routeLocation: typeof location
-  ) => {
+  const renderResetPasswordPage = (routeLocation: typeof location) => {
     if (!isAuthReady) {
       return null;
     }
 
-    if (!user) {
-      if (isGuest) {
-        return <Redirect to="/home" />;
-      }
-
-      if (isAuthRoute) {
-        return null;
-      }
-
-      return <Redirect to={getLoginRedirectLocation(routeLocation)} />;
+    if (
+      user ||
+      hasAuthRedirectParams(routeLocation.search, routeLocation.hash)
+    ) {
+      return <ResetPassword />;
     }
 
-    return <Component />;
+    if (isGuest) {
+      return <Redirect to="/home" />;
+    }
+
+    return <Redirect to={getLoginRedirectLocation(routeLocation)} />;
   };
 
   const renderAdminPage = (Component: React.FC, routeLocation: typeof location) => {
@@ -204,6 +179,7 @@ const AppTabs: React.FC = () => {
     <IonTabsWithId id="main-content">
 
       <IonRouterOutlet>
+        <Route path="/auth/callback" component={AuthCallback} exact />
         <Route path="/login" render={() => renderGuestOnlyPage(Login)} exact />
         <Route path="/register" render={() => renderGuestOnlyPage(Register)} exact />
         <Route
@@ -213,9 +189,7 @@ const AppTabs: React.FC = () => {
         />
         <Route
           path="/reset-password"
-          render={({ location: routeLocation }) =>
-            renderAuthenticatedPage(ResetPassword, routeLocation)
-          }
+          render={({ location: routeLocation }) => renderResetPasswordPage(routeLocation)}
           exact
         />
         <Route path="/home" component={Home} exact />
@@ -338,45 +312,7 @@ const AppTabs: React.FC = () => {
         />
       </IonRouterOutlet>
 
-      <IonTabBar
-        className={`ctl-tab-bar${shouldHideTabs ? ' ctl-tab-bar--hidden' : ''}`}
-        slot="bottom"
-      >
-        <IonTabButton className="ctl-tab-button" tab="home" href="/home">
-          <IonIcon icon={homeOutline} />
-          <IonLabel>Home</IonLabel>
-        </IonTabButton>
-
-        <IonTabButton className="ctl-tab-button" tab="services" href="/services">
-          <IonIcon icon={gridOutline} />
-          <IonLabel>Services</IonLabel>
-        </IonTabButton>
-
-        <IonTabButton
-          className="ctl-tab-button ctl-quote-tab"
-          href={user ? '/quote' : undefined}
-          onClick={(event) => handleGuestQuoteTabClick('/quote', event)}
-          tab="quote"
-        >
-          <IonIcon className="ctl-quote-tab-icon" icon={documentTextOutline} />
-          <IonLabel>QUOTE</IonLabel>
-        </IonTabButton>
-
-        <IonTabButton
-          className="ctl-tab-button"
-          href={user ? '/quotes' : undefined}
-          onClick={(event) => handleGuestQuoteTabClick('/quotes', event)}
-          tab="quotes"
-        >
-          <IonIcon icon={listOutline} />
-          <IonLabel>My Quotes</IonLabel>
-        </IonTabButton>
-
-        <IonTabButton className="ctl-tab-button" tab="contact" href="/contact">
-          <IonIcon icon={callOutline} />
-          <IonLabel>Contact</IonLabel>
-        </IonTabButton>
-      </IonTabBar>
+      <BottomNav hidden={shouldHideBottomNav} variant="customer" />
 
     </IonTabsWithId>
   );

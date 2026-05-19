@@ -1,14 +1,17 @@
 import { IonButton, IonContent, IonIcon, IonPage } from '@ionic/react';
 import {
+  alertCircleOutline,
   eyeOffOutline,
   lockClosedOutline,
+  reloadOutline,
   shieldCheckmarkOutline
 } from 'ionicons/icons';
 import { useFormik } from 'formik';
-import { useState } from 'react';
-import { useHistory } from 'react-router';
+import { useEffect, useState } from 'react';
+import { useHistory, useLocation } from 'react-router';
 import AuthField from '../../components/auth/AuthField';
-import { authService } from '../../services/authService';
+import { authService, hasAuthRedirectParams } from '../../services/authService';
+import { useAuthStore } from '../../store/authStore';
 import './auth.css';
 
 interface ResetPasswordValues {
@@ -41,7 +44,63 @@ const validateResetPassword = (values: ResetPasswordValues) => {
 
 const ResetPassword: React.FC = () => {
   const history = useHistory();
+  const location = useLocation();
+  const session = useAuthStore((state) => state.session);
+  const setSession = useAuthStore((state) => state.setSession);
+  const [isPreparingSession, setIsPreparingSession] = useState(() =>
+    hasAuthRedirectParams(location.search, location.hash)
+  );
   const [submitMessage, setSubmitMessage] = useState<SubmitMessage | null>(null);
+
+  useEffect(() => {
+    if (!isPreparingSession) {
+      return undefined;
+    }
+
+    let isMounted = true;
+
+    const prepareRecoverySession = async () => {
+      try {
+        const recoverySession = await authService.completeEmailRedirect(
+          location.search,
+          location.hash
+        );
+
+        if (!isMounted) {
+          return;
+        }
+
+        setSession(recoverySession);
+        history.replace('/reset-password');
+        setIsPreparingSession(false);
+      } catch (error) {
+        if (!isMounted) {
+          return;
+        }
+
+        setSubmitMessage({
+          text:
+            error instanceof Error
+              ? error.message
+              : 'Unable to verify this reset link.',
+          type: 'error'
+        });
+        setIsPreparingSession(false);
+      }
+    };
+
+    void prepareRecoverySession();
+
+    return () => {
+      isMounted = false;
+    };
+  }, [
+    history,
+    isPreparingSession,
+    location.hash,
+    location.search,
+    setSession
+  ]);
 
   const formik = useFormik<ResetPasswordValues>({
     initialValues: {
@@ -57,7 +116,9 @@ const ResetPassword: React.FC = () => {
           text: 'Password updated successfully.',
           type: 'success'
         });
-        history.replace('/home');
+        window.setTimeout(() => {
+          history.replace('/home');
+        }, 600);
       } catch (error) {
         setSubmitMessage({
           text:
@@ -77,13 +138,51 @@ const ResetPassword: React.FC = () => {
         <main className="ctl-auth-screen">
           <div className="ctl-auth-panel ctl-login-panel">
             <section className="ctl-auth-heading">
-              <div className="ctl-auth-symbol ctl-auth-symbol--reverse">
-                <IonIcon icon={lockClosedOutline} />
+              <div
+                className={`ctl-auth-symbol ctl-auth-symbol--reverse${
+                  submitMessage?.type === 'error' && !session
+                    ? ' ctl-auth-symbol--error'
+                    : ''
+                }`}
+              >
+                <IonIcon
+                  icon={
+                    isPreparingSession
+                      ? reloadOutline
+                      : submitMessage?.type === 'error' && !session
+                        ? alertCircleOutline
+                        : lockClosedOutline
+                  }
+                />
               </div>
               <h1>Reset Password</h1>
-              <p>Please create a new password that you don't use on any other site.</p>
+              <p>
+                {isPreparingSession
+                  ? 'Verifying your password reset link...'
+                  : 'Please create a new password that you do not use on any other site.'}
+              </p>
             </section>
 
+            {isPreparingSession ? null : !session ? (
+              <div className="ctl-auth-form ctl-auth-form--large-gap">
+                {submitMessage ? (
+                  <p className={`ctl-auth-message ctl-auth-message--${submitMessage.type}`}>
+                    {submitMessage.text}
+                  </p>
+                ) : (
+                  <p className="ctl-auth-message ctl-auth-message--error">
+                    Please open the latest reset link from your email.
+                  </p>
+                )}
+
+                <IonButton
+                  className="ctl-auth-primary"
+                  onClick={() => history.replace('/forgot-password')}
+                >
+                  REQUEST NEW LINK
+                </IonButton>
+              </div>
+            ) : (
             <form
               className="ctl-auth-form ctl-auth-form--large-gap"
               noValidate
@@ -130,6 +229,7 @@ const ResetPassword: React.FC = () => {
                 {formik.isSubmitting ? 'UPDATING...' : 'UPDATE PASSWORD'}
               </IonButton>
             </form>
+            )}
           </div>
         </main>
       </IonContent>

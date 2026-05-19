@@ -160,6 +160,7 @@ const QuoteServiceBlock: React.FC<QuoteServiceBlockProps> = ({
                       onChange={(event) =>
                         onProductQuantityChange(product.id, event.target.value)
                       }
+                      pattern="[0-9]*[.]?[0-9]*"
                       placeholder="0"
                       value={block.productQuantities[product.id] ?? ''}
                     />

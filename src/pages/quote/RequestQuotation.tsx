@@ -28,6 +28,7 @@ import {
   serviceCategories
 } from '../../data/servicesProducts';
 import { goToPreviousPage } from '../../lib/navigation';
+import { isPositiveQuantity, sanitizeQuantityInput } from '../../lib/quantity';
 import { formatQuotationReference } from '../../lib/quotation';
 import { getUserDisplayName } from '../../lib/userProfile';
 import { useInvokeEdgeFunctionMutation } from '../../services/api/edgeFunctionsApi';
@@ -242,8 +243,12 @@ const validateQuotation = (values: QuotationValues) => {
     }
 
     block.productIds.forEach((productId) => {
-      if (!block.productQuantities[productId]?.trim()) {
+      const quantity = block.productQuantities[productId] ?? '';
+
+      if (!quantity.trim()) {
         productQuantityErrors[productId] = 'Quantity is required';
+      } else if (!isPositiveQuantity(quantity)) {
+        productQuantityErrors[productId] = 'Quantity must be greater than 0';
       }
     });
 
@@ -484,7 +489,7 @@ const RequestQuotation: React.FC = () => {
             ...block,
             productQuantities: {
               ...block.productQuantities,
-              [productId]: value
+              [productId]: sanitizeQuantityInput(value)
             }
           }
         : block

@@ -34,15 +34,15 @@ const homeServiceIds = [
   'industrial-flooring'
 ];
 
-const serviceImages: Record<string, string> = {
+const homeServiceImages: Record<string, string> = {
   'concrete-admixture':
-    'https://images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=600&q=80',
+    'https://chandigarhtradelink.com/wp-content/uploads/2025/10/download-5.png',
   'industrial-flooring':
-    'https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=600&q=80',
+    'https://chandigarhtradelink.com/wp-content/uploads/2025/10/Industrial-Flooring-Solutions-in-North-India.png',
   'structure-strengthening':
-    'https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=600&q=80',
+    'https://chandigarhtradelink.com/wp-content/uploads/2025/10/Structural-Strengthening-Services-in-North-India.png',
   waterproofing:
-    'https://images.unsplash.com/photo-1605152276897-4f618f831968?auto=format&fit=crop&w=600&q=80'
+    'https://chandigarhtradelink.com/wp-content/uploads/2025/10/Waterproof-Coating-Services.png'
 };
 
 const Home: React.FC = () => {
@@ -162,9 +162,10 @@ const Home: React.FC = () => {
               {services.map((service) => (
                 <ServiceCard
                   icon={getServiceIcon(service.id)}
-                  image={serviceImages[service.id]}
+                  image={homeServiceImages[service.id]}
                   key={service.id}
                   onClick={() => history.push(getServicePath(service.id))}
+                  serviceId={service.id}
                   title={service.name}
                 />
               ))}

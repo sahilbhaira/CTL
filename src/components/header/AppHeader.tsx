@@ -31,6 +31,7 @@ interface Props {
   onBack?: () => void;
   onProfile?: () => void;
   onShare?: () => void;
+  shareDisabled?: boolean;
   userInitials?: string;
 }
 
@@ -41,6 +42,7 @@ const AppHeader: FC<Props> = ({
   onBack,
   onProfile,
   onShare,
+  shareDisabled,
   showBack,
   variant = 'default',
   userInitials = 'GU'
@@ -148,8 +150,9 @@ const AppHeader: FC<Props> = ({
           <IonButtons slot="end">
             {brandTrailing === 'share' ? (
               <IonButton
-                aria-label="Share product"
+                aria-label={shareDisabled ? 'Share unavailable' : 'Share product'}
                 className="ctl-header-button"
+                disabled={shareDisabled || !onShare}
                 fill="clear"
                 onClick={onShare}
               >

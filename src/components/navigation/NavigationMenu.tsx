@@ -48,13 +48,18 @@ const mainMenuItems: MenuItemConfig[] = [
   { icon: homeOutline, label: 'Home', path: '/home' },
   { icon: gridOutline, label: 'Services', path: '/services' },
   { icon: documentTextOutline, label: 'Request Quotation', path: '/quote' },
-  { icon: listOutline, label: 'My Quotes', path: '/quotes' },
+  { icon: listOutline, label: 'Track', path: '/quotes' },
   { icon: callOutline, label: 'Contact Us', path: '/contact' }
 ];
 
 const adminMenuItems: MenuItemConfig[] = [
   { icon: speedometerOutline, label: 'Admin Dashboard', path: '/admin/dashboard' },
   { icon: peopleOutline, label: 'Inquiries', path: '/admin/inquiries' },
+  {
+    icon: checkmarkDoneCircleOutline,
+    label: 'Responded',
+    path: '/admin/inquiries?status=sent'
+  },
   { icon: documentTextOutline, label: 'Create Quote', path: '/admin/quote' },
   { icon: chatbubbleEllipsesOutline, label: 'Negotiations', path: '/admin/negotiations' },
   { icon: checkmarkDoneCircleOutline, label: 'Accepted Quotes', path: '/admin/accepted' },
@@ -74,28 +79,42 @@ const hideMenuElement = (menu: HTMLIonMenuElement | null) => {
   });
 };
 
-const isItemActive = (pathname: string, path?: string) => {
+const isItemActive = (pathname: string, search: string, path?: string) => {
   if (!path) {
     return false;
   }
 
-  if (path === '/services') {
+  const [targetPathname, targetQuery = ''] = path.split('?');
+  const targetParams = new URLSearchParams(targetQuery);
+  const currentParams = new URLSearchParams(search);
+
+  if (targetPathname === '/services') {
     return pathname.startsWith('/services') || pathname.startsWith('/products');
   }
 
-  if (path === '/quotes') {
+  if (targetPathname === '/quotes') {
     return pathname === '/quotes' || pathname === '/status';
   }
 
-  if (path === '/admin/inquiries') {
-    return pathname === '/admin/inquiries' || pathname === '/admin/leads';
+  if (targetPathname === '/admin/inquiries') {
+    const targetStatus = targetParams.get('status');
+    const currentStatus = currentParams.get('status');
+
+    if (targetStatus === 'sent') {
+      return pathname === '/admin/inquiries' && currentStatus === 'sent';
+    }
+
+    return (
+      (pathname === '/admin/inquiries' || pathname === '/admin/leads') &&
+      currentStatus !== 'sent'
+    );
   }
 
-  if (path === '/admin/quote') {
+  if (targetPathname === '/admin/quote') {
     return pathname.startsWith('/admin/quote');
   }
 
-  return pathname === path;
+  return pathname === targetPathname;
 };
 
 const NavigationMenu: FC<NavigationMenuProps> = ({ contentId }) => {
@@ -211,7 +230,7 @@ const NavigationMenu: FC<NavigationMenuProps> = ({ contentId }) => {
                 >
                   <button
                     className={`ctl-navigation-item${
-                      isItemActive(location.pathname, item.path)
+                      isItemActive(location.pathname, location.search, item.path)
                         ? ' ctl-navigation-item--active'
                         : ''
                     }`}

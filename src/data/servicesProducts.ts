@@ -36,7 +36,7 @@ export interface ProductApplicationStep {
 export interface ProductDocument {
   label: string;
   type: string;
-  url: string;
+  url: string | null;
 }
 
 export interface Product {
@@ -58,7 +58,7 @@ export interface Product {
     };
     application: {
       steps: ProductApplicationStep[];
-      consumption: ProductKeyValue;
+      consumption: ProductKeyValue | null;
       notes: string | null;
     };
     documents: {

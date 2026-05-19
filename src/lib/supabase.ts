@@ -4,10 +4,9 @@ import { supabaseConfig } from './env';
 export const supabase = createClient(supabaseConfig.url, supabaseConfig.anonKey, {
   auth: {
     autoRefreshToken: true,
-    detectSessionInUrl: true,
-    flowType: 'pkce',
+    detectSessionInUrl: false,
+    flowType: 'implicit',
     persistSession: true,
     storageKey: 'ctl-supabase-auth'
   }
 });
-

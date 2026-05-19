@@ -16,7 +16,7 @@ import {
   getServiceById,
   getServiceIcon
 } from '../../data/servicesProducts';
-import { goToPreviousPage } from '../../lib/navigation';
+import { isPositiveQuantity, sanitizeQuantityInput } from '../../lib/quantity';
 import { getUserDisplayName } from '../../lib/userProfile';
 import { useAuthStore } from '../../store/authStore';
 import { useQuoteDraftStore } from '../../store/quoteDraftStore';
@@ -53,7 +53,9 @@ const ServiceProducts: React.FC = () => {
   const service = getServiceById(serviceId) ?? getServiceById('concrete-admixture');
   const products = getProductsForService(service?.id);
   const [confirmingProductIds, setConfirmingProductIds] = useState<string[]>([]);
+  const [quantityFocusProductId, setQuantityFocusProductId] = useState<string | null>(null);
   const confirmationTimersRef = useRef<Record<string, ReturnType<typeof setTimeout>>>({});
+  const quantityInputRefs = useRef<Record<string, HTMLInputElement | null>>({});
   const isAuthReady = useAuthStore((state) => state.isAuthReady);
   const openQuoteLoginPrompt = useQuoteAccessStore((state) => state.openLoginPrompt);
   const selectedQuoteProductIds = useMemo(
@@ -84,6 +86,20 @@ const ServiceProducts: React.FC = () => {
     []
   );
 
+  useEffect(() => {
+    if (!quantityFocusProductId || !selectedQuoteProductIds.has(quantityFocusProductId)) {
+      return;
+    }
+
+    const input = quantityInputRefs.current[quantityFocusProductId];
+
+    window.requestAnimationFrame(() => {
+      input?.focus();
+      input?.select();
+    });
+    setQuantityFocusProductId(null);
+  }, [quantityFocusProductId, selectedQuoteProductIds]);
+
   if (!service) {
     return null;
   }
@@ -112,6 +128,7 @@ const ServiceProducts: React.FC = () => {
       productId,
       serviceId: service.id
     });
+    setQuantityFocusProductId(productId);
     showAddedConfirmation(productId);
   };
 
@@ -168,7 +185,7 @@ const ServiceProducts: React.FC = () => {
     <IonPage>
       <AppHeader
         brandLeading="back"
-        onBack={() => goToPreviousPage(history)}
+        onBack={() => history.replace('/services')}
         title={service.name}
         variant="brand"
       />
@@ -264,10 +281,25 @@ const ServiceProducts: React.FC = () => {
                         aria-label={`${product.name} quote quantity`}
                         disabled={!isSelectedForQuote}
                         inputMode="decimal"
+                        onBlur={(event) => {
+                          if (
+                            event.target.value.trim() &&
+                            !isPositiveQuantity(event.target.value)
+                          ) {
+                            updateProductQuantity(product.id, '');
+                          }
+                        }}
                         onChange={(event) =>
-                          updateProductQuantity(product.id, event.target.value)
+                          updateProductQuantity(
+                            product.id,
+                            sanitizeQuantityInput(event.target.value)
+                          )
                         }
+                        pattern="[0-9]*[.]?[0-9]*"
                         placeholder="0"
+                        ref={(element) => {
+                          quantityInputRefs.current[product.id] = element;
+                        }}
                         value={quantity}
                       />
                       <em>{getProductQuantityUnit(product)}</em>

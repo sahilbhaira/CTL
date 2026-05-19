@@ -52,6 +52,13 @@
   font-size: 14px;
 }
 
+.ctl-product-download--disabled,
+.ctl-document-download--disabled {
+  background: rgba(100, 116, 139, 0.1);
+  color: rgba(100, 116, 139, 0.62);
+  cursor: not-allowed;
+}
+
 .ctl-product-title h2 {
   color: var(--ion-color-primary);
   font-size: 14px;

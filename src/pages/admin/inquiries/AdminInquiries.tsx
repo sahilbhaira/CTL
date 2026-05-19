@@ -174,7 +174,7 @@ const AdminInquiries: React.FC = () => {
                 <strong className="ctl-admin-inquiry-reference">
                   {formatQuotationReference(quote.id)}
                 </strong>
-                {activeFilter === 'sent' ? <AdminStatusBadge status={quote.status} /> : null}
+                <AdminStatusBadge status={quote.status} />
               </div>
               <h2>{quote.customer.name}</h2>
               <p>{getInquiryService(quote)}</p>
@@ -195,9 +195,11 @@ const AdminInquiries: React.FC = () => {
       brandLeading={location.search ? 'back' : 'menu'}
       hideTitle
       title={
-        location.search ? 
-        activeFilter == "sent" ? "Responded" : "Pending"
-        : "Inquiries"
+        location.search
+          ? activeFilter === 'sent'
+            ? 'Responded'
+            : 'Pending'
+          : 'Inquiries'
       }
     >
       <section className="ctl-admin-content-stack ctl-admin-inquiries">

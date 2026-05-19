@@ -18,7 +18,7 @@ interface QuoteSuccessModalProps {
 
 const QuoteSuccessModal: FC<QuoteSuccessModalProps> = ({
   actionIcon = listOutline,
-  actionLabel = 'GO TO MY QUOTES',
+  actionLabel = 'GO TO TRACK',
   closeLabel = 'Close quote success',
   description = 'Your quotation request has been submitted successfully. Our team will get back to you shortly.',
   isOpen,

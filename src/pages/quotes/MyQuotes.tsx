@@ -13,7 +13,7 @@ import {
   refreshOutline,
   timeOutline
 } from 'ionicons/icons';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useHistory } from 'react-router';
 import AppHeader from '../../components/header/AppHeader';
 import {
@@ -126,13 +126,26 @@ const MyQuotes: React.FC = () => {
       method: 'GET'
     },
     {
+      refetchOnFocus: true,
+      refetchOnReconnect: true,
       skip: !user
     }
   );
-  const quotes = ((data as QuotesResponse | undefined)?.quotes ?? []) as QuoteRequest[];
+  const responseQuotes = (data as QuotesResponse | undefined)?.quotes;
+  const [cachedQuotes, setCachedQuotes] = useState<QuoteRequest[]>([]);
+
+  useEffect(() => {
+    if (Array.isArray(responseQuotes)) {
+      setCachedQuotes(responseQuotes as QuoteRequest[]);
+    }
+  }, [responseQuotes]);
+
+  const quotes = ((responseQuotes ?? cachedQuotes) ?? []) as QuoteRequest[];
   const pendingQuotes = quotes.filter((quote) => !hasReceivedQuotation(quote));
   const receivedQuotes = quotes.filter(hasReceivedQuotation);
   const visibleQuotes = activeTab === 'pending' ? pendingQuotes : receivedQuotes;
+  const hasBlockingError = Boolean(error) && !quotes.length && !isFetching;
+  const hasRefreshError = Boolean(error) && quotes.length > 0;
 
   const handleAcceptQuote = async (quote: QuoteRequest) => {
     setSubmitMessage(null);
@@ -165,7 +178,7 @@ const MyQuotes: React.FC = () => {
       <div className="ctl-quotes-empty__icon">
         <IonIcon icon={documentTextOutline} />
       </div>
-      <h2>Login to view your quotes</h2>
+      <h2>Login to track quotes</h2>
       <p>Quotation history is saved with your account after you sign in.</p>
       <div className="ctl-quotes-auth-actions">
         <button
@@ -229,7 +242,7 @@ const MyQuotes: React.FC = () => {
       return renderGuestState();
     }
 
-    if (isFetching) {
+    if (isFetching && !quotes.length) {
       return (
         <section className="ctl-quotes-list" aria-label="Loading quotation requests">
           {[0, 1].map((item) => (
@@ -243,7 +256,7 @@ const MyQuotes: React.FC = () => {
       );
     }
 
-    if (error) {
+    if (hasBlockingError) {
       return renderErrorState();
     }
 
@@ -281,6 +294,12 @@ const MyQuotes: React.FC = () => {
         {submitMessage ? (
           <p className={`ctl-quotes-message ctl-quotes-message--${submitMessage.type}`}>
             {submitMessage.text}
+          </p>
+        ) : null}
+
+        {hasRefreshError ? (
+          <p className="ctl-quotes-message ctl-quotes-message--error">
+            Latest status could not refresh. Showing your last loaded quotes.
           </p>
         ) : null}
 
@@ -452,7 +471,7 @@ const MyQuotes: React.FC = () => {
       <IonContent className="ctl-account-content" fullscreen>
         <main className="ctl-account ctl-quotes">
           <section className="ctl-account-title ctl-quotes-title">
-            <h1>My Quotes</h1>
+            <h1>Track</h1>
             <p>Track your submitted quotation requests and product quantities.</p>
           </section>
 

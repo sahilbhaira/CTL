@@ -1,16 +1,16 @@
-.ctl-product-nav {
+.ctl-bottom-nav {
   align-items: center;
   background: #ffffff;
   border: 1px solid rgba(232, 232, 232, 0.62);
   border-radius: var(--ctl-footer-radius);
   bottom: 0;
-  box-shadow: 0 -8px 30px rgba(6, 22, 89, 0.08);
+  box-shadow: var(--ctl-footer-shadow);
   display: flex;
   gap: 2px;
   justify-content: space-between;
   left: 50%;
-  max-width: var(--ctl-page-max-width);
   margin: 0 auto;
+  max-width: var(--ctl-page-max-width);
   min-height: var(--ctl-footer-height);
   padding: var(--ctl-footer-padding);
   position: fixed;
@@ -19,8 +19,8 @@
   z-index: 60;
 }
 
-.ctl-product-nav__item,
-.ctl-product-nav__quote {
+.ctl-bottom-nav__item,
+.ctl-bottom-nav__quote {
   align-items: center;
   appearance: none;
   background: transparent;
@@ -30,7 +30,7 @@
   flex: 1 1 0;
   flex-direction: column;
   font-size: 10px;
-  font-weight: 800;
+  font-weight: 600;
   gap: 4px;
   justify-content: center;
   margin: 0;
@@ -40,8 +40,8 @@
   text-align: center;
 }
 
-.ctl-product-nav__item span:last-child,
-.ctl-product-nav__quote span:last-child {
+.ctl-bottom-nav__item span:last-child,
+.ctl-bottom-nav__quote span:last-child {
   line-height: 1.1;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -49,34 +49,34 @@
   width: 100%;
 }
 
-.ctl-product-nav__item ion-icon {
+.ctl-bottom-nav__item ion-icon {
   font-size: 20px;
 }
 
-.ctl-product-nav__item--active {
+.ctl-bottom-nav__item--active {
   color: var(--ion-color-primary);
 }
 
-.ctl-product-nav__quote {
+.ctl-bottom-nav__quote {
   color: var(--ctl-secondary);
-  margin-top: -32px;
+  font-weight: 800;
+  margin-top: -28px;
   position: relative;
   z-index: 1;
 }
 
-.ctl-product-nav__quote-icon {
+.ctl-bottom-nav__quote-icon {
   align-items: center;
   background: var(--ion-color-primary);
   border: 4px solid var(--ctl-background);
   border-radius: 50%;
-  box-shadow: 0 12px 20px rgba(255, 95, 19, 0.34);
   color: #ffffff;
   display: flex;
-  height: 56px;
+  height: var(--ctl-quote-action-size);
   justify-content: center;
-  width: 56px;
+  width: var(--ctl-quote-action-size);
 }
 
-.ctl-product-nav__quote-icon ion-icon {
-  font-size: 24px;
+.ctl-bottom-nav__quote-icon ion-icon {
+  font-size: var(--ctl-quote-action-icon-size);
 }

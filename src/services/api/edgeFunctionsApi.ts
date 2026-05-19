@@ -126,8 +126,8 @@ const getAuthHeaders = async (headers?: Record<string, string>) => {
 const edgeFunctionsBaseQuery =
   (): BaseQueryFn<EdgeFunctionRequest, unknown, EdgeFunctionError> =>
   async ({ body, functionName, headers, method = 'POST', params }) => {
-    try {
-      const response = await edgeClient.request({
+    const runRequest = async () =>
+      edgeClient.request({
         data: body,
         headers: await getAuthHeaders(headers),
         method,
@@ -135,9 +135,35 @@ const edgeFunctionsBaseQuery =
         url: functionName.replace(/^\/+/, '')
       });
 
+    try {
+      const response = await runRequest();
+
       return { data: response.data };
     } catch (error) {
       const axiosError = error as AxiosError;
+
+      if (axiosError.response?.status === 401) {
+        const {
+          data: { session }
+        } = await supabase.auth.refreshSession();
+
+        if (session) {
+          try {
+            const response = await runRequest();
+
+            return { data: response.data };
+          } catch (retryError) {
+            const retryAxiosError = retryError as AxiosError;
+
+            return {
+              error: {
+                data: retryAxiosError.response?.data ?? retryAxiosError.message,
+                status: retryAxiosError.response?.status ?? 'FETCH_ERROR'
+              }
+            };
+          }
+        }
+      }
 
       return {
         error: {
